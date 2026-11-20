@@ -249,6 +249,9 @@ ${body}
 }
 
 export default defineConfig({
+  // Relative base so the build works both at domain root and under a
+  // sub-path (e.g. GitHub Pages project sites like /rasa-map/).
+  base: "./",
   plugins: [react(), adsensePlugin(), legalPagesPlugin()],
   define: {
     "import.meta.env.VITE_APP_VERSION": JSON.stringify(appVersion),

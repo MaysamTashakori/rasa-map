@@ -13,7 +13,7 @@ export default function GeneralHeader({ onAboutOpen }: GeneralHeaderProps) {
       <div className="desktop-brand">
         <img
           className="desktop-brand-logo brand-logo"
-          src="/assets/logo.svg"
+          src="./assets/logo.svg"
           alt={t("shell.header.logoAlt")}
         />
         <div className="desktop-brand-copy brand-copy">

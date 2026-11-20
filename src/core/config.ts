@@ -130,7 +130,7 @@ export const APP_VERSION = String(
   import.meta.env.VITE_APP_VERSION ?? "0.0.0",
 ).trim();
 export const UPDATES_URL = String(
-  import.meta.env.VITE_UPDATES_URL ?? "/updates.json",
+  import.meta.env.VITE_UPDATES_URL ?? "./updates.json",
 ).trim();
 
 export const INSTALL_DIAGNOSTICS_ENABLED = false;

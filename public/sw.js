@@ -2,15 +2,15 @@ const CACHE_NAME = "rasamap-static-v1";
 const TILE_CACHE_NAME = "rasamap-tiles-v1";
 const TILE_ORIGINS = ["https://tiles.openfreemap.org"];
 const APP_SHELL_ASSETS = [
-  "/",
-  "/index.html",
-  "/site.webmanifest",
-  "/assets/icon-192.png",
-  "/assets/icon-512.png",
-  "/assets/icon-maskable.png",
-  "/assets/favicon-32.png",
-  "/assets/favicon-16.png",
-  "/assets/apple-touch-icon.png",
+  "./",
+  "./index.html",
+  "./site.webmanifest",
+  "./assets/icon-192.png",
+  "./assets/icon-512.png",
+  "./assets/icon-maskable.png",
+  "./assets/favicon-32.png",
+  "./assets/favicon-16.png",
+  "./assets/apple-touch-icon.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -78,7 +78,7 @@ self.addEventListener("fetch", (event) => {
   const isNavigation = request.mode === "navigate";
 
   if (isNavigation) {
-    event.respondWith(fetch(request).catch(() => caches.match("/index.html")));
+    event.respondWith(fetch(request).catch(() => caches.match("./index.html")));
     return;
   }
 

@@ -1311,6 +1311,43 @@
         "grain": 0.14,
         "vignette": 0.45
       }
+    },
+    "holo_foil": {
+      "name": "Holo Foil",
+      "description": "Iridescent foil stamp — chrome rivers, holographic avenues on deep violet-black",
+      "ui": {
+        "bg": "#0D0A18",
+        "text": "#CFE8FF"
+      },
+      "map": {
+        "land": "#0D0A18",
+        "landcover": "#141126",
+        "water": "#0A2438",
+        "waterway": "#0E3A5C",
+        "parks": "#0E1F2E",
+        "buildings": "#1B1436",
+        "aeroway": "#1E1838",
+        "rail": "#7DF9FF",
+        "roads": {
+          "major": "#E8D5FF",
+          "minor_high": "#7DF9FF",
+          "minor_mid": "#B79CFF",
+          "minor_low": "#4A3D78",
+          "path": "#2A2150",
+          "outline": "#0D0A18"
+        },
+        "forest": "#0C2218",
+        "grass": "#0F2A1C",
+        "farmland": "#14291A",
+        "wetland": "#123040",
+        "sand": "#2A2340",
+        "ice": "#22304E",
+        "borders": "#FF5CE1"
+      },
+      "fx": {
+        "grain": 0.1,
+        "vignette": 0.4
+      }
     }
   }
 }

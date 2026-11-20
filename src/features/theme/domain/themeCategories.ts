@@ -76,9 +76,10 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
       "night_bazaar",
       "aurora",
       "solar_dusk",
+      "holo_foil",
     ],
   },
-  { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber", "xray", "neon_tokyo", "vaporwave", "ultraviolet", "laser"] },
+  { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber", "xray", "neon_tokyo", "vaporwave", "ultraviolet", "laser", "holo_foil"] },
   { id: "rasa", color: "#D6AD55", themeIds: ["rasa_night", "rasa_dusk"] },
 ];
 

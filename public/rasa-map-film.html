@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رسا مپ — تیزر سینمایی</title>
+<style>
+  :root{
+    --navy:#0B1424; --navy2:#0E1B31; --amber:#D6AD55; --amber2:#E6C983;
+    --violet:#7C5CFF; --cyan:#5AD7FF; --rose:#FF5C8A; --ink:#F2EFE6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:#02040a;overflow:hidden;
+    font-family:"Vazirmatn","Space Grotesk",system-ui,sans-serif;color:var(--ink)}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  .frame{position:relative;width:min(94vw,158vh);aspect-ratio:16/9;border-radius:18px;
+    overflow:hidden;background:radial-gradient(120% 90% at 50% 10%,var(--navy2),var(--navy) 60%,#050A16);
+    box-shadow:0 40px 120px rgba(0,0,0,.8),0 0 0 1px rgba(214,173,85,.25);
+    opacity:0;animation:frameIn .8s ease .2s forwards}
+  @keyframes frameIn{to{opacity:1}}
+
+  /* living map backdrop */
+  .map{position:absolute;inset:-6%;opacity:0;animation:mapIn 1.6s ease .5s forwards}
+  @keyframes mapIn{to{opacity:1}}
+  .map svg{width:100%;height:100%}
+  .street{stroke:rgba(120,150,200,.16);stroke-width:1;fill:none}
+  .street.major{stroke:rgba(150,180,230,.24);stroke-width:1.6}
+  .water{fill:rgba(90,215,255,.08)}
+  .block{fill:rgba(124,92,255,.05)}
+  .route-glow{stroke:var(--amber);stroke-width:7;fill:none;opacity:.25;
+    filter:drop-shadow(0 0 14px rgba(214,173,85,.8));stroke-linecap:round;
+    stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s ease-in-out 1.6s forwards}
+  .route{stroke:var(--amber2);stroke-width:2.6;fill:none;stroke-linecap:round;
+    stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s ease-in-out 1.6s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .pulse{fill:var(--cyan);filter:drop-shadow(0 0 10px var(--cyan);
+    offset-path:path('M90 400 C 240 300, 380 430, 520 330 S 760 250, 880 300');
+    offset-rotate:0deg;animation:travel 3.2s linear 1.6s forwards,blink 1s ease-in-out infinite}
+  @keyframes travel{from{offset-distance:0%}to{offset-distance:100%}}
+  @keyframes blink{50%{opacity:.4}}
+
+  /* grid + grain + vignette */
+  .grid{position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(120,160,255,.05) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(120,160,255,.05) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(80% 80% at 50% 45%,#000 30%,transparent 100%)}
+  .grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation:gr .9s steps(3) infinite}
+  @keyframes gr{0%{background-position:0 0}33%{background-position:-30px 20px}66%{background-position:24px -28px}100%{background-position:0 0}}
+  .vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55))}
+
+  /* scenes */
+  .scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;opacity:0;pointer-events:none}
+  .scene.show{animation:sceneIn 1s ease forwards}
+  @keyframes sceneIn{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
+  .kicker{font-size:clamp(11px,1.6vmin,15px);letter-spacing:.5em;color:var(--amber2);
+    text-transform:uppercase;opacity:.9;margin-bottom:2.2vmin}
+  .title{font-size:clamp(30px,7vmin,84px);font-weight:800;line-height:1.15;
+    background:linear-gradient(100deg,#fff 20%,var(--amber2) 55%,var(--cyan) 90%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 6px 40px rgba(214,173,85,.25))}
+  .sub{margin-top:2vmin;font-size:clamp(13px,2.2vmin,22px);color:#b9c6dd;letter-spacing:.06em}
+  .cta{margin-top:3.4vmin;display:inline-flex;align-items:center;gap:.6em;
+    padding:1.1em 2.4em;border-radius:999px;font-weight:700;font-size:clamp(13px,2vmin,19px);
+    color:#0B1424;background:linear-gradient(120deg,var(--amber2),var(--amber));
+    box-shadow:0 10px 40px rgba(214,173,85,.35);text-decoration:none}
+  .brand{position:absolute;top:4%;right:5%;display:flex;align-items:center;gap:.7em;
+    font-weight:800;font-size:clamp(14px,2.4vmin,24px);letter-spacing:.02em}
+  .brand .mark{width:1.6em;height:1.6em;border-radius:50%;
+    background:conic-gradient(from 210deg,var(--amber),var(--violet),var(--cyan),var(--amber));
+    box-shadow:0 0 24px rgba(124,92,255,.5)}
+  .brand small{display:block;font-size:.55em;color:#8fa3c4;font-weight:500}
+  .hint{position:absolute;bottom:4%;left:50%;transform:translateX(-50%);
+    font-size:clamp(10px,1.4vmin,13px);color:#6d7f9c;letter-spacing:.2em}
+
+  /* letterbox bars for cinema feel */
+  .bar{position:absolute;left:0;right:0;height:7%;background:#02040a;z-index:5}
+  .bar.top{top:0;animation:barIn .9s ease .1s both}
+  .bar.bottom{bottom:0;animation:barIn .9s ease .1s both}
+  @keyframes barIn{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+  .particles span{position:absolute;width:3px;height:3px;border-radius:50%;
+    background:var(--amber2);opacity:0;animation:float 7s linear infinite}
+  @keyframes float{0%{opacity:0;transform:translateY(20px)}15%{opacity:.8}
+    100%{opacity:0;transform:translateY(-160px)}}
+
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}.scene{opacity:1;position:static}}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="frame">
+    <div class="bar top"></div><div class="bar bottom"></div>
+    <div class="grid"></div>
+
+    <div class="map">
+      <svg viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice">
+        <rect class="water" x="0" y="380" width="1000" height="180"/>
+        <g>
+          <path class="block" d="M60 60h180v120H60zM300 80h220v90H300zM600 50h200v140H600zM120 240h160v140H120zM360 220h240v160H360zM700 200h180v180H700zM80 430h200v90H80zM420 410h260v110H420zM760 420h160v100H760z"/>
+        </g>
+        <g>
+          <path class="street" d="M0 180H1000M0 300H1000M0 460H1000M180 0V560M420 0V560M680 0V560M880 0V560"/>
+          <path class="street major" d="M-20 240 C200 200 350 330 560 260 S860 180 1020 300M120 -20 C160 160 340 300 300 580M760 -20 C720 180 860 380 800 580"/>
+        </g>
+        <path class="route-glow" pathLength="1" d="M90 400 C 240 300, 380 430, 520 330 S 760 250, 880 300"/>
+        <path class="route" pathLength="1" d="M90 400 C 240 300, 380 430, 520 330 S 760 250, 880 300"/>
+        <circle class="pulse" r="7"/>
+      </svg>
+    </div>
+
+    <div class="particles" id="pts"></div>
+    <div class="vig"></div><div class="grain"></div>
+
+    <div class="brand"><span class="mark"></span><span>رسا مپ<small>RASA MAP</small></span></div>
+    <div class="hint">SCROLL-FREE · 15s FILM</div>
+
+    <!-- Scene 1: hook -->
+    <div class="scene" id="s1" style="animation-delay:1.4s">
+      <div class="kicker">هر جا که باشی</div>
+      <div class="title">شهرِ تو،<br>اثر هنریِ تو</div>
+      <div class="sub">نقشه‌ای که زنده است — چاپ، استوری، دیوار</div>
+    </div>
+    <!-- Scene 2: process -->
+    <div class="scene" id="s2" style="animation-delay:5.4s">
+      <div class="kicker">فرایند خلق</div>
+      <div class="title" style="font-size:clamp(24px,5vmin,60px)">جست‌وجو ← طراحی ←<br>خروجی زنده</div>
+      <div class="sub">۵۰+ تم چاپی · انیمیشن واقعی · کیفیت ۳۰۰dpi</div>
+    </div>
+    <!-- Scene 3: CTA -->
+    <div class="scene" id="s3" style="animation-delay:9.6s">
+      <div class="kicker">رایگان و متن‌باز</div>
+      <div class="title">رسا مپ</div>
+      <div class="sub">AGPL-3.0 · فارسی‌محور · ۱۳ زبان</div>
+      <a class="cta" href="https://maysamtashakori.github.io/rasa-map/" target="_blank" rel="noreferrer">شروع خلق ←</a>
+    </div>
+  </div>
+</div>
+<script>
+// rising dust particles
+var box=document.getElementById('pts');
+for(var i=0;i<22;i++){var s=document.createElement('span');
+  s.style.left=(Math.random()*96+2)+'%';s.style.bottom='-4%';
+  s.style.animationDelay=(Math.random()*9)+'s';
+  s.style.animationDuration=(5+Math.random()*6)+'s';
+  s.style.background=Math.random()<.5?'#D6AD55':'#5AD7FF';
+  box.appendChild(s);}
+// scene visibility driver (CSS animation-delay handles the rest)
+['s1','s2','s3'].forEach(function(id){
+  var el=document.getElementById(id);
+  setTimeout(function(){el.classList.add('show')},
+    id==='s1'?1400:id==='s2'?5400:9600);
+  setTimeout(function(){el.classList.remove('show');el.style.opacity=0},
+    id==='s1'?5200:id==='s2'?9400:15000);
+});
+// gentle camera breathing on the map
+var map=document.querySelector('.map'),t=0;
+(function breathe(){t+=0.004;
+  map.style.transform='scale('+(1.02+Math.sin(t)*0.015)+') translate('+(Math.sin(t*0.7)*8)+'px,'+(Math.cos(t*0.5)*6)+'px)';
+  requestAnimationFrame(breathe);})();
+</script>
+</body>
+</html>

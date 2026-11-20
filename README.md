@@ -101,7 +101,7 @@ src/features/
 
 ## 🤝 Contributing
 
-Issues and PRs are welcome — open them on [GitHub](https://github.com/MaysamTashakori/rasa-map/issues). Keep changes modular and aligned with the architecture in [AGENT.md](./AGENT.md).
+Issues, PRs and [Discussions](https://github.com/MaysamTashakori/rasa-map/discussions) are welcome. The improvement backlog lives in [ROADMAP.md](./ROADMAP.md). Keep changes modular and aligned with the architecture in [AGENT.md](./AGENT.md).
 
 ## 📄 License & attribution
 

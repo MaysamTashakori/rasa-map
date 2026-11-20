@@ -1,37 +1,42 @@
-# Roadmap
+# Rasa Map — Development Roadmap
 
-## SEO & Discoverability
+Backlog for continuous improvement. Each item should ship as a small,
+verified commit: `bun run typecheck`, `bun run i18n:check` and
+`bun run build` must pass before pushing to `main`.
 
-- [ ] **Google Search Console** — Submit sitemap, monitor indexing, and track keyword performance (see setup steps below)
-- [ ] **Blog / content pages** — Add server-rendered pages (e.g. "How to create a free map poster") to drive organic traffic; an SPA alone is limited since Google mostly sees a single URL
-- [ ] **Submit to directories** — List Terraink on Product Hunt, AlternativeTo, Futurepedia, and similar design-tool directories
-- [ ] **OpenStreetMap community** — Showcase Terraink in OSM forums, wiki tool pages, and community channels
-- [ ] **Backlink outreach** — Reach out to map/design blogs for reviews or mentions
-- [ ] **Social media presence** — Regular posts showcasing poster examples on Instagram, Reddit (r/MapPorn, r/Design), and X/Twitter to build domain authority
+## Creative exports
 
-## Code Quality
+- [ ] Route-draw animation in animated HTML export (stroke-dash draw-on loop)
+- [ ] Marker pulse rings in animated HTML export
+- [ ] More frame styles: deckle edge, orbit stickers, stamp frame
+- [ ] Cinematic intro variant for the animated HTML (3-2-1 title reveal)
+- [ ] Animated WebP export (better quality/size than GIF)
+- [ ] Social-story format preset (9:16 animated HTML)
 
-- [ ] **TypeScript strict mode** — Migrate to `strict: true` and remove `allowJs`; currently gradual (`strict: false`, `allowJs: true`)
-- [ ] **Fix pre-existing type errors** — `pngExporter.ts`, `StartupLocationModal.tsx`, `typography.ts` have unresolved TS errors
+## Themes
 
-## Features
+- [ ] More print-art themes: cyanotype, letterpress, giclée, hologram pastel
+- [ ] User theme editor improvements (live preview while picking colors)
+- [ ] Seasonal/occasion themes (Yalda, Nowruz, Ramadan nights)
 
-- [ ] **Expand export formats** — Additional export options or quality settings beyond current PNG, PDF, SVG
-- [ ] **Markers improvements** — Enhance the `markers` feature (custom icons, bulk import, etc.)
-- [ ] **Theme gallery** — Browsable theme previews to make discovery easier
-- [ ] **Accessibility audit** — Ensure full keyboard navigation and screen reader support across all features
+## Product & monetization
 
-## Google Search Console Setup
+- [ ] Physical print order flow (size + frame + contact → Telegram notify)
+- [ ] Telegram bot delivery for generated files (needs server endpoint)
+- [ ] Real Zibal merchant wiring once credentials arrive (`VITE_ZIBAL_MERCHANT`)
+- [ ] Lead endpoint integration when `VITE_LEAD_ENDPOINT` is provisioned
 
-1. Go to https://search.google.com/search-console
-2. Click **Add Property** and choose **URL prefix** method
-3. Enter `https://terraink.app`
-4. Verify ownership using one of these methods:
-   - **HTML meta tag** (easiest): Add the verification `<meta>` tag Google gives you to `index.html` `<head>`
-   - **DNS TXT record**: Add a TXT record to your domain's DNS settings
-   - **HTML file**: Upload a verification HTML file to `public/`
-5. Once verified:
-   - Go to **Sitemaps** in the left sidebar
-   - Submit `https://terraink.app/sitemap.xml`
-   - Go to **URL Inspection** and request indexing for `https://terraink.app`
-6. Monitor the **Performance** tab for keyword impressions, clicks, and average position
+## Quality & reach
+
+- [ ] Lighthouse pass: keep mobile TTI low despite MapLibre bundle
+- [ ] OG/social preview image for link shares
+- [ ] More showcase screenshots in README
+- [ ] Persian SEO content page (how-to guides in fa)
+
+## Rules for contributors (human or agent)
+
+- All user-facing text goes through i18n — update **every** locale file.
+- New CSS classes need a matching rule in `src/styles/`.
+- Respect layer boundaries in `AGENT.md` — no infra imports in UI.
+- Never commit secrets; env vars live in `.env.local` / CI secrets only.
+- Persian copy follows the `persian-writing` conventions (ZWNJ, RTL).

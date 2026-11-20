@@ -560,7 +560,9 @@
       "followUs": "フォローする",
       "videoText": "Rasa Map をもっと活用したい方へ。全メニューを 6 分で紹介するガイドをご覧ください。",
       "videoWatch": "YouTube で見る",
-      "videoAlt": "Rasa Map 動画ガイド"
+      "videoAlt": "Rasa Map 動画ガイド",
+      "rasatoCta": "Rasato を試す ↗",
+      "rasatoText": "印刷やお届けをご希望ですか？姉妹サービス Rasato が対応します。"
     },
     "errors": {
       "mapNotReady": "マップの準備ができていません。",
@@ -679,7 +681,8 @@
         "search": "場所検索",
         "renderer": "地図エンジン"
       },
-      "coffee": "コーヒー"
+      "coffee": "コーヒー",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "プロジェクトのリンク",

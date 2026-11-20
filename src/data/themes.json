@@ -1348,6 +1348,117 @@
         "grain": 0.1,
         "vignette": 0.4
       }
+    },
+    "eshgh": {
+      "name": "Eshgh",
+      "description": "Rose-hour romance — blush streets and gilded water on warm noir",
+      "ui": {
+        "bg": "#241019",
+        "text": "#FFD9E4"
+      },
+      "map": {
+        "land": "#2B1420",
+        "landcover": "#361A29",
+        "water": "#4A1E33",
+        "waterway": "#5C2740",
+        "parks": "#2E1A26",
+        "buildings": "#4A2338",
+        "aeroway": "#3A1E30",
+        "rail": "#FFB3CD",
+        "roads": {
+          "major": "#FF8FB8",
+          "minor_high": "#E56A96",
+          "minor_mid": "#8C4A6E",
+          "minor_low": "#4A2C48",
+          "path": "#3A2038",
+          "outline": "#241019"
+        },
+        "forest": "#1E2B22",
+        "grass": "#243527",
+        "farmland": "#2C2A1C",
+        "wetland": "#33202E",
+        "sand": "#3A2A30",
+        "ice": "#3A2E44",
+        "borders": "#FF5C8A"
+      },
+      "fx": {
+        "grain": 0.16,
+        "vignette": 0.5
+      }
+    },
+    "modern_line": {
+      "name": "Mono Modern",
+      "description": "Gallery white cube — black ink streets, one electric accent",
+      "ui": {
+        "bg": "#FAFAF7",
+        "text": "#141414"
+      },
+      "map": {
+        "land": "#FAFAF7",
+        "landcover": "#F1F1EC",
+        "water": "#DCE8EC",
+        "waterway": "#DCE8EC",
+        "parks": "#E9EFE4",
+        "buildings": "#E4E4DE",
+        "aeroway": "#ECECE6",
+        "rail": "#141414",
+        "roads": {
+          "major": "#141414",
+          "minor_high": "#3C3C3C",
+          "minor_mid": "#8A8A86",
+          "minor_low": "#C9C9C4",
+          "path": "#DCDCD6",
+          "outline": "#FAFAF7"
+        },
+        "forest": "#E4EDE2",
+        "grass": "#EDF2E8",
+        "farmland": "#F0EDE2",
+        "wetland": "#E2ECEE",
+        "sand": "#EFEBDD",
+        "ice": "#E4E8EE",
+        "borders": "#FF4D00"
+      },
+      "fx": {
+        "grain": 0.06,
+        "vignette": 0.18
+      }
+    },
+    "nostalgi": {
+      "name": "Nostalgi",
+      "description": "Faded Kodachrome — sepia streets, teal shadows, sun-faded paper",
+      "ui": {
+        "bg": "#EDE3CE",
+        "text": "#4A3620"
+      },
+      "map": {
+        "land": "#EFE6D0",
+        "landcover": "#E7DCC2",
+        "water": "#9DB8A8",
+        "waterway": "#9DB8A8",
+        "parks": "#D8CFB2",
+        "buildings": "#E0D3B4",
+        "aeroway": "#E4D9BE",
+        "rail": "#4A3620",
+        "roads": {
+          "major": "#7A4A22",
+          "minor_high": "#9C6B35",
+          "minor_mid": "#B98F58",
+          "minor_low": "#D3B98C",
+          "path": "#E0CDA6",
+          "outline": "#EFE6D0"
+        },
+        "forest": "#C9C2A2",
+        "grass": "#D5CDA9",
+        "farmland": "#E3D5AC",
+        "wetland": "#B9C4AC",
+        "sand": "#E8D9B8",
+        "ice": "#CFC8B4",
+        "borders": "#B0482E"
+      },
+      "fx": {
+        "grain": 0.22,
+        "vignette": 0.55
+      }
     }
   }
 }

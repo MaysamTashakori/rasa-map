@@ -564,7 +564,9 @@
       "followUs": "Seguici",
       "videoText": "Vuoi sfruttare di più Rasa Map? Guarda la guida di 6 minuti a tutti i menu.",
       "videoWatch": "Guarda su YouTube",
-      "videoAlt": "Videoguida di Rasa Map"
+      "videoAlt": "Videoguida di Rasa Map",
+      "rasatoCta": "Prova Rasato ↗",
+      "rasatoText": "Vuoi una stampa o la consegna? Rasato è il nostro servizio gemello per la stampa reale."
     },
     "errors": {
       "mapNotReady": "La mappa non è pronta.",
@@ -683,7 +685,8 @@
         "search": "Ricerca luoghi",
         "renderer": "Motore mappa"
       },
-      "coffee": "Caffè"
+      "coffee": "Caffè",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "Link del progetto",

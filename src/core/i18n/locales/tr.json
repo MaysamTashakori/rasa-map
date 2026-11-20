@@ -562,7 +562,9 @@
       "followUs": "Bizi takip edin",
       "videoText": "Rasa Map'ten daha fazlasını mı istiyorsunuz? Tüm menüleri anlatan 6 dakikalık rehberi izleyin.",
       "videoWatch": "YouTube'da izle",
-      "videoAlt": "Rasa Map video rehberi"
+      "videoAlt": "Rasa Map video rehberi",
+      "rasatoCta": "Rasato’yu dene ↗",
+      "rasatoText": "Baskı veya teslimat ister misin? Rasato, gerçek baskı için kardeş hizmetimiz."
     },
     "errors": {
       "mapNotReady": "Harita hazır değil.",
@@ -681,7 +683,8 @@
         "search": "Yer arama",
         "renderer": "Harita motoru"
       },
-      "coffee": "Kahve"
+      "coffee": "Kahve",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "Proje bağlantıları",

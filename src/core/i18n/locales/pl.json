@@ -566,7 +566,9 @@
       "followUs": "Obserwuj nas",
       "videoText": "Chcesz wycisnąć więcej z Rasa Map? Obejrzyj 6-minutowy przewodnik po wszystkich menu.",
       "videoWatch": "Obejrzyj na YouTube",
-      "videoAlt": "Wideoporadnik Rasa Map"
+      "videoAlt": "Wideoporadnik Rasa Map",
+      "rasatoCta": "Wypróbuj Rasato ↗",
+      "rasatoText": "Chcesz wydruk lub dostawę? Rasato to nasza siostrzana usługa druku."
     },
     "errors": {
       "mapNotReady": "Mapa nie jest gotowa.",
@@ -685,7 +687,8 @@
         "search": "Wyszukiwanie miejsc",
         "renderer": "Silnik mapy"
       },
-      "coffee": "Kawa"
+      "coffee": "Kawa",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "Linki projektu",

@@ -96,6 +96,18 @@
   background: rgba(47, 35, 16, 0.9);
 }
 
+.rasato-badge {
+  color: #e6c983;
+  border-color: rgba(214, 173, 85, 0.45);
+}
+
+.rasato-badge:hover,
+.rasato-badge:focus-visible {
+  color: #f4dfa8;
+  border-color: rgba(214, 173, 85, 0.85);
+  background: rgba(43, 32, 12, 0.9);
+}
+
 .badge-icon {
   width: 16px;
   height: 16px;

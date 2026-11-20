@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import { APP_VERSION, SOCIAL_INSTAGRAM } from "@/core/config";
+import { APP_VERSION, RASATO_URL, SOCIAL_INSTAGRAM } from "@/core/config";
 import { CloseIcon, InstagramIcon } from "@/shared/ui/Icons";
 import { trackEvent } from "@/shared/utils/analytics";
 import type { SupportPromptVariant } from "../application/useExport";
@@ -77,6 +77,24 @@ export default function SupportModal({
             {t("export.support.headline")}
           </p>
           <p className="support-modal__text">{t("export.support.text")}</p>
+          {RASATO_URL ? (
+            <div className="support-modal__rasato">
+              <p className="support-modal__rasato-text">
+                {t("export.support.rasatoText")}
+              </p>
+              <a
+                className="support-modal__rasato-link"
+                href={RASATO_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() =>
+                  trackEvent("rasato_click", { ...trackParams, source: "support_modal" })
+                }
+              >
+                {t("export.support.rasatoCta")}
+              </a>
+            </div>
+          ) : null}
           <div className="support-modal__actions">
             {instagramUrl ? (
               <a

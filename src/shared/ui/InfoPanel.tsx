@@ -12,6 +12,7 @@ import {
   SOCIAL_REDDIT,
   SOCIAL_THREADS,
   SOCIAL_TELEGRAM,
+  RASATO_URL,
 } from "@/core/config";
 import {
   GitHubIcon,
@@ -133,6 +134,18 @@ function HelpUsGrowSection({
             <CoffeeShop className="github-badge">
               <span>{t("shell.info.coffee")}</span>
             </CoffeeShop>
+            {RASATO_URL ? (
+              <a
+                className="github-badge rasato-badge"
+                href={RASATO_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t("shell.info.rasato")}
+                onClick={() => trackEvent("rasato_click", { source: "info_panel" })}
+              >
+                <span>{t("shell.info.rasato")}</span>
+              </a>
+            ) : null}
           </div>
         </div>
 

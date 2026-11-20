@@ -562,7 +562,9 @@
       "followUs": "Volg ons",
       "videoText": "Meer uit Rasa Map halen? Bekijk de gids van 6 minuten over alle menu's.",
       "videoWatch": "Bekijk op YouTube",
-      "videoAlt": "Rasa Map-videogids"
+      "videoAlt": "Rasa Map-videogids",
+      "rasatoCta": "Probeer Rasato ↗",
+      "rasatoText": "Wil je het laten#printen of bezorgen? Rasato is onze zusterdienst voor echte prints."
     },
     "errors": {
       "mapNotReady": "De kaart is nog niet klaar.",
@@ -681,7 +683,8 @@
         "search": "Plaatsen zoeken",
         "renderer": "Kaart-engine"
       },
-      "coffee": "Koffie"
+      "coffee": "Koffie",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "Projectlinks",

@@ -570,7 +570,9 @@
       "followUs": "تابعنا",
       "videoText": "هل تريد الاستفادة أكثر من Rasa Map؟ شاهد الدليل المصوّر لكل القوائم في 6 دقائق.",
       "videoWatch": "شاهد على YouTube",
-      "videoAlt": "دليل Rasa Map المصوّر"
+      "videoAlt": "دليل Rasa Map المصوّر",
+      "rasatoCta": "جرّب Rasato ↗",
+      "rasatoText": "تريد الطباعة أو التوصيل؟ Rasato خدمتنا الشقيقة للطباعة الواقعية."
     },
     "errors": {
       "mapNotReady": "الخريطة غير جاهزة.",
@@ -689,7 +691,8 @@
         "search": "البحث عن الأماكن",
         "renderer": "محرك الخريطة"
       },
-      "coffee": "قهوة"
+      "coffee": "قهوة",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "روابط المشروع",

@@ -564,7 +564,9 @@
       "followUs": "Síguenos",
       "videoText": "¿Quieres sacarle más partido a Rasa Map? Mira la guía de 6 minutos de todos los menús.",
       "videoWatch": "Ver en YouTube",
-      "videoAlt": "Videoguía de Rasa Map"
+      "videoAlt": "Videoguía de Rasa Map",
+      "rasatoCta": "Probar Rasato ↗",
+      "rasatoText": "¿Quieres impresión o entrega? Rasato es nuestro servicio hermano para impresión real."
     },
     "errors": {
       "mapNotReady": "El mapa no está listo.",
@@ -683,7 +685,8 @@
         "search": "Búsqueda de lugares",
         "renderer": "Motor del mapa"
       },
-      "coffee": "Café"
+      "coffee": "Café",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "Enlaces del proyecto",

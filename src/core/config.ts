@@ -64,6 +64,9 @@ export const SOCIAL_INSTAGRAM = import.meta.env.VITE_SOCIAL_INSTAGRAM ?? "";
 export const SOCIAL_REDDIT = import.meta.env.VITE_SOCIAL_REDDIT ?? "";
 export const SOCIAL_THREADS = import.meta.env.VITE_SOCIAL_THREADS ?? "";
 export const SOCIAL_TELEGRAM = import.meta.env.VITE_SOCIAL_TELEGRAM ?? "";
+/** Sister product — promoted after downloads and in the info panel. */
+export const RASATO_URL =
+  import.meta.env.VITE_RASATO_URL ?? "https://rasa-to.ir";
 export const KOFI_URL = import.meta.env.VITE_KOFI_URL ?? "";
 /** Optional webhook that receives {name, contact, page} once per visitor. */
 export const LEAD_ENDPOINT = import.meta.env.VITE_LEAD_ENDPOINT ?? "";

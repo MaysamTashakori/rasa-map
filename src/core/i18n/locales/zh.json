@@ -560,7 +560,9 @@
       "followUs": "关注我们",
       "videoText": "想更好地使用 Rasa Map？观看 6 分钟的全菜单使用指南。",
       "videoWatch": "在 YouTube 上观看",
-      "videoAlt": "Rasa Map 视频指南"
+      "videoAlt": "Rasa Map 视频指南",
+      "rasatoCta": "试试 Rasato ↗",
+      "rasatoText": "想要打印或配送？Rasato 是我们的姊妹服务，提供实体打印。"
     },
     "errors": {
       "mapNotReady": "地图尚未就绪。",
@@ -679,7 +681,8 @@
         "search": "地点搜索",
         "renderer": "地图引擎"
       },
-      "coffee": "咖啡"
+      "coffee": "咖啡",
+      "rasato": "Rasato ↗"
     },
     "social": {
       "projectLinks": "项目链接",

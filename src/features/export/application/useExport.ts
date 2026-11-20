@@ -333,7 +333,12 @@ export function useExport() {
           });
           await triggerDownloadBlob(pdfBlob, filename);
         } else if (format === "gif") {
-          const gifBlob = await createGifBlobFromCanvas(canvas);
+          const gifBlob = await createGifBlobFromCanvas(canvas, {
+            frame: {
+              mat: effectiveTheme.ui.border || effectiveTheme.ui.bg,
+              line: effectiveTheme.ui.borderLine || effectiveTheme.ui.text,
+            },
+          });
           await triggerDownloadBlob(gifBlob, filename);
         } else if (format === "html") {
           // Downscale the embedded artwork — the HTML animates it on screen,
@@ -348,6 +353,8 @@ export function useExport() {
           const htmlBlob = createAnimatedHtmlBlob({
             imageDataUrl: embed.toDataURL("image/png"),
             theme: effectiveTheme,
+            themeId: form.theme,
+            frameStyle: "auto",
             title: posterNames.title,
             subtitle: posterNames.subtitle,
             coordinateText,

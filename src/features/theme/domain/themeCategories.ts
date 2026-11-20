@@ -28,13 +28,13 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
   {
     id: "neutral",
     color: "#A6A6A6",
-    themeIds: ["carrara", "graphite", "noir", "japanese_ink", "contrast_zones", "swiss", "vintage_postcard"],
+    themeIds: ["carrara", "graphite", "noir", "japanese_ink", "contrast_zones", "swiss", "vintage_postcard", "modern_line", "nostalgi"],
   },
-  { id: "sand", color: "#E4CF92", themeIds: ["sandstone", "desert", "rustic", "vintage_postcard"] },
+  { id: "sand", color: "#E4CF92", themeIds: ["sandstone", "desert", "rustic", "vintage_postcard", "nostalgi"] },
   {
     id: "warm",
     color: "#C8742E",
-    themeIds: ["amber", "autumn", "copper", "heatwave", "terracotta", "rustic", "risograph", "night_bazaar"],
+    themeIds: ["amber", "autumn", "copper", "heatwave", "terracotta", "rustic", "risograph", "night_bazaar", "eshgh", "nostalgi"],
   },
   {
     id: "water",
@@ -58,7 +58,7 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
   {
     id: "light",
     color: "#F0C6CC",
-    themeIds: ["blush", "coral", "pastel_dream", "sage", "risograph", "swiss"],
+    themeIds: ["blush", "coral", "pastel_dream", "sage", "risograph", "swiss", "modern_line"],
   },
   {
     id: "dark",
@@ -77,6 +77,7 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
       "aurora",
       "solar_dusk",
       "holo_foil",
+      "eshgh",
     ],
   },
   { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber", "xray", "neon_tokyo", "vaporwave", "ultraviolet", "laser", "holo_foil"] },

@@ -83,8 +83,13 @@ export const PAYMENT_GATEWAY_TOKEN =
  * Zibal merchant id (درگاه زیبال) for the coffee shop. When set it takes
  * precedence over the generic PAYMENT_GATEWAY_URL. Request/verify need only
  * this id — no secret ever ships to the client.
+ *
+ * Defaults to Zibal's public test merchant ("zibal") so the shop works
+ * out-of-the-box in sandbox mode — no real money moves. Set
+ * VITE_ZIBAL_MERCHANT to the real merchant id from zibal.ir for live payments.
  */
-export const ZIBAL_MERCHANT = import.meta.env.VITE_ZIBAL_MERCHANT ?? "";
+export const ZIBAL_MERCHANT =
+  import.meta.env.VITE_ZIBAL_MERCHANT ?? "zibal";
 
 export interface DonationLink {
   name: string;

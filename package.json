@@ -1,9 +1,38 @@
 {
   "name": "rasa-map",
-  "private": true,
   "version": "0.5.0",
   "type": "module",
   "license": "AGPL-3.0-only",
+  "description": "Rasa Map — free creative studio that turns places into map posters, postcards, GIFs and printable art. Persian-first, 13 languages.",
+  "homepage": "https://maysamtashakori.github.io/rasa-map/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaysamTashakori/rasa-map.git"
+  },
+  "bugs": "https://github.com/MaysamTashakori/rasa-map/issues",
+  "keywords": [
+    "map-poster",
+    "openstreetmap",
+    "map-art",
+    "poster",
+    "print",
+    "persian",
+    "rtl",
+    "farsi",
+    "pwa",
+    "react"
+  ],
+  "bin": {
+    "rasa-map": "./bin/rasa-map.mjs"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "prepack": "bun run build",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "bunx --bun vite --host",
     "build": "bunx --bun vite build",

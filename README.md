@@ -64,7 +64,28 @@ Every export is a real file you can print or share:
 - **Payments**: [Zibal gateway](https://gateway.zibal.ir) (optional, env-configured)
 - **GIF encoding**: [gifenc](https://github.com/mattdesl/gifenc) — fully client-side
 
-## 🚀 Run
+## 🖼️ Sample works
+
+Four poster styles from the theme engine — every one printable at 300 dpi:
+
+<p align="center">
+  <img src="./docs/samples/rasa-emerald.svg" alt="Rasa Emerald poster" width="30%" />
+  <img src="./docs/samples/eshgh.svg" alt="Eshgh romance poster" width="30%" />
+  <img src="./docs/samples/nostalgi.svg" alt="Nostalgi film poster" width="30%" />
+  <img src="./docs/samples/holo-foil.svg" alt="Holo Foil poster" width="30%" />
+</p>
+
+**🌍 Multilingual:** the whole UI speaks **13 languages** — Persian-first and fully RTL with Vazirmatn, plus English, Arabic, German, Spanish, French, Italian, Japanese, Dutch, Polish, Portuguese (BR), Turkish and Chinese. Map labels and poster text support Persian typefaces natively.
+
+## 🚀 Install & run
+
+**One command (npm):**
+
+```bash
+npx rasa-map          # serves the studio on http://localhost:4173
+```
+
+**From source:**
 
 ```bash
 bun install
@@ -76,6 +97,16 @@ Or with Docker:
 ```bash
 docker compose up -d --build   # http://localhost:7200
 ```
+
+## 📱 Telegram bot — status
+
+File delivery via Telegram needs a **bot token** (`@BotFather`) plus a small server-side endpoint — the token can never live in client-side code. The plumbing is designed for it:
+
+- `VITE_SOCIAL_TELEGRAM` — community/support bot link shown in the UI
+- `VITE_LEAD_ENDPOINT` — webhook that receives leads; can forward to a Telegram bot server-side
+- Planned: a tiny edge function (Cloudflare Worker / bot webhook) that receives export requests and sends the PNG/GIF back via the Bot API `sendDocument`
+
+To activate: create a bot with BotFather, deploy the endpoint, set the env vars — no app code changes needed.
 
 ## ⚙️ Environment
 

@@ -574,7 +574,9 @@
       "exportContext": "Dışa aktarma canvas'ı için 2D bağlam oluşturulamadı",
       "svgLayerContext": "SVG katmanı dışa aktarma için 2D bağlam oluşturulamadı.",
       "svgOverlayContext": "SVG kaplama dışa aktarma için 2D bağlam oluşturulamadı.",
-      "pngBlob": "Canvas'tan PNG blob oluşturulamadı."
+      "pngBlob": "Canvas'tan PNG blob oluşturulamadı.",
+      "telegramNotConfigured": "Telegram teslimi bu sürümde yapılandırılmadı.",
+      "network": "Ağ hatası — bağlantınızı kontrol edip tekrar deneyin."
     },
     "lead": {
       "close": "Kapat",

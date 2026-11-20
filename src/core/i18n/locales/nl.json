@@ -574,7 +574,9 @@
       "exportContext": "Geen 2D-context voor exportcanvas",
       "svgLayerContext": "Kan geen 2D-context maken voor SVG-laagexport.",
       "svgOverlayContext": "Kan geen 2D-context maken voor SVG-overlayexport.",
-      "pngBlob": "PNG-blob maken van canvas mislukt."
+      "pngBlob": "PNG-blob maken van canvas mislukt.",
+      "telegramNotConfigured": "Telegram-levering is niet geconfigureerd in deze versie.",
+      "network": "Netwerkfout — controleer de verbinding en probeer opnieuw."
     },
     "lead": {
       "close": "Sluiten",

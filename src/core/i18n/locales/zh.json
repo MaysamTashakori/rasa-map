@@ -572,7 +572,9 @@
       "exportContext": "无法为导出画布创建 2D 上下文",
       "svgLayerContext": "无法为 SVG 图层导出创建 2D 上下文。",
       "svgOverlayContext": "无法为 SVG 叠加层导出创建 2D 上下文。",
-      "pngBlob": "无法从画布创建 PNG 数据。"
+      "pngBlob": "无法从画布创建 PNG 数据。",
+      "telegramNotConfigured": "此版本未配置 Telegram 发送功能。",
+      "network": "网络错误——请检查连接后重试。"
     },
     "lead": {
       "close": "关闭",

@@ -67,6 +67,13 @@ export const SOCIAL_TELEGRAM = import.meta.env.VITE_SOCIAL_TELEGRAM ?? "";
 /** Sister product — promoted after downloads and in the info panel. */
 export const RASATO_URL =
   import.meta.env.VITE_RASATO_URL ?? "https://rasa-to.ir";
+
+/**
+ * Telegram relay endpoint (server/telegram-bot.mjs or compatible). When set,
+ * the export menu offers "Send to Telegram". The bot token stays server-side.
+ */
+export const TELEGRAM_ENDPOINT =
+  import.meta.env.VITE_TELEGRAM_ENDPOINT ?? "";
 export const KOFI_URL = import.meta.env.VITE_KOFI_URL ?? "";
 /** Optional webhook that receives {name, contact, page} once per visitor. */
 export const LEAD_ENDPOINT = import.meta.env.VITE_LEAD_ENDPOINT ?? "";

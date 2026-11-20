@@ -576,7 +576,9 @@
       "exportContext": "No se pudo crear el contexto 2D del canvas de exportación",
       "svgLayerContext": "No se pudo crear el contexto 2D para exportar la capa SVG.",
       "svgOverlayContext": "No se pudo crear el contexto 2D para exportar la superposición SVG.",
-      "pngBlob": "No se pudo crear el blob PNG desde el canvas."
+      "pngBlob": "No se pudo crear el blob PNG desde el canvas.",
+      "telegramNotConfigured": "La entrega por Telegram no está configurada en esta versión.",
+      "network": "Error de red — comprueba la conexión e inténtalo de nuevo."
     },
     "lead": {
       "close": "Cerrar",

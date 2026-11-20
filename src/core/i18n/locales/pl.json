@@ -578,7 +578,9 @@
       "exportContext": "Nie udało się utworzyć kontekstu 2D dla canvasu eksportu",
       "svgLayerContext": "Nie udało się utworzyć kontekstu 2D do eksportu warstwy SVG.",
       "svgOverlayContext": "Nie udało się utworzyć kontekstu 2D do eksportu nakładki SVG.",
-      "pngBlob": "Nie udało się utworzyć pliku PNG z canvasu."
+      "pngBlob": "Nie udało się utworzyć pliku PNG z canvasu.",
+      "telegramNotConfigured": "Wysyłka przez Telegram nie jest skonfigurowana w tej wersji.",
+      "network": "Błąd sieci — sprawdź połączenie i spróbuj ponownie."
     },
     "lead": {
       "close": "Zamknij",

@@ -574,7 +574,9 @@
       "exportContext": "Could not create 2D context for export canvas",
       "svgLayerContext": "Could not create 2D context for SVG layer export.",
       "svgOverlayContext": "Could not create 2D context for SVG overlay export.",
-      "pngBlob": "Failed to create PNG blob from canvas."
+      "pngBlob": "Failed to create PNG blob from canvas.",
+      "telegramNotConfigured": "Telegram delivery is not configured on this deployment.",
+      "network": "Network error — check your connection and try again."
     },
     "lead": {
       "close": "Close",

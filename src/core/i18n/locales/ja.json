@@ -572,7 +572,9 @@
       "exportContext": "書き出し用キャンバスの2Dコンテキストを作成できませんでした",
       "svgLayerContext": "SVGレイヤー書き出し用の2Dコンテキストを作成できませんでした。",
       "svgOverlayContext": "SVGオーバーレイ書き出し用の2Dコンテキストを作成できませんでした。",
-      "pngBlob": "キャンバスからPNG Blobを作成できませんでした。"
+      "pngBlob": "キャンバスからPNG Blobを作成できませんでした。",
+      "telegramNotConfigured": "このデプロイでは Telegram 送信が設定されていません。",
+      "network": "ネットワークエラー — 接続を確認して再試行してください。"
     },
     "lead": {
       "close": "閉じる",

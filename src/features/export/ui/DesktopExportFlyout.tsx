@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { useExport } from "@/features/export/application/useExport";
 import type { ExportFormat } from "@/features/export/domain/types";
 import { useTranslation } from "react-i18next";
-import { DownloadIcon, LoaderIcon } from "@/shared/ui/Icons";
+import { DownloadIcon, LoaderIcon, TelegramIcon } from "@/shared/ui/Icons";
+import { TELEGRAM_ENDPOINT } from "@/core/config";
 
 const FLYOUT_FORMATS: { format: ExportFormat; label: string }[] = [
   { format: "svg", label: "RSVG" },
   { format: "pdf", label: "PDF" },
   { format: "gif", label: "GIF" },
   { format: "html", label: "HTML" },
+  ...(TELEGRAM_ENDPOINT ? [{ format: "telegram" as ExportFormat, label: "Telegram" }] : []),
 ];
 
 export default function DesktopExportFlyout() {
@@ -38,7 +40,9 @@ export default function DesktopExportFlyout() {
           >
             {isExporting && activeFormat === format
               ? <LoaderIcon className="desktop-export-btn-icon is-spinning" />
-              : <DownloadIcon className="desktop-export-btn-icon" />}
+              : format === "telegram"
+                ? <TelegramIcon className="desktop-export-btn-icon" />
+                : <DownloadIcon className="desktop-export-btn-icon" />}
             <span>{label}</span>
           </button>
         ))}

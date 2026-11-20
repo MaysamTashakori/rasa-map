@@ -574,7 +574,9 @@
       "exportContext": "2D-Kontext für das Export-Canvas konnte nicht erstellt werden",
       "svgLayerContext": "2D-Kontext für den SVG-Ebenen-Export konnte nicht erstellt werden.",
       "svgOverlayContext": "2D-Kontext für den SVG-Overlay-Export konnte nicht erstellt werden.",
-      "pngBlob": "PNG-Blob konnte nicht aus dem Canvas erstellt werden."
+      "pngBlob": "PNG-Blob konnte nicht aus dem Canvas erstellt werden.",
+      "telegramNotConfigured": "Telegram-Zustellung ist in dieser Version nicht konfiguriert.",
+      "network": "Netzwerkfehler — Verbindung prüfen und erneut versuchen."
     },
     "lead": {
       "close": "Schließen",

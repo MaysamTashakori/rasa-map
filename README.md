@@ -98,15 +98,21 @@ Or with Docker:
 docker compose up -d --build   # http://localhost:7200
 ```
 
-## 📱 Telegram bot — status
+## 📱 Telegram delivery
 
-File delivery via Telegram needs a **bot token** (`@BotFather`) plus a small server-side endpoint — the token can never live in client-side code. The plumbing is designed for it:
+Send any poster straight to Telegram — the export menu gains a **Telegram** button when `VITE_TELEGRAM_ENDPOINT` points at the included relay:
 
-- `VITE_SOCIAL_TELEGRAM` — community/support bot link shown in the UI
-- `VITE_LEAD_ENDPOINT` — webhook that receives leads; can forward to a Telegram bot server-side
-- Planned: a tiny edge function (Cloudflare Worker / bot webhook) that receives export requests and sends the PNG/GIF back via the Bot API `sendDocument`
+```bash
+# server side (token stays here, never in the web app)
+TELEGRAM_BOT_TOKEN=123456:ABC... TELEGRAM_CHAT_ID=123 node server/telegram-bot.mjs
 
-To activate: create a bot with BotFather, deploy the endpoint, set the env vars — no app code changes needed.
+# web app
+VITE_TELEGRAM_ENDPOINT=https://your-relay.example.com/api/send
+```
+
+- `server/telegram-bot.mjs` — zero-dependency Node relay: `POST /api/send` (file → `sendDocument`), `POST /api/notify` (text → `sendMessage`), `GET /health`
+- If `TELEGRAM_CHAT_ID` is unset, the relay auto-resolves the chat from the bot's recent `getUpdates` — just message the bot once after creating it
+- The web client only ever sees the endpoint URL; the bot token never ships to browsers
 
 ## ⚙️ Environment
 

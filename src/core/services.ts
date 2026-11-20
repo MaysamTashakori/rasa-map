@@ -9,7 +9,8 @@
 import { localStorageCache } from "@/core/cache/localStorageCache";
 import { fetchAdapter } from "@/core/http/fetchAdapter";
 import { localFontsAdapter } from "@/core/fonts/localFontsAdapter";
-import { ZIBAL_MERCHANT } from "@/core/config";
+import { ZIBAL_MERCHANT, TELEGRAM_ENDPOINT } from "@/core/config";
+import { createTelegramSender } from "@/features/export/infrastructure/telegramSender";
 import { createCheckoutAdapter } from "@/features/shop/infrastructure/checkoutAdapter";
 import { createZibalAdapter } from "@/features/shop/infrastructure/zibalAdapter";
 import { createNominatimAdapter } from "@/features/location/infrastructure/nominatimAdapter";
@@ -70,6 +71,11 @@ export {
 } from "@/features/export/infrastructure/animatedExporters";
 
 export { triggerDownloadBlob } from "@/features/export/infrastructure/fileDownloader";
+
+/* ── Telegram delivery ── */
+
+const telegramSender = createTelegramSender(fetchAdapter, TELEGRAM_ENDPOINT);
+export const sendPosterToTelegram = telegramSender.sendFile;
 export {
   loadFavoriteThemeIds,
   saveFavoriteThemeIds,

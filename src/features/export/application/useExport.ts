@@ -19,6 +19,7 @@ import {
   createAnimatedHtmlBlob,
   createPosterFilename,
   triggerDownloadBlob,
+  sendPosterToTelegram,
 } from "@/core/services";
 import {
   APP_VERSION,
@@ -323,8 +324,36 @@ export function useExport() {
         const filename = createPosterFilename(
           form.displayCity || form.location,
           form.theme,
-          format,
+          format === "telegram" ? "png" : format,
         );
+
+        if (format === "telegram") {
+          const pngBlob = await createPngBlob(canvas, dpi);
+          const sent = await sendPosterToTelegram(
+            pngBlob,
+            filename,
+            `${posterNames.title} — ${posterNames.subtitle}`,
+          );
+          if (!sent.ok) {
+            dispatch({
+              type: "SET_EXPORT_STATUS",
+              exporting: false,
+              error:
+                sent.message === "telegram_not_configured"
+                  ? i18n.t("export.errors.telegramNotConfigured")
+                  : sent.message === "network_error"
+                    ? i18n.t("export.errors.network")
+                    : sent.message ?? i18n.t("export.errors.exportFailed"),
+            });
+            trackEvent("telegram_send_fail", { reason: sent.message ?? "unknown" });
+            return;
+          }
+          trackEvent("telegram_send_ok", { poster_city: exportParams.poster_city });
+          reportExportSuccess(nextCount, exportParams);
+          registerSuccessfulExport(nextCount, nextVersionCount);
+          dispatch({ type: "SET_EXPORT_STATUS", exporting: false });
+          return;
+        }
 
         if (format === "pdf") {
           const pdfBlob = createPdfBlobFromCanvas(canvas, {

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useExport } from "@/features/export/application/useExport";
 import type { ExportFormat } from "@/features/export/domain/types";
-import { CloseIcon, DownloadIcon, LoaderIcon } from "@/shared/ui/Icons";
+import { CloseIcon, DownloadIcon, LoaderIcon, TelegramIcon } from "@/shared/ui/Icons";
 import { useTranslation } from "react-i18next";
+import { TELEGRAM_ENDPOINT } from "@/core/config";
 import SocialLinkGroup from "@/shared/ui/SocialLinkGroup";
 
 const FORMAT_OPTIONS: { format: ExportFormat; label: string }[] = [
@@ -12,6 +13,11 @@ const FORMAT_OPTIONS: { format: ExportFormat; label: string }[] = [
   { format: "gif", label: "GIF" },
   { format: "html", label: "HTML" },
 ];
+
+const TELEGRAM_OPTION: { format: ExportFormat; label: string } = {
+  format: "telegram",
+  label: "Telegram",
+};
 
 interface ExportFabProps {
   isMobile: boolean;
@@ -102,7 +108,7 @@ export default function ExportFab({ isMobile }: ExportFabProps) {
               </button>
             </div>
             <div className="export-modal-actions">
-              {FORMAT_OPTIONS.map(({ format, label }) => (
+              {[...FORMAT_OPTIONS, ...(TELEGRAM_ENDPOINT ? [TELEGRAM_OPTION] : [])].map(({ format, label }) => (
                 <button
                   key={format}
                   type="button"
@@ -112,6 +118,8 @@ export default function ExportFab({ isMobile }: ExportFabProps) {
                 >
                   {isExporting && activeFormat === format ? (
                     <LoaderIcon className="export-modal-option-icon is-spinning" />
+                  ) : format === "telegram" ? (
+                    <TelegramIcon className="export-modal-option-icon" />
                   ) : (
                     <DownloadIcon className="export-modal-option-icon" />
                   )}

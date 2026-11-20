@@ -1459,6 +1459,117 @@
         "grain": 0.22,
         "vignette": 0.55
       }
+    },
+    "rasa_forest": {
+      "name": "Rasa Forest",
+      "description": "Rasa Studio green — living emerald streets on morning mist",
+      "ui": {
+        "bg": "#F4F8F3",
+        "text": "#0B3D24"
+      },
+      "map": {
+        "land": "#F4F8F3",
+        "landcover": "#E9F1E7",
+        "water": "#BFE3D4",
+        "waterway": "#BFE3D4",
+        "parks": "#D6EBD8",
+        "buildings": "#DEE9DA",
+        "aeroway": "#E4EDE2",
+        "rail": "#0B3D24",
+        "roads": {
+          "major": "#007F4E",
+          "minor_high": "#00A566",
+          "minor_mid": "#45E499",
+          "minor_low": "#A8D9BC",
+          "path": "#CDE5D3",
+          "outline": "#F4F8F3"
+        },
+        "forest": "#CBE3CE",
+        "grass": "#D9EDDA",
+        "farmland": "#E8EFD9",
+        "wetland": "#C4E0D2",
+        "sand": "#EFEBD8",
+        "ice": "#DDE9E4",
+        "borders": "#FCBB00"
+      },
+      "fx": {
+        "grain": 0.08,
+        "vignette": 0.22
+      }
+    },
+    "rasa_emerald": {
+      "name": "Rasa Emerald",
+      "description": "Midnight studio — neon green avenues on deep forest black",
+      "ui": {
+        "bg": "#04140B",
+        "text": "#B9F5D4"
+      },
+      "map": {
+        "land": "#04140B",
+        "landcover": "#0A2417",
+        "water": "#07231C",
+        "waterway": "#0A3527",
+        "parks": "#0C2B1C",
+        "buildings": "#12301F",
+        "aeroway": "#0F2C1D",
+        "rail": "#FCBB00",
+        "roads": {
+          "major": "#45E499",
+          "minor_high": "#00BB7F",
+          "minor_mid": "#007F4E",
+          "minor_low": "#0F4A30",
+          "path": "#0B3826",
+          "outline": "#04140B"
+        },
+        "forest": "#0E2E1E",
+        "grass": "#113522",
+        "farmland": "#1A2E1C",
+        "wetland": "#0E3328",
+        "sand": "#2A2416",
+        "ice": "#16303A",
+        "borders": "#FCBB00"
+      },
+      "fx": {
+        "grain": 0.12,
+        "vignette": 0.45
+      }
+    },
+    "rasa_paper": {
+      "name": "Rasa Paper",
+      "description": "Warm studio paper — sage ink and leaf-green streets",
+      "ui": {
+        "bg": "#FBF8F1",
+        "text": "#24211B"
+      },
+      "map": {
+        "land": "#FBF8F1",
+        "landcover": "#F3EEE2",
+        "water": "#CDE0D8",
+        "waterway": "#CDE0D8",
+        "parks": "#E4EEDC",
+        "buildings": "#EAE4D4",
+        "aeroway": "#F0EBDF",
+        "rail": "#24211B",
+        "roads": {
+          "major": "#1E7A4E",
+          "minor_high": "#2E9E68",
+          "minor_mid": "#7FBF9E",
+          "minor_low": "#BFD8C4",
+          "path": "#DCE8D2",
+          "outline": "#FBF8F1"
+        },
+        "forest": "#D2E2CC",
+        "grass": "#DFEBD2",
+        "farmland": "#F0EBD4",
+        "wetland": "#C8DCD0",
+        "sand": "#F2EAD4",
+        "ice": "#E2E8E0",
+        "borders": "#F99C00"
+      },
+      "fx": {
+        "grain": 0.18,
+        "vignette": 0.28
+      }
     }
   }
 }

@@ -53,12 +53,12 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
   {
     id: "green",
     color: "#5FA36A",
-    themeIds: ["sage", "forest", "emerald", "copper_patina"],
+    themeIds: ["sage", "forest", "emerald", "copper_patina", "rasa_forest", "rasa_paper"],
   },
   {
     id: "light",
     color: "#F0C6CC",
-    themeIds: ["blush", "coral", "pastel_dream", "sage", "risograph", "swiss", "modern_line"],
+    themeIds: ["blush", "coral", "pastel_dream", "sage", "risograph", "swiss", "modern_line", "rasa_forest", "rasa_paper"],
   },
   {
     id: "dark",
@@ -78,10 +78,11 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
       "solar_dusk",
       "holo_foil",
       "eshgh",
+      "rasa_emerald",
     ],
   },
   { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber", "xray", "neon_tokyo", "vaporwave", "ultraviolet", "laser", "holo_foil"] },
-  { id: "rasa", color: "#D6AD55", themeIds: ["rasa_night", "rasa_dusk"] },
+  { id: "rasa", color: "#D6AD55", themeIds: ["rasa_night", "rasa_dusk", "rasa_forest", "rasa_emerald", "rasa_paper"] },
 ];
 
 /** Themes of one category, kept in the list's own order. */

@@ -23,6 +23,30 @@ async function loadLanguage(code: string): Promise<void> {
 /* Arabic is kept left-to-right on purpose; Persian gets a full right-to-left layout. */
 const RTL_LANGUAGES = new Set(["fa"]);
 
+/* Inside the Telegram Mini App, Telegram.WebApp carries the user's app
+   language. Map it to a supported code ("pt-br" → "pt-BR"). */
+function telegramLanguageCode(): string | null {
+  const w = window as unknown as {
+    Telegram?: {
+      WebApp?: {
+        initDataUnsafe?: { user?: { language_code?: string } };
+        ready?: () => void;
+        expand?: () => void;
+      };
+    };
+  };
+  const webApp = w.Telegram?.WebApp;
+  webApp?.ready?.();
+  webApp?.expand?.();
+  const raw = webApp?.initDataUnsafe?.user?.language_code;
+  if (!raw) return null;
+  const normalized = raw.toLowerCase().replace(/_/g, "-");
+  return (
+    SUPPORTED_LANGUAGE_CODES.find((code) => code.toLowerCase() === normalized) ??
+    null
+  );
+}
+
 function syncHtmlLang(code: string) {
   if (typeof document !== "undefined") {
     document.documentElement.lang = code;
@@ -69,6 +93,18 @@ export const i18nReady: Promise<void> = i18n
   })
   .then(() => loadLanguage(i18n.language))
   .then(syncDocumentMeta)
+  /* In the Mini App, follow Telegram's language unless the user already
+     made a manual pick on this device. */
+  .then(() => {
+    const tg = telegramLanguageCode();
+    if (
+      tg &&
+      tg !== i18n.language &&
+      !localStorage.getItem(LANGUAGE_STORAGE_KEY)
+    ) {
+      return i18n.changeLanguage(tg);
+    }
+  })
   .catch(() => undefined);
 
 /** Manual pick from the language picker; remembered on this device. */

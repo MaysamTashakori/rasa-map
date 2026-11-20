@@ -41,6 +41,10 @@ const TOKEN = (process.env.TELEGRAM_BOT_TOKEN ?? "").trim();
 const CHAT_ID = (process.env.TELEGRAM_CHAT_ID ?? "").trim();
 const PORT = Number(process.env.PORT) || 8787;
 const MAX_BODY = 30 * 1024 * 1024; // 30 MB
+const MINI_APP_URL =
+  (process.env.TELEGRAM_MINI_APP_URL ?? "").trim() ||
+  "https://maysamtashakori.github.io/rasa-map/";
+const POLL_ENABLED = process.env.TELEGRAM_POLL !== "0";
 
 const API = `https://api.telegram.org/bot${TOKEN}`;
 
@@ -148,9 +152,103 @@ const server = createServer(async (req, res) => {
   }
 });
 
+const REPLIES = {
+  start: [
+    "سلام! 👋 من <b>رسا مپ</b> هستم — استودیوی ساخت پوستر و نقشهٔ هنری.",
+    "",
+    "هر جایی از دنیا را انتخاب کن، تم و رنگش را خودت بساز و خروجی چاپی با کیفیت بگیر — PNG، PDF، SVG، GIF و HTML متحرک.",
+    "کاملاً رایگان و بدون ثبت‌نام. 🇮🇷",
+  ].join("\n"),
+  poster: [
+    "🎨 <b>ساخت پوستر نقشه</b>",
+    "",
+    "۱. دکمهٔ زیر را بزن تا استودیو داخل همین چت باز شود",
+    "۲. شهر یا محله‌ات را جست‌وجو کن",
+    "۳. تم، رنگ و حاشیه را انتخاب کن",
+    "۴. دانلود کن یا برایم بفرست تا برات بسازم",
+  ].join("\n"),
+  coffee: [
+    "☕ <b>یک قهوه برای رسا مپ بخر</b>",
+    "",
+    "رسا مپ رایگان می‌ماند — حمایت تو نگهش می‌دارد.",
+    "داخل مینی‌اپ بخش «قهوه» را باز کن و با درگاه زیبال پرداخت کن.",
+  ].join("\n"),
+  fallback: [
+    "من ربات <b>رسا مپ</b> هستم 🗺️",
+    "برای ساخت پوستر نقشه دکمهٔ زیر را بزن، یا /poster را بفرست.",
+    "دستورات: /start /poster /coffee",
+  ].join("\n"),
+};
+
+function replyKeyboard() {
+  return {
+    inline_keyboard: [
+      [{ text: "🎨 باز کردن رسا مپ", web_app: { url: MINI_APP_URL } }],
+      [
+        { text: "🖼️ پوستر", callback_data: "poster" },
+        { text: "☕ قهوه", callback_data: "coffee" },
+      ],
+    ],
+  };
+}
+
+function replyText(command) {
+  if (command === "start" || command === "help") return REPLIES.start;
+  if (command === "poster") return REPLIES.poster;
+  if (command === "coffee") return REPLIES.coffee;
+  return REPLIES.fallback;
+}
+
+/** Long-poll getUpdates and answer commands + callback buttons. */
+async function pollLoop() {
+  if (!TOKEN || !POLL_ENABLED) return;
+  let offset = 0;
+  for (;;) {
+    try {
+      const res = await fetch(
+        `${API}/getUpdates?timeout=25&offset=${offset}`,
+      );
+      const data = await res.json().catch(() => ({}));
+      const updates = Array.isArray(data.result) ? data.result : [];
+      for (const u of updates) {
+        offset = Math.max(offset, u.update_id + 1);
+        const msg = u.message;
+        const cb = u.callback_query;
+        if (msg?.chat?.id != null) {
+          const text = String(msg.text ?? "");
+          const cmd = text.trim().split(/\s+/)[0].replace(/^\//, "").split("@")[0];
+          await tgCall("sendMessage", {
+            chat_id: msg.chat.id,
+            text: replyText(cmd),
+            parse_mode: "HTML",
+            reply_markup: replyKeyboard(),
+            disable_web_page_preview: true,
+          }).catch(() => {});
+        } else if (cb?.message?.chat?.id != null) {
+          const cmd = cb.data === "poster" ? "poster" : cb.data === "coffee" ? "coffee" : "start";
+          await tgCall("sendMessage", {
+            chat_id: cb.message.chat.id,
+            text: replyText(cmd),
+            parse_mode: "HTML",
+            reply_markup: replyKeyboard(),
+            disable_web_page_preview: true,
+          }).catch(() => {});
+          await tgCall("answerCallbackQuery", {
+            callback_query_id: cb.id,
+          }).catch(() => {});
+        }
+      }
+    } catch {
+      await new Promise((r) => setTimeout(r, 5000));
+    }
+  }
+}
+
 server.listen(PORT, () => {
   console.log(`Rasa Map telegram relay → http://localhost:${PORT}`);
   console.log(`  health:  GET  /health`);
   console.log(`  send:    POST /api/send`);
   console.log(`  notify:  POST /api/notify`);
+  console.log(`  poll:    ${POLL_ENABLED ? "on (/start /poster /coffee)" : "off"}`);
+  void pollLoop();
 });

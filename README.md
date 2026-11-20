@@ -14,6 +14,8 @@
 [![MapLibre](https://img.shields.io/badge/MapLibre-000?logo=maplibre&logoColor=fff&style=for-the-badge)](https://maplibre.org/)
 [![i18n: 13 languages](https://img.shields.io/badge/i18n-13%20languages-D6AD55?style=for-the-badge)](src/core/i18n)
 
+**🌐 Live demo: [maysamtashakori.github.io/rasa-map](https://maysamtashakori.github.io/rasa-map/)**
+
 A Persian-first companion to [Terraink](https://github.com/yousifamanuel/terraink), reimagined as a creative studio: animated landing, living poster exports, a coffee shop powered by Zibal, and a lead gate that turns downloads into connections.
 
 </div>
@@ -96,6 +98,10 @@ src/features/
   export/  install/  landing/  layout/  location/
   map/     markers/  poster/   shop/    theme/  updates/
 ```
+
+## 🤝 Contributing
+
+Issues and PRs are welcome — open them on [GitHub](https://github.com/MaysamTashakori/rasa-map/issues). Keep changes modular and aligned with the architecture in [AGENT.md](./AGENT.md).
 
 ## 📄 License & attribution
 

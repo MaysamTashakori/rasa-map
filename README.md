@@ -1,177 +1,108 @@
-![](./public/assets/banner.png)
+<div align="center">
 
-# Terraink
+<img src="./public/assets/logo.svg" alt="Rasa Map" width="96" />
 
-[![Website Badge](https://img.shields.io/badge/Website-fff?logo=appveyor&logoColor=000&style=for-the-badge)](https://terraink.app)
-[![Email Badge](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=fff&style=for-the-badge)](mailto:hello@terraink.app)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=for-the-badge)](https://www.linkedin.com/company/terraink/)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=fff&style=for-the-badge)](https://instagram.com/terraink.app)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=fff&style=for-the-badge)](https://www.youtube.com/@terrainkapp)
-[![Threads](https://img.shields.io/badge/Threads-000?logo=threads&logoColor=fff&style=for-the-badge)](https://www.threads.net/@terraink.app)
-[![Reddit](https://img.shields.io/badge/Reddit-FF4500?logo=reddit&logoColor=fff&style=for-the-badge)](https://www.reddit.com/r/terraink)
-[![TikTok](https://img.shields.io/badge/TikTok-000?logo=tiktok&logoColor=fff&style=for-the-badge)](https://www.tiktok.com/@terraink.app)
-[![Product Hunt](https://img.shields.io/badge/Product%20Hunt-DA552F?logo=producthunt&logoColor=fff&style=for-the-badge)](https://www.producthunt.com/products/terraink)
+# رسا مپ · Rasa Map
 
-[![Bun Badge](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff&style=for-the-badge)](https://bun.sh)
-[![Vite Badge](https://img.shields.io/badge/Vite-9135FF?logo=vite&logoColor=fff&style=for-the-badge)](https://vitejs.dev)
-[![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)](https://react.dev/)
-[![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![TypeScript Badge](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=fff&style=for-the-badge)](https://www.typescriptlang.org)
-[![OpenStreetMap Badge](https://img.shields.io/badge/OpenStreetMap-7EBC6F?logo=openstreetmap&logoColor=fff&style=for-the-badge)](https://www.openstreetmap.org)
-[![MapLibre Badge](https://img.shields.io/badge/MapLibre-000?logo=maplibre&logoColor=fff&style=for-the-badge)](https://maplibre.org/)
-[![GitHub Badge](https://img.shields.io/badge/GitHub-fff?logo=github&logoColor=000&style=for-the-badge)](https://github.com/yousifamanuel/terraink)
-[![Cloudflare Badge](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=fff&style=for-the-badge)](https://www.cloudflare.com)
-[![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)](https://www.docker.com)
+**Turn any place on Earth into a living piece of art — posters, postcards, animated GIFs and print-ready files, free and open.**
 
-> Note: Terraink is still in development. Every feedback is appreciated. This is an open-source project, and community contributions are very welcome.
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-0B1424?style=for-the-badge&logo=gnu)](LICENSE)
+[![Bun](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff&style=for-the-badge)](https://bun.sh)
+[![Vite](https://img.shields.io/badge/Vite-9135FF?logo=vite&logoColor=fff&style=for-the-badge)](https://vitejs.dev)
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=fff&style=for-the-badge)](https://www.typescriptlang.org)
+[![MapLibre](https://img.shields.io/badge/MapLibre-000?logo=maplibre&logoColor=fff&style=for-the-badge)](https://maplibre.org/)
+[![i18n: 13 languages](https://img.shields.io/badge/i18n-13%20languages-D6AD55?style=for-the-badge)](src/core/i18n)
 
-> **License & Trademark Notice:** This project is licensed under AGPL-3.0 and includes trademark protections. See the [License](#license) and [Trademark](#trademark) sections for details.
+A Persian-first companion to [Terraink](https://github.com/yousifamanuel/terraink), reimagined as a creative studio: animated landing, living poster exports, a coffee shop powered by Zibal, and a lead gate that turns downloads into connections.
 
-## Watch the Complete Guide
+</div>
 
-[![Terraink: Make Map Posters of Any City for FREE (Complete Guide)](https://img.youtube.com/vi/Eitp-_LAqlc/maxresdefault.jpg)](https://youtu.be/Eitp-_LAqlc)
+---
 
-A 6-minute walkthrough of every menu, from picking a city to exporting a print-ready poster: [watch on YouTube](https://youtu.be/Eitp-_LAqlc).
+## ✨ What makes Rasa Map different
 
-## Features
+| | Terraink | **Rasa Map** |
+|---|---|---|
+| Language | English-first | **Persian-first, RTL, Vazirmatn** — 13 languages |
+| First screen | Studio | **Animated landing** that tells the creative story |
+| Exports | PNG / PDF / SVG | **+ animated GIF and self-contained animated HTML** |
+| Themes | Color palettes | **Print-aware themes** — grain, vignette, risograph, x-ray, holo foil |
+| Monetization | None | **Coffee shop (Zibal), lead capture, print orders** |
 
-- **Custom city map posters** for any location in the world, powered by real OpenStreetMap data
-- **Smart geocoding** — search for any city or region by name, or enter coordinates manually
-- **Rich theme system** — choose from dozens of curated themes or build your own custom color palette
-- **Detailed map layers** — roads, water bodies, parks, and building footprints with per-layer styling
-- **Typography controls** — set city/country display labels in one of nine bundled, self-hosted typefaces
-- **High-resolution export** — download a print-ready poster as PNG, PDF, or layered SVG at any defined dimension
+## 🎬 Features
 
-## Data Providers and Mapping Stack
+- **Living landing page** — an animated "living poster" that demonstrates the creative process before you enter the studio
+- **Real map posters** — any place on Earth via OpenStreetMap data: roads, water, parks, buildings, rail
+- **Animated exports** — Ken Burns GIF (28 frames) and a single-file animated HTML poster with grain, dust particles and breathing glow — zero external requests
+- **Print-grade output** — PNG, PDF, layered SVG (RSVG), up to 300 dpi; optional paper grain & vignette per theme
+- **50+ curated themes** — Persian palettes (Chinar, Lajvard, Firuzeh), Rasa Night/Dusk, Risograph, Indigo Dye, X-Ray, Holo Foil, Neon, Swiss, Vintage Postcard…
+- **Typography controls** — city/country labels in bundled typefaces including Vazirmatn
+- **Smart geocoding** — search any city or enter coordinates manually
+- **Coffee shop** — espresso / americano / macchiato checkout via Zibal gateway (sandbox-ready via env)
+- **Lead gate** — optional name + phone/email before first download, webhook-ready
+- **Zibal payment callback** — request → redirect → verify flow with localized notices
+- **Fully client-side rendering** — no server needed for map generation
+
+## 🖼️ Sample outputs
+
+Every export is a real file you can print or share:
+
+- **PNG / PDF poster** — gallery print, wall art
+- **RSVG** — layered SVG for designers
+- **GIF** — 28-frame Ken Burns animation for social posts & stories
+- **Animated HTML** — a living poster that plays grain, particles and glow offline in one file
+
+## 🧱 Stack
 
 - **Map data**: [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)
-- **Tiles**: [OpenMapTiles](https://openmaptiles.org/)
-- **Tile hosting**: [OpenFreeMap](https://openfreemap.org/)
+- **Tiles**: [OpenMapTiles](https://openmaptiles.org/) · hosted by [OpenFreeMap](https://openfreemap.org/)
 - **Geocoding**: [Nominatim](https://nominatim.openstreetmap.org/)
-- **Map renderer**: [MapLibre](https://maplibre.org/)
+- **Renderer**: [MapLibre GL JS](https://maplibre.org/)
+- **Payments**: [Zibal gateway](https://gateway.zibal.ir) (optional, env-configured)
+- **GIF encoding**: [gifenc](https://github.com/mattdesl/gifenc) — fully client-side
 
-## User Interface
-
-![Terraink web UI](./docs/images/Web_UI.png)
-
-## Showcase
-
-### Featured Examples
-
-<p align="center">
-  <img src="./docs/images/showcase_1.png" alt="Featured showcase example 1" width="100%" />
-  <img src="./docs/images/showcase_2.png" alt="Featured showcase example 2" width="100%" />
-</p>
-
-## License
-
-As of **April 3rd 2026**, all new changes to this repository are licensed under [AGPL-3.0](LICENSE). Code released before that date remains under the [MIT License](LICENSE-OLD).
-
-The hosted Terraink service includes attribution and branding as part of the user interface.
-
-If you deploy or modify the open-source version, you are responsible for complying with the AGPL-3.0 license, including preserving license and copyright notices.
-
-For access to the hosted version with additional features and support, see Terraink Business or contact: [business@terraink.app](mailto:business@terraink.app).
-
-## Trademark
-
-Terraink™ is a trademark of Yousuf Amanuel. An application for registration has been filed with the German Patent and Trade Mark Office (DPMA). This filing establishes priority rights under the Paris Convention, allowing international trademark registration to be pursued within six months of the original filing date. The Terraink logo, visual identity, and branding assets are copyright © 2026 Yousuf Amanuel. All rights reserved.
-
-Unauthorized use of the Terraink name in connection with similar software, map services, or related commercial products may be restricted. For licensing inquiries, contact [business@terraink.app](mailto:business@terraink.app).
-
-See [TRADEMARK.md](./TRADEMARK.md) for details.
-
-## Run
+## 🚀 Run
 
 ```bash
 bun install
-bun run dev
+bun run dev        # http://localhost:5173
 ```
 
-## Environment
-
-Check [`.env.example`](./.env.example) for available variables. They are optional for most local work and should not be set during testing unless a specific case requires them.
-
-## Build
+Or with Docker:
 
 ```bash
-bun run build
+docker compose up -d --build   # http://localhost:7200
 ```
 
-## Deploy with Docker (Self-Hosting)
+## ⚙️ Environment
 
-### 1) Build and run with Docker Compose
+All variables are optional for core functionality — see [`.env.example`](./.env.example).
 
-Create `.env` from `.env.example` (or set `APP_PORT` directly in your shell), then run:
+| Variable | Purpose |
+|---|---|
+| `VITE_ZIBAL_MERCHANT` | Zibal merchant ID for the coffee shop |
+| `VITE_PAYMENT_GATEWAY_URL` | Optional generic payment gateway fallback |
+| `VITE_LEAD_ENDPOINT` | Webhook that receives lead submissions |
+| `VITE_DONATION_LINKS` | JSON array of donation targets |
+| `VITE_APP_CREDIT_URL` | Credit link printed on exports |
 
-```bash
-docker compose up -d --build
+## 🏗️ Architecture
+
+Feature-based + hexagonal layers under `src/features/` — `domain` (pure), `application` (hooks), `infrastructure` (adapters), `ui` (components). Single source of truth: `PosterContext`. See [AGENT.md](./AGENT.md) and [CLAUDE.md](./CLAUDE.md).
+
+```text
+src/features/
+  export/  install/  landing/  layout/  location/
+  map/     markers/  poster/   shop/    theme/  updates/
 ```
 
-This serves the app on `http://localhost:7200` by default.
+## 📄 License & attribution
 
-To change the exposed host port:
+Rasa Map is licensed under [AGPL-3.0](LICENSE). It is a Persian-first fork & companion of [Terraink](https://github.com/yousifamanuel/terraink) by Yousuf Amanuel — all upstream copyright, license and trademark notices are preserved. Terraink™ remains a trademark of its owner; Rasa Map is an independent project.
 
-- Linux/macOS:
+Map data © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright) (ODbL) · Tiles © [OpenMapTiles](https://openmaptiles.org/) · Inspired by [MapToPoster](https://github.com/originalankur/maptoposter).
 
-```bash
-APP_PORT=80 docker compose up -d --build
-```
+## ⭐ Star History
 
-- PowerShell:
-
-```powershell
-$env:APP_PORT=80
-docker compose up -d --build
-```
-
-### 2) Stop the deployment
-
-```bash
-docker compose down
-```
-
-### 3) Optional: build and run without Compose
-
-```bash
-docker build -t terraink:latest .
-docker run -d --name terraink -p 7200:80 --restart unless-stopped terraink:latest
-```
-
-## Reporting Bugs and Requesting Features
-
-Found a problem or have an idea? Open an issue on GitHub, the form asks for everything we need:
-
-- [Report a bug](https://github.com/yousifamanuel/terraink/issues/new?template=bug_report.yml): what happened, how to reproduce it, your device and browser
-- [Request a feature](https://github.com/yousifamanuel/terraink/issues/new?template=feature_request.yml): what you'd like to do and how it could work
-- Questions about using Terraink: [hello@terraink.app](mailto:hello@terraink.app)
-
-Please check the [open issues](https://github.com/yousifamanuel/terraink/issues) first, maybe it's already reported.
-
-## Contributing
-
-> The contribution guidelines are meant to keep Terraink easy to extend, review, and maintain over time. They are here to support a durable architecture, not to add unnecessary friction.
-
-Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a PR.
-
-- Branch from `dev` and target `dev` only. Do not open PRs against `main`.
-- Fill out the pull request template completely when you open a PR.
-- Keep contributions clean, modular, and aligned with the existing architecture.
-- Avoid hard-coded values when constants, configuration, or reusable abstractions are more appropriate.
-- AI-assisted coding is allowed, but submissions must be reviewed, refined, and intentionally engineered before review.
-
-## Attribution
-
-- **Map data**: © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), licensed under [ODbL](https://opendatacommons.org/licenses/odbl/)
-- **Tile schema**: © [OpenMapTiles](https://openmaptiles.org/), licensed under [ODbL](https://openmaptiles.org/docs/tileset/openmaptiles/)
-- **Tile hosting**: [OpenFreeMap](https://openfreemap.org/)
-- **Geocoding**: [Nominatim](https://nominatim.openstreetmap.org/) / OpenStreetMap data
-- **Map renderer**: [MapLibre GL JS](https://maplibre.org/), licensed under [BSD-3-Clause](https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt)
-
-## Acknowledgment
-
-Terraink was inspired by [MapToPoster](https://github.com/originalankur/maptoposter) by [Ankur Gupta](https://github.com/originalankur), originally released under the MIT license. Terraink is an independent reimplementation built from scratch using Bun, React, and TypeScript, and has since evolved significantly beyond the original concept.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yousifamanuel/terraink&type=Date)](https://star-history.com/#yousifamanuel/terraink&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=MaysamTashakori/rasa-map&type=Date)](https://star-history.com/#MaysamTashakori/rasa-map&Date)

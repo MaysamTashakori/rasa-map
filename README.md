@@ -14,7 +14,7 @@
 [![MapLibre](https://img.shields.io/badge/MapLibre-000?logo=maplibre&logoColor=fff&style=for-the-badge)](https://maplibre.org/)
 [![i18n: 13 languages](https://img.shields.io/badge/i18n-13%20languages-D6AD55?style=for-the-badge)](src/core/i18n)
 
-**🌐 Live demo: [maysamtashakori.github.io/rasa-map](https://maysamtashakori.github.io/rasa-map/)**
+**🌐 Live demo: [maysamtashakori.github.io/rasa-map](https://maysamtashakori.github.io/rasa-map/)** · **🎬 [15s cinematic film](https://maysamtashakori.github.io/rasa-map/rasa-map-film.html)**
 
 A Persian-first companion to [Terraink](https://github.com/yousifamanuel/terraink), reimagined as a creative studio: animated landing, living poster exports, a coffee shop powered by Zibal, and a lead gate that turns downloads into connections.
 

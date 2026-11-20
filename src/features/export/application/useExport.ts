@@ -15,6 +15,8 @@ import {
   createPngBlob,
   createPdfBlobFromCanvas,
   createLayeredSvgBlobFromMap,
+  createGifBlobFromCanvas,
+  createAnimatedHtmlBlob,
   createPosterFilename,
   triggerDownloadBlob,
 } from "@/core/services";
@@ -43,6 +45,32 @@ export interface SupportPromptState {
 }
 
 export const SUPPORT_PROMPT_EVENT = "terraink:support-prompt";
+
+/** Lead capture gate: shown once before the first download. */
+export const LEAD_REQUEST_EVENT = "terraink:lead-request";
+export const LEAD_DONE_EVENT = "terraink:lead-done";
+const LEAD_DONE_KEY = "terraink.lead.done";
+const LEAD_DONE_TTL_MS = 365 * 24 * 60 * 60 * 1000;
+
+let leadResolver: (() => void) | null = null;
+
+function ensureLead(): Promise<void> {
+  if (localStorageCache.read<boolean>(LEAD_DONE_KEY, LEAD_DONE_TTL_MS)) {
+    return Promise.resolve();
+  }
+  return new Promise((resolve) => {
+    leadResolver = resolve;
+    window.dispatchEvent(new CustomEvent(LEAD_REQUEST_EVENT));
+  });
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener(LEAD_DONE_EVENT, () => {
+    localStorageCache.write(LEAD_DONE_KEY, true);
+    leadResolver?.();
+    leadResolver = null;
+  });
+}
 
 // Use a 1-year TTL so the export count persists across sessions.
 const EXPORT_COUNT_TTL_MS = 365 * 24 * 60 * 60 * 1000;
@@ -156,6 +184,9 @@ export function useExport() {
         dispatch({ type: "SET_ERROR", error: i18n.t("export.errors.mapNotReady") });
         return;
       }
+
+      // One-time contact capture; never blocks the download itself.
+      await ensureLead();
 
       dispatch({ type: "SET_EXPORT_STATUS", exporting: true });
 
@@ -301,6 +332,29 @@ export function useExport() {
             heightCm,
           });
           await triggerDownloadBlob(pdfBlob, filename);
+        } else if (format === "gif") {
+          const gifBlob = await createGifBlobFromCanvas(canvas);
+          await triggerDownloadBlob(gifBlob, filename);
+        } else if (format === "html") {
+          // Downscale the embedded artwork — the HTML animates it on screen,
+          // so 300 dpi print resolution would only bloat the file.
+          const embedScale = Math.min(1, 1600 / canvas.width);
+          const embed = document.createElement("canvas");
+          embed.width = Math.round(canvas.width * embedScale);
+          embed.height = Math.round(canvas.height * embedScale);
+          const embedCtx = embed.getContext("2d");
+          if (!embedCtx) throw new Error("html_embed_no_context");
+          embedCtx.drawImage(canvas, 0, 0, embed.width, embed.height);
+          const htmlBlob = createAnimatedHtmlBlob({
+            imageDataUrl: embed.toDataURL("image/png"),
+            theme: effectiveTheme,
+            title: posterNames.title,
+            subtitle: posterNames.subtitle,
+            coordinateText,
+            includeCredits: form.includeCredits,
+            aspect: canvas.width / canvas.height,
+          });
+          await triggerDownloadBlob(htmlBlob, filename);
         } else {
           const pngBlob = await createPngBlob(canvas, dpi);
           await triggerDownloadBlob(pngBlob, filename);

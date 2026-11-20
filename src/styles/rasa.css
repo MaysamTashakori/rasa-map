@@ -1,0 +1,176 @@
+/* ══════════════════════════════════════════════════════════════
+   Rasa theme layer — inspired by rasa-to.ir
+   Deep navy aurora, amber signal, violet/cyan accents, glass depth.
+   Loaded last among theme sheets (before RTL overrides).
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --rasa-navy: #0b1424;
+  --rasa-navy-2: #18283f;
+  --rasa-amber: #d6ad55;
+  --rasa-amber-2: #e6c983;
+  --rasa-violet: #7c5cff;
+  --rasa-cyan: #22d3ee;
+  --rasa-rose: #ff5c8a;
+  --rasa-ink: #eef2fb;
+  --rasa-muted: #a8b3cc;
+  --rasa-ease: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --focus-ring: rgba(214, 173, 85, 0.8);
+}
+
+html,
+body {
+  background-color: var(--rasa-navy);
+}
+
+body {
+  background:
+    radial-gradient(
+      120% 80% at 50% -10%,
+      #16264a 0%,
+      var(--rasa-navy) 62%
+    );
+}
+
+/* #root paints its own opaque background — make it transparent so the
+   aurora layers below can show through. */
+#root {
+  background-color: transparent;
+}
+
+/* Aurora blobs: two fixed layers drifting like rasa-to.ir's .aurora */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    radial-gradient(
+      circle at 82% 8%,
+      rgba(214, 173, 85, 0.16),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 8% 30%,
+      rgba(124, 92, 255, 0.14),
+      transparent 38%
+    );
+  animation: rasa-drift-a 28s var(--rasa-ease) infinite alternate;
+}
+
+body::after {
+  background:
+    radial-gradient(
+      circle at 88% 78%,
+      rgba(34, 211, 238, 0.1),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 18% 92%,
+      rgba(255, 92, 138, 0.08),
+      transparent 34%
+    );
+  animation: rasa-drift-b 34s var(--rasa-ease) infinite alternate;
+}
+
+@keyframes rasa-drift-a {
+  from {
+    background-position: 0 0, 0 0;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    background-position: -6% 4%, 5% -3%;
+    transform: translate3d(-2%, 1.5%, 0) scale(1.06);
+  }
+}
+
+@keyframes rasa-drift-b {
+  from {
+    background-position: 0 0, 0 0;
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+  to {
+    background-position: 4% -5%, -4% 3%;
+    transform: translate3d(2%, -1%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
+
+/* ── Amber signal on primary actions (rasa-to.ir .primary) ── */
+
+.export-fab-trigger-desktop,
+.mobile-export-fab-trigger,
+.desktop-export-btn--primary,
+.map-control-btn--primary {
+  background: linear-gradient(
+    135deg,
+    var(--rasa-amber-2),
+    var(--rasa-amber) 55%,
+    #b8913f
+  );
+  border-color: rgba(230, 201, 131, 0.6);
+  color: var(--rasa-navy-2);
+  box-shadow:
+    0 14px 34px -10px rgba(214, 173, 85, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.export-fab-trigger-desktop:hover,
+.mobile-export-fab-trigger:hover,
+.desktop-export-btn--primary:hover:not(:disabled),
+.map-control-btn--primary:hover:not(:disabled) {
+  filter: brightness(1.07);
+  background: linear-gradient(
+    135deg,
+    var(--rasa-amber-2),
+    var(--rasa-amber) 55%,
+    #b8913f
+  );
+  color: var(--rasa-navy-2);
+}
+
+/* Coffee checkout + lead submit share the support-modal primary style */
+.coffee-pay,
+.support-modal__instagram {
+  background: linear-gradient(
+    135deg,
+    var(--rasa-amber-2),
+    var(--rasa-amber) 55%,
+    #b8913f
+  );
+  border-color: rgba(230, 201, 131, 0.55);
+  color: var(--rasa-navy-2);
+}
+
+.coffee-pay:hover:not(:disabled),
+.support-modal__instagram:hover:not(:disabled) {
+  filter: brightness(1.07);
+}
+
+/* Selection + focus follow the amber signal */
+::selection {
+  background: var(--rasa-amber);
+  color: var(--rasa-navy);
+}
+
+/* Rasa glass: panels get a touch more translucency and blur */
+.app-header,
+.info-panel,
+.export-modal,
+.donate-modal,
+.support-modal {
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}

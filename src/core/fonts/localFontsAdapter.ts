@@ -65,6 +65,38 @@ const FONT_LOADERS: Record<string, () => Promise<unknown>> = {
       import("@fontsource/merriweather/700.css"),
     ]),
   "bebas neue": () => import("@fontsource/bebas-neue/400.css"),
+  vazirmatn: () =>
+    Promise.all([
+      import("@fontsource/vazirmatn/300.css"),
+      import("@fontsource/vazirmatn/400.css"),
+      import("@fontsource/vazirmatn/700.css"),
+    ]),
+  lalezar: () => import("@fontsource/lalezar/400.css"),
+  "markazi text": () =>
+    Promise.all([
+      import("@fontsource/markazi-text/400.css"),
+      import("@fontsource/markazi-text/700.css"),
+    ]),
+  "reem kufi": () =>
+    Promise.all([
+      import("@fontsource/reem-kufi/400.css"),
+      import("@fontsource/reem-kufi/700.css"),
+    ]),
+  amiri: () =>
+    Promise.all([
+      import("@fontsource/amiri/400.css"),
+      import("@fontsource/amiri/700.css"),
+    ]),
+  "noto naskh arabic": () =>
+    Promise.all([
+      import("@fontsource/noto-naskh-arabic/400.css"),
+      import("@fontsource/noto-naskh-arabic/700.css"),
+    ]),
+  "aref ruqaa": () =>
+    Promise.all([
+      import("@fontsource/aref-ruqaa/400.css"),
+      import("@fontsource/aref-ruqaa/700.css"),
+    ]),
 };
 
 export const localFontsAdapter: IFontLoader = {

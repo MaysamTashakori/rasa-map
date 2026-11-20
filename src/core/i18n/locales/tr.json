@@ -5,7 +5,7 @@
       "done": "Bitti"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "Raptiye",
       "heart": "Kalp",
       "home": "Ev",
@@ -151,12 +151,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Daha hızlı erişim ve daha iyi bir deneyim için Terraink'i yükleyin.",
+      "deferred": "Daha hızlı erişim ve daha iyi bir deneyim için Rasa Map'i yükleyin.",
       "addToHomeScreen": "Ana ekrana ekle",
       "maybeLater": "Belki sonra",
       "diagnostics": "Tanılama",
       "iosHint": "Daha hızlı erişim ve daha iyi bir deneyim için <share/> simgesine, ardından <strong>Ana Ekrana Ekle</strong> seçeneğine dokunun.",
-      "androidHint": "Daha hızlı erişim ve daha iyi bir deneyim için Terraink'i tarayıcı menünüzden yükleyin: <strong>Uygulamayı yükle</strong> veya <strong>Ana ekrana ekle</strong>"
+      "androidHint": "Daha hızlı erişim ve daha iyi bir deneyim için Rasa Map'i tarayıcı menünüzden yükleyin: <strong>Uygulamayı yükle</strong> veya <strong>Ana ekrana ekle</strong>"
     },
     "diagnostics": {
       "ariaLabel": "Tanılama",
@@ -275,7 +275,7 @@
       "longitude": "Boylam (isteğe bağlı)"
     },
     "geo": {
-      "deniedNative": "Konum erişimi engellendi. Cihaz Ayarları'ndan Terraink için konumu açın, sonra tekrar deneyin.",
+      "deniedNative": "Konum erişimi engellendi. Cihaz Ayarları'ndan Rasa Map için konumu açın, sonra tekrar deneyin.",
       "deniedBrowser": "Konum erişimi engellendi. Tarayıcı ayarlarından konum iznini açın, sonra tekrar deneyin.",
       "unsupported": "Bu tarayıcı konumu desteklemiyor.",
       "insecure": "Konum için güvenli bağlantı (HTTPS) gerekir.",
@@ -490,6 +490,12 @@
       "roads": "Yollar"
     },
     "descriptions": {
+      "chinar": "Çınar yeşili ve sonbahar altını, sıcak kâğıt üzerinde",
+      "lajvard": "Altın sokaklı derin lacivert taşı — saray minyatürü paleti",
+      "firuzeh": "İsfahan çinisi — krem üzerinde turkuaz su ve mürekkep yeşili sokaklar",
+      "zafaran": "Safran ve gül suyu — fildişi üzerinde sıcak kehribar sokaklar",
+      "anar": "Nar gecesi — koyu lal üzerinde kızıl caddeler",
+      "kavir": "Yıldızlı çöl gecesi — mor alacakaranlıkta ay ışığı çizgileri",
       "carrara": "Beyaz mermer — soluk taş, yumuşak kömür grisi damarlar",
       "blush": "Sıcak beyaz üzerinde solgun gül",
       "sandstone": "Sıcak bej, yumuşak kahverengi çizgiler",
@@ -525,6 +531,7 @@
     },
     "categories": {
       "label": "Tema kategorileri",
+      "persian": "İran",
       "all": "Tümü",
       "neutral": "Nötr",
       "sand": "Kum",
@@ -533,7 +540,8 @@
       "green": "Yeşil",
       "light": "Açık",
       "dark": "Koyu",
-      "electric": "Elektrik"
+      "electric": "Elektrik",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -550,11 +558,11 @@
     "support": {
       "close": "Kapat",
       "headline": "✨ Posteriniz hazır!",
-      "text": "Yeni harita fikirleri, tasarım ipuçları ve en son özellikler için Terraink'i Instagram'da takip edin — yaptığınız posterleri de bizimle paylaşın.",
+      "text": "Yeni harita fikirleri, tasarım ipuçları ve en son özellikler için Rasa Map'i Instagram'da takip edin — yaptığınız posterleri de bizimle paylaşın.",
       "followUs": "Bizi takip edin",
-      "videoText": "Terraink'ten daha fazlasını mı istiyorsunuz? Tüm menüleri anlatan 6 dakikalık rehberi izleyin.",
+      "videoText": "Rasa Map'ten daha fazlasını mı istiyorsunuz? Tüm menüleri anlatan 6 dakikalık rehberi izleyin.",
       "videoWatch": "YouTube'da izle",
-      "videoAlt": "Terraink video rehberi"
+      "videoAlt": "Rasa Map video rehberi"
     },
     "errors": {
       "mapNotReady": "Harita hazır değil.",
@@ -565,6 +573,16 @@
       "svgLayerContext": "SVG katmanı dışa aktarma için 2D bağlam oluşturulamadı.",
       "svgOverlayContext": "SVG kaplama dışa aktarma için 2D bağlam oluşturulamadı.",
       "pngBlob": "Canvas'tan PNG blob oluşturulamadı."
+    },
+    "lead": {
+      "close": "Kapat",
+      "headline": "✨ Küçük bir şey",
+      "text": "Telefon veya e-posta bırak — baskı ipuçları ve yeni tasarımlar gönderelim. İndirmen ücretsiz kalır.",
+      "name": "Ad",
+      "phone": "Telefon",
+      "email": "E-posta (isteğe bağlı)",
+      "submit": "Devam",
+      "skip": "Şimdilik değil"
     }
   },
   "settings": {
@@ -608,7 +626,7 @@
       "imprint": "Künye",
       "privacy": "Gizlilik",
       "cookieSettings": "Çerezler",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | Hannover, Almanya'da <heart>❤︎</heart> ile yapıldı",
+      "madeWith": "Rasa Map v{{version}} | açık kaynak Terraink tabanlı (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "Harita verileri © <link>OpenStreetMap katkıda bulunanlar</link>",
       "moreAttribution": "Daha fazla harita atfı"
     },
@@ -636,24 +654,24 @@
       "close": "{{title}} öğesini kapat"
     },
     "ad": {
-      "label": "Reklamlar Terraink'i ücretsiz tutar"
+      "label": "Reklamlar Rasa Map'i ücretsiz tutar"
     },
     "about": {
-      "dialog": "Terraink hakkında"
+      "dialog": "Rasa Map hakkında"
     },
     "info": {
       "helpTitle": "Büyümemize yardım edin",
-      "helpCopy": "Terraink %100 istemci tarafında çalışır ve açık kaynaktır. Yol haritamıza katkıda bulunarak harita sanatının geleceğini birlikte inşa edelim!",
+      "helpCopy": "Rasa Map %100 istemci tarafında çalışır ve açık kaynaktır. Yol haritamıza katkıda bulunarak harita sanatının geleceğini birlikte inşa edelim!",
       "supportProject": "Destek ol",
       "spreadWord": "Duyurun",
       "supportMission": "Destek ol",
       "githubRepo": "GitHub",
-      "openRepo": "Terraink deposunu GitHub'da aç",
-      "starRepo": "Terraink'i GitHub'da yıldızla",
+      "openRepo": "Rasa Map deposunu GitHub'da aç",
+      "starRepo": "Rasa Map'i GitHub'da yıldızla",
       "star": "Yıldızla",
       "donate": "Bağış",
-      "donateLabel": "Terraink'i ücretsiz tutmak için destek olun ve bağış yapın",
-      "follow": "Terraink'i {{network}} üzerinde takip et",
+      "donateLabel": "Rasa Map'i ücretsiz tutmak için destek olun ve bağış yapın",
+      "follow": "Rasa Map'i {{network}} üzerinde takip et",
       "credits": "Aracı başkalarının keşfetmesi için kaynak göstermeyi unutmayın",
       "builtWith": {
         "title": "Kullanılanlar",
@@ -662,14 +680,15 @@
         "hosting": "Karo barındırma",
         "search": "Yer arama",
         "renderer": "Harita motoru"
-      }
+      },
+      "coffee": "Kahve"
     },
     "social": {
       "projectLinks": "Proje bağlantıları",
       "githubRepository": "GitHub deposu"
     },
     "header": {
-      "logoAlt": "Terraink logosu",
+      "logoAlt": "Rasa Map logosu",
       "tagline": "Ücretsiz harita posteri ve duvar kâğıdı",
       "about": "Hakkında"
     },
@@ -696,7 +715,7 @@
       "doneEditing": "Bitti"
     },
     "donate": {
-      "intro": "Terraink'i ve dayandığı açık projeleri destekle. Bağlantılar yeni sekmede açılır."
+      "intro": "Rasa Map'i ve dayandığı açık projeleri destekle. Bağlantılar yeni sekmede açılır."
     }
   },
   "updates": {
@@ -736,7 +755,67 @@
     "error": "Bu belge yüklenemedi — lütfen daha sonra tekrar deneyin."
   },
   "meta": {
-    "title": "Terraink: Ücretsiz Harita Posteri ve Duvar Kâğıdı Oluşturucu",
+    "title": "Rasa Map: Ücretsiz Harita Posteri ve Duvar Kâğıdı Oluşturucu",
     "description": "Ücretsiz çevrimiçi harita posteri ve duvar kâğıdı oluşturucu. Her şehir veya konum için baskıya hazır özel harita sanatı tasarlayın — PNG, PDF veya SVG olarak dışa aktarın. Kayıt gerekmez."
+  },
+  "shop": {
+    "buttonLabel": "Rasa Map'a bir kahve ısmarla",
+    "title": "Bize bir kahve ısmarla",
+    "subtitle": "Her fincan Rasa Map'ı ücretsiz tutar. Bir içecek seç, numaranı bırak ve güvenle öde.",
+    "menuLabel": "Kahve menüsü",
+    "currency": "Toman",
+    "gatewayPending": "Ödeme ağ geçidi kuruluyor — siparişin onaylanacak. Numaranı bırak.",
+    "pay": "Öde",
+    "processing": "Ağ geçidiyle iletişim…",
+    "success": "Sipariş alındı — teşekkürler! Sizinle iletişime geçeceğiz.",
+    "successSandbox": "Sandbox testi kabul edildi — gerçek tahsilat yapılmadı.",
+    "orderAnother": "Başka kahve sipariş et",
+    "errorNetwork": "Ödeme ağ geçidine ulaşılamadı. Bağlantını kontrol et.",
+    "errorGeneric": "Ağ geçidi siparişi tamamlayamadı. Tekrar dene.",
+    "items": {
+      "espresso": {
+        "name": "Tek espresso",
+        "desc": "Oluşturma kuyruğunu besleyen küçük, sert bir shot."
+      },
+      "americano": {
+        "name": "Americano",
+        "desc": "Klasik — yumuşak, dengeli, dipsiz."
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "desc": "Süt bulutuyla lekeleşmiş espresso."
+      }
+    },
+    "paymentSuccess": "Ödeme doğrulandı — teşekkürler! Kahveniz yolda.",
+    "paymentCancelled": "Ödeme iptal edildi — tahsilat yapılmadı.",
+    "paymentFailed": "Ödeme doğrulanamadı. Para çekildiyse destekle iletişime geçin."
+  },
+  "landing": {
+    "eyebrow": "Yaratıcı harita stüdyosu",
+    "title": "Her yeri",
+    "titleAccent": "canlı sanata çevir",
+    "tagline": "Rasa Map şehirleri posterlere, kartpostallara ve canlı GIF'lere dönüştürür — ücretsiz, tarayıcıda, baskıya hazır.",
+    "stepsLabel": "Yaratıcı süreç",
+    "step1": {
+      "title": "Yer seç",
+      "desc": "Ara ya da haritaya pin bırak"
+    },
+    "step2": {
+      "title": "Temayı biçimlendir",
+      "desc": "48 sanat teması + kendi renklerin"
+    },
+    "step3": {
+      "title": "Rota ve pin çiz",
+      "desc": "GPS rotaları, işaretçiler ve katmanlar"
+    },
+    "step4": {
+      "title": "Eseri dışa aktar",
+      "desc": "PNG, PDF, SVG, GIF, animasyonlu HTML + baskı"
+    },
+    "cta": "Stüdyoya gir",
+    "hint": "Ücretsiz, kurulum yok — her şey tarayıcıda çalışır.",
+    "chipPrint": "Baskı",
+    "chipPostcard": "Kartpostal",
+    "chipStory": "Hikâye"
   }
 }

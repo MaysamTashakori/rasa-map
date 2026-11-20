@@ -5,7 +5,7 @@
       "done": "Gotowe"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "Pinezka",
       "heart": "Serce",
       "home": "Dom",
@@ -153,12 +153,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Zainstaluj Terraink, aby mieć szybszy dostęp i wygodniejsze korzystanie.",
+      "deferred": "Zainstaluj Rasa Map, aby mieć szybszy dostęp i wygodniejsze korzystanie.",
       "addToHomeScreen": "Dodaj do ekranu głównego",
       "maybeLater": "Może później",
       "diagnostics": "Diagnostyka",
       "iosHint": "Dotknij <share/>, a potem <strong>Do ekranu początkowego</strong>, aby mieć szybszy dostęp i wygodniejsze korzystanie.",
-      "androidHint": "Aby mieć szybszy dostęp i wygodniejsze korzystanie, zainstaluj Terraink z menu przeglądarki: <strong>Zainstaluj aplikację</strong> lub <strong>Dodaj do ekranu głównego</strong>"
+      "androidHint": "Aby mieć szybszy dostęp i wygodniejsze korzystanie, zainstaluj Rasa Map z menu przeglądarki: <strong>Zainstaluj aplikację</strong> lub <strong>Dodaj do ekranu głównego</strong>"
     },
     "diagnostics": {
       "ariaLabel": "Diagnostyka",
@@ -277,7 +277,7 @@
       "longitude": "Długość (opc.)"
     },
     "geo": {
-      "deniedNative": "Dostęp do lokalizacji jest zablokowany. Włącz lokalizację dla Terraink w ustawieniach urządzenia i spróbuj ponownie.",
+      "deniedNative": "Dostęp do lokalizacji jest zablokowany. Włącz lokalizację dla Rasa Map w ustawieniach urządzenia i spróbuj ponownie.",
       "deniedBrowser": "Dostęp do lokalizacji jest zablokowany. Włącz uprawnienie do lokalizacji w ustawieniach przeglądarki i spróbuj ponownie.",
       "unsupported": "Ta przeglądarka nie obsługuje lokalizacji.",
       "insecure": "Lokalizacja wymaga bezpiecznego połączenia (HTTPS).",
@@ -494,6 +494,12 @@
       "roads": "Drogi"
     },
     "descriptions": {
+      "chinar": "Zieleń platanu i jesienne złoto na ciepłym papierze",
+      "lajvard": "Głęboki lapis lazuli ze złoconymi ulicami — królewska paleta miniatur",
+      "firuzeh": "Kafle z Isfahanu — turkusowa woda i atramentowe ulice na kremie",
+      "zafaran": "Szafran i woda różana — ciepłe bursztynowe ulice na kości słoniowej",
+      "anar": "Noc granatu — karmazynowe aleje na ciemnym granacie",
+      "kavir": "Pustynna noc pod gwiazdami — księżycowe linie na fioletowym zmierzchu",
       "carrara": "Biały marmur — jasny kamień z miękkimi szarymi żyłkami",
       "blush": "Przygaszona róża na ciepłej bieli",
       "sandstone": "Ciepły beż ze stonowanymi brązowymi liniami",
@@ -529,6 +535,7 @@
     },
     "categories": {
       "label": "Kategorie motywów",
+      "persian": "Perskie",
       "all": "Wszystkie",
       "neutral": "Neutralne",
       "sand": "Piasek",
@@ -537,7 +544,8 @@
       "green": "Zielone",
       "light": "Jasne",
       "dark": "Ciemne",
-      "electric": "Elektryczne"
+      "electric": "Elektryczne",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -554,11 +562,11 @@
     "support": {
       "close": "Zamknij",
       "headline": "✨ Twój plakat jest gotowy!",
-      "text": "Obserwuj Terraink na Instagramie, by poznać nowe pomysły na mapy, wskazówki projektowe i najnowsze funkcje — i pochwal się swoimi plakatami.",
+      "text": "Obserwuj Rasa Map na Instagramie, by poznać nowe pomysły na mapy, wskazówki projektowe i najnowsze funkcje — i pochwal się swoimi plakatami.",
       "followUs": "Obserwuj nas",
-      "videoText": "Chcesz wycisnąć więcej z Terraink? Obejrzyj 6-minutowy przewodnik po wszystkich menu.",
+      "videoText": "Chcesz wycisnąć więcej z Rasa Map? Obejrzyj 6-minutowy przewodnik po wszystkich menu.",
       "videoWatch": "Obejrzyj na YouTube",
-      "videoAlt": "Wideoporadnik Terraink"
+      "videoAlt": "Wideoporadnik Rasa Map"
     },
     "errors": {
       "mapNotReady": "Mapa nie jest gotowa.",
@@ -569,6 +577,16 @@
       "svgLayerContext": "Nie udało się utworzyć kontekstu 2D do eksportu warstwy SVG.",
       "svgOverlayContext": "Nie udało się utworzyć kontekstu 2D do eksportu nakładki SVG.",
       "pngBlob": "Nie udało się utworzyć pliku PNG z canvasu."
+    },
+    "lead": {
+      "close": "Zamknij",
+      "headline": "✨ Jedna drobnost",
+      "text": "Zostaw telefon lub e-mail — wyślemy wskazówki do druku i nowe projekty. Pobieranie zostaje darmowe.",
+      "name": "Imię",
+      "phone": "Telefon",
+      "email": "E-mail (opcjonalnie)",
+      "submit": "Dalej",
+      "skip": "Nie teraz"
     }
   },
   "settings": {
@@ -612,7 +630,7 @@
       "imprint": "Nota prawna",
       "privacy": "Prywatność",
       "cookieSettings": "Cookies",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | Stworzone z <heart>❤︎</heart> w Hanowerze, Niemcy",
+      "madeWith": "Rasa Map v{{version}} | oparte na otwartym kodzie Terraink (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "Dane mapy © <link>współtwórcy OpenStreetMap</link>",
       "moreAttribution": "Źródła mapy"
     },
@@ -640,24 +658,24 @@
       "close": "Zamknij: {{title}}"
     },
     "ad": {
-      "label": "Reklamy utrzymują Terraink za darmo"
+      "label": "Reklamy utrzymują Rasa Map za darmo"
     },
     "about": {
-      "dialog": "O Terraink"
+      "dialog": "O Rasa Map"
     },
     "info": {
       "helpTitle": "Pomóż nam rosnąć",
-      "helpCopy": "Terraink działa w 100% po stronie klienta i ma otwarty kod. Pomóż nam budować przyszłość sztuki map, współtworząc naszą mapę drogową!",
+      "helpCopy": "Rasa Map działa w 100% po stronie klienta i ma otwarty kod. Pomóż nam budować przyszłość sztuki map, współtworząc naszą mapę drogową!",
       "supportProject": "Wesprzyj projekt",
       "spreadWord": "Poleć dalej",
       "supportMission": "Wesprzyj misję",
       "githubRepo": "GitHub",
-      "openRepo": "Otwórz repozytorium Terraink na GitHub",
-      "starRepo": "Daj gwiazdkę Terraink na GitHub",
+      "openRepo": "Otwórz repozytorium Rasa Map na GitHub",
+      "starRepo": "Daj gwiazdkę Rasa Map na GitHub",
       "star": "Gwiazdka",
       "donate": "Wesprzyj",
-      "donateLabel": "Wesprzyj Terraink darowizną, by pozostał darmowy",
-      "follow": "Obserwuj Terraink na {{network}}",
+      "donateLabel": "Wesprzyj Rasa Map darowizną, by pozostał darmowy",
+      "follow": "Obserwuj Rasa Map na {{network}}",
       "credits": "Podaj źródło, by pomóc innym odkryć to narzędzie",
       "builtWith": {
         "title": "Zbudowano z",
@@ -666,14 +684,15 @@
         "hosting": "Hosting kafelków",
         "search": "Wyszukiwanie miejsc",
         "renderer": "Silnik mapy"
-      }
+      },
+      "coffee": "Kawa"
     },
     "social": {
       "projectLinks": "Linki projektu",
       "githubRepository": "Repozytorium GitHub"
     },
     "header": {
-      "logoAlt": "Logo Terraink",
+      "logoAlt": "Logo Rasa Map",
       "tagline": "Darmowy kreator plakatów i tapet z map",
       "about": "O nas"
     },
@@ -700,7 +719,7 @@
       "doneEditing": "Gotowe"
     },
     "donate": {
-      "intro": "Wesprzyj Terraink i otwarte projekty, na których działa. Linki otwierają się w nowej karcie."
+      "intro": "Wesprzyj Rasa Map i otwarte projekty, na których działa. Linki otwierają się w nowej karcie."
     }
   },
   "updates": {
@@ -740,7 +759,67 @@
     "error": "Nie udało się wczytać dokumentu — spróbuj ponownie później."
   },
   "meta": {
-    "title": "Terraink: darmowy kreator plakatów i tapet z map",
+    "title": "Rasa Map: darmowy kreator plakatów i tapet z map",
     "description": "Darmowy generator plakatów i tapet z map online. Projektuj własne mapy gotowe do druku dla dowolnego miasta lub miejsca i eksportuj je jako PNG, PDF lub SVG. Bez rejestracji."
+  },
+  "shop": {
+    "buttonLabel": "Postaw Rasa Map kawę",
+    "title": "Postaw nam kawę",
+    "subtitle": "Każda filiżanka utrzymuje Rasa Map za darmo. Wybierz napój, zostaw numer i zapłać bezpiecznie.",
+    "menuLabel": "Karta kaw",
+    "currency": "Toman",
+    "gatewayPending": "Bramka płatności jest konfigurowana — zamówienie zostanie potwierdzone. Zostaw numer.",
+    "pay": "Zapłać",
+    "processing": "Kontakt z bramką…",
+    "success": "Zamówienie przyjęte — dziękujemy! Skontaktujemy się.",
+    "successSandbox": "Test sandbox przyjęty — nic nie pobrano.",
+    "orderAnother": "Zamów kolejną kawę",
+    "errorNetwork": "Nie można połączyć się z bramką. Sprawdź połączenie.",
+    "errorGeneric": "Bramka nie mogła dokończyć zamówienia. Spróbuj ponownie.",
+    "items": {
+      "espresso": {
+        "name": "Pojedyncze espresso",
+        "desc": "Mały, mocny shot do kolejki renderowania."
+      },
+      "americano": {
+        "name": "Americano",
+        "desc": "Klasyk — łagodny, zrównoważony, bez dna."
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "desc": "Espresso poplamane chmurką mleka."
+      }
+    },
+    "paymentSuccess": "Płatność zweryfikowana — dziękujemy! Twoja kawa jest w drodze.",
+    "paymentCancelled": "Płatność anulowana — nic nie pobrano.",
+    "paymentFailed": "Nie udało się zweryfikować płatności. Jeśli pobrano środki, skontaktuj się z pomocą."
+  },
+  "landing": {
+    "eyebrow": "Kreatywne studio map",
+    "title": "Zamień każde miejsce w",
+    "titleAccent": "żywą sztukę",
+    "tagline": "Rasa Map zamienia miasta w plakaty, pocztówki i żywe GIF-y — za darmo, w przeglądarce, gotowe do druku.",
+    "stepsLabel": "Proces twórczy",
+    "step1": {
+      "title": "Wybierz miejsce",
+      "desc": "Wyszukaj lub upuść pinezkę na mapie"
+    },
+    "step2": {
+      "title": "Ustaw motyw",
+      "desc": "48 motywów artystycznych + własne kolory"
+    },
+    "step3": {
+      "title": "Rysuj trasy i pinezki",
+      "desc": "Trasy GPS, markery i warstwy"
+    },
+    "step4": {
+      "title": "Wyeksportuj dzieło",
+      "desc": "PNG, PDF, SVG, GIF, animowane HTML + druk"
+    },
+    "cta": "Wejdź do studia",
+    "hint": "Za darmo, bez instalacji — wszystko w przeglądarce.",
+    "chipPrint": "Druk",
+    "chipPostcard": "Pocztówka",
+    "chipStory": "Relacja"
   }
 }

@@ -3,6 +3,7 @@ import {
   DOUBLE_LINE_GAP,
   type PosterStyleTemplate,
 } from "@/features/poster/domain/posterStyleTemplates";
+import type { ThemeFx } from "@/features/theme/domain/types";
 
 export function applyFades(
   ctx: CanvasRenderingContext2D,
@@ -60,6 +61,62 @@ export function applyFades(
     rightGradient.addColorStop(1, withAlpha(color, 0));
     ctx.fillStyle = rightGradient;
     ctx.fillRect(width - rightWidth, 0, rightWidth, height);
+  }
+}
+
+/**
+ * Print effects inspired by risograph/analog posters:
+ * - vignette: soft darkening toward the edges (drawn under text).
+ * - grain: subtle paper noise over the whole poster (drawn last).
+ */
+export function applyPrintEffects(
+  ctx: CanvasRenderingContext2D,
+  width: number,
+  height: number,
+  fx: ThemeFx | undefined,
+  phase: "vignette" | "grain",
+): void {
+  if (!fx) return;
+
+  if (phase === "vignette" && fx.vignette) {
+    const strength = Math.min(1, Math.max(0, fx.vignette));
+    const cx = width / 2;
+    const cy = height / 2;
+    const radius = Math.hypot(cx, cy);
+    const g = ctx.createRadialGradient(cx, cy, radius * 0.45, cx, cy, radius);
+    g.addColorStop(0, "rgba(0,0,0,0)");
+    g.addColorStop(1, `rgba(0,0,0,${(strength * 0.45).toFixed(3)})`);
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, width, height);
+    return;
+  }
+
+  if (phase === "grain" && fx.grain) {
+    const strength = Math.min(1, Math.max(0, fx.grain));
+    const size = 256;
+    const noise = document.createElement("canvas");
+    noise.width = size;
+    noise.height = size;
+    const nctx = noise.getContext("2d");
+    if (!nctx) return;
+    const img = nctx.createImageData(size, size);
+    for (let i = 0; i < img.data.length; i += 4) {
+      const v = Math.floor(Math.random() * 255);
+      img.data[i] = v;
+      img.data[i + 1] = v;
+      img.data[i + 2] = v;
+      img.data[i + 3] = 255;
+    }
+    nctx.putImageData(img, 0, 0);
+    ctx.save();
+    ctx.globalAlpha = strength * 0.16;
+    ctx.globalCompositeOperation = "overlay";
+    const pattern = ctx.createPattern(noise, "repeat");
+    if (pattern) {
+      ctx.fillStyle = pattern;
+      ctx.fillRect(0, 0, width, height);
+    }
+    ctx.restore();
   }
 }
 

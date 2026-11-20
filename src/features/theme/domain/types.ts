@@ -41,9 +41,18 @@ export interface ThemeColors {
   map: ThemeMapColors;
 }
 
+export interface ThemeFx {
+  /** Paper grain overlay strength (0–1). */
+  grain?: number;
+  /** Edge vignette darkening (0–1). */
+  vignette?: number;
+}
+
 export interface ResolvedTheme extends ThemeColors {
   name: string;
   description: string;
+  /** Optional print effects applied at export time. */
+  fx?: ThemeFx;
 }
 
 export type ThemeColorKey =

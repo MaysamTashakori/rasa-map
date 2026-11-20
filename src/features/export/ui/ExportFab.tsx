@@ -9,6 +9,8 @@ const FORMAT_OPTIONS: { format: ExportFormat; label: string }[] = [
   { format: "png", label: "PNG" },
   { format: "pdf", label: "PDF" },
   { format: "svg", label: "RSVG" },
+  { format: "gif", label: "GIF" },
+  { format: "html", label: "HTML" },
 ];
 
 interface ExportFabProps {

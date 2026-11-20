@@ -11,6 +11,7 @@ import { drawRoutesOnCanvas } from "@/features/routes/infrastructure/rendering";
 import { routeEndpointMarkerItems } from "@/features/routes/infrastructure/helpers";
 import {
   applyFades,
+  applyPrintEffects,
   drawTemplateFrame,
 } from "@/features/poster/infrastructure/renderer/layers";
 import { drawPosterText } from "@/features/poster/infrastructure/renderer/typography";
@@ -186,6 +187,7 @@ export async function createLayeredSvgBlobFromMap({
         id: "fades",
         dataUrl: canvasToDataUrl(exportWidth, exportHeight, (ctx) => {
           applyFades(ctx, exportWidth, exportHeight, theme.ui.bg, template);
+          applyPrintEffects(ctx, exportWidth, exportHeight, theme.fx, "vignette");
         }),
       });
     }
@@ -295,6 +297,15 @@ export async function createLayeredSvgBlobFromMap({
         );
       }),
     });
+
+    if (theme.fx?.grain) {
+      overlayLayers.push({
+        id: "grain",
+        dataUrl: canvasToDataUrl(exportWidth, exportHeight, (ctx) => {
+          applyPrintEffects(ctx, exportWidth, exportHeight, theme.fx, "grain");
+        }),
+      });
+    }
 
     const mapLayerGroups = mapLayerDataUrls
       .map(

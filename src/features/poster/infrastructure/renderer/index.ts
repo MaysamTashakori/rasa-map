@@ -1,5 +1,5 @@
 import i18n from "@/core/i18n";
-import { applyFades, drawTemplateFrame } from "./layers";
+import { applyFades, applyPrintEffects, drawTemplateFrame } from "./layers";
 import { drawPosterText } from "./typography";
 import { drawMarkersOnCanvas } from "@/features/markers/infrastructure/rendering";
 import { drawRoutesOnCanvas } from "@/features/routes/infrastructure/rendering";
@@ -57,9 +57,10 @@ export async function compositeExport(
   // 1. Draw map snapshot
   ctx.drawImage(mapCanvas, 0, 0);
 
-  // 2. Gradient fades
+  // 2. Gradient fades + vignette (under text and markers)
   if (showOverlay) {
     applyFades(ctx, width, height, theme.ui.bg, template);
+    applyPrintEffects(ctx, width, height, theme.fx, "vignette");
   }
 
   // 3. Routes (below markers)
@@ -129,6 +130,9 @@ export async function compositeExport(
     template,
     coordinateText,
   );
+
+  // 8. Paper grain — last, over everything, like a real print
+  applyPrintEffects(ctx, width, height, theme.fx, "grain");
 
   const size: CanvasSize = {
     width,

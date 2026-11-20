@@ -5,7 +5,7 @@
       "done": "Done"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "Pin",
       "heart": "Heart",
       "home": "Home",
@@ -151,12 +151,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Install Terraink for faster access and a better experience.",
+      "deferred": "Install Rasa Map for faster access and a better experience.",
       "addToHomeScreen": "Add to Home Screen",
       "maybeLater": "Maybe later",
       "diagnostics": "Diagnostics",
       "iosHint": "Tap <share/> then <strong>Add to Home Screen</strong> for faster access and a better experience.",
-      "androidHint": "For faster access and a better experience, install Terraink from your browser menu: <strong>Install app</strong> or <strong>Add to Home screen</strong>"
+      "androidHint": "For faster access and a better experience, install Rasa Map from your browser menu: <strong>Install app</strong> or <strong>Add to Home screen</strong>"
     },
     "diagnostics": {
       "ariaLabel": "Install diagnostics",
@@ -275,7 +275,7 @@
       "longitude": "Longitude (optional)"
     },
     "geo": {
-      "deniedNative": "Location access is blocked. Enable location for Terraink in your device Settings, then try again.",
+      "deniedNative": "Location access is blocked. Enable location for Rasa Map in your device Settings, then try again.",
       "deniedBrowser": "Location access is blocked. Enable location permission in your browser settings, then try again.",
       "unsupported": "Location is not supported in this browser.",
       "insecure": "Location requires a secure connection (HTTPS).",
@@ -490,6 +490,12 @@
       "roads": "Roads"
     },
     "descriptions": {
+      "chinar": "Plane-tree green and autumn gold on warm paper",
+      "lajvard": "Deep lapis lazuli with gilded streets — a royal miniature palette",
+      "firuzeh": "Isfahan tilework — turquoise water and ink-teal streets on cream",
+      "zafaran": "Saffron and rosewater — warm amber streets on ivory",
+      "anar": "Pomegranate night — crimson avenues on deep garnet",
+      "kavir": "Desert night under the stars — moonlit sand lines on violet dusk",
       "carrara": "White marble — pale stone with soft charcoal veining",
       "blush": "Dusty rose on warm white",
       "sandstone": "Warm beige with muted brown lines",
@@ -525,6 +531,7 @@
     },
     "categories": {
       "label": "Theme categories",
+      "persian": "Persian",
       "all": "All",
       "neutral": "Neutral",
       "sand": "Sand",
@@ -533,7 +540,8 @@
       "green": "Green",
       "light": "Light",
       "dark": "Dark",
-      "electric": "Electric"
+      "electric": "Electric",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -550,11 +558,11 @@
     "support": {
       "close": "Close",
       "headline": "✨ Your poster is ready!",
-      "text": "Follow Terraink on Instagram for fresh map ideas, design tips, and the latest features — and show off the posters you make.",
+      "text": "Follow Rasa Map on Instagram for fresh map ideas, design tips, and the latest features — and show off the posters you make.",
       "followUs": "Follow us",
-      "videoText": "Want to get more out of Terraink? Watch the 6-minute guide to every menu.",
+      "videoText": "Want to get more out of Rasa Map? Watch the 6-minute guide to every menu.",
       "videoWatch": "Watch on YouTube",
-      "videoAlt": "Terraink video guide"
+      "videoAlt": "Rasa Map video guide"
     },
     "errors": {
       "mapNotReady": "Map is not ready.",
@@ -565,6 +573,16 @@
       "svgLayerContext": "Could not create 2D context for SVG layer export.",
       "svgOverlayContext": "Could not create 2D context for SVG overlay export.",
       "pngBlob": "Failed to create PNG blob from canvas."
+    },
+    "lead": {
+      "close": "Close",
+      "headline": "✨ One quick thing",
+      "text": "Leave a phone or email — we send print tips and new designs. Your download stays free.",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email (optional)",
+      "submit": "Continue",
+      "skip": "Skip for now"
     }
   },
   "settings": {
@@ -608,7 +626,7 @@
       "imprint": "Imprint",
       "privacy": "Data Privacy",
       "cookieSettings": "Cookie Settings",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | Made with <heart>❤︎</heart> in Hannover, Germany",
+      "madeWith": "Rasa Map v{{version}} | based on open-source Terraink (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "Map data © <link>OpenStreetMap contributors</link>",
       "moreAttribution": "More map attribution"
     },
@@ -636,24 +654,24 @@
       "close": "Close {{title}}"
     },
     "ad": {
-      "label": "Ads keep Terraink free"
+      "label": "Ads keep Rasa Map free"
     },
     "about": {
-      "dialog": "About Terraink"
+      "dialog": "About Rasa Map"
     },
     "info": {
       "helpTitle": "Help Us Grow",
-      "helpCopy": "Terraink is 100% client-side and open-source. Help us build the future of map art by contributing to our roadmap!",
+      "helpCopy": "Rasa Map is 100% client-side and open-source. Help us build the future of map art by contributing to our roadmap!",
       "supportProject": "Support the project",
       "spreadWord": "Spread the word",
       "supportMission": "Support the mission",
       "githubRepo": "GitHub Repo",
-      "openRepo": "Open Terraink repository on GitHub",
-      "starRepo": "Star Terraink on GitHub",
+      "openRepo": "Open Rasa Map repository on GitHub",
+      "starRepo": "Star Rasa Map on GitHub",
       "star": "Star",
       "donate": "Donate",
-      "donateLabel": "Support Terraink and donate to keep it free",
-      "follow": "Follow Terraink on {{network}}",
+      "donateLabel": "Support Rasa Map and donate to keep it free",
+      "follow": "Follow Rasa Map on {{network}}",
       "credits": "Include credits to help others discover the tool",
       "builtWith": {
         "title": "Built with",
@@ -662,14 +680,15 @@
         "hosting": "Tile hosting",
         "search": "Place search",
         "renderer": "Map engine"
-      }
+      },
+      "coffee": "Coffee"
     },
     "social": {
       "projectLinks": "Project links",
       "githubRepository": "GitHub repository"
     },
     "header": {
-      "logoAlt": "Terraink logo",
+      "logoAlt": "Rasa Map logo",
       "tagline": "Free Map Poster & Wallpaper Creator",
       "about": "About"
     },
@@ -696,7 +715,7 @@
       "doneEditing": "Done Editing"
     },
     "donate": {
-      "intro": "Support Terraink and the open projects it runs on. Links open in a new tab."
+      "intro": "Support Rasa Map and the open projects it runs on. Links open in a new tab."
     }
   },
   "updates": {
@@ -736,7 +755,67 @@
     "error": "Couldn't load this document — please try again later."
   },
   "meta": {
-    "title": "Terraink: Free Map Poster & Wallpaper Creator",
+    "title": "Rasa Map: Free Map Poster & Wallpaper Creator",
     "description": "Free online map poster and wallpaper generator. Design custom, print-ready map art for any city or location — export as PNG, PDF, or SVG. No sign-up required."
+  },
+  "shop": {
+    "buttonLabel": "Buy Rasa Map a coffee",
+    "title": "Buy us a coffee",
+    "subtitle": "Every cup keeps Rasa Map free. Pick a drink, leave your number and pay securely.",
+    "menuLabel": "Coffee menu",
+    "currency": "Toman",
+    "gatewayPending": "The payment gateway is being set up — your order will be confirmed soon. Leave your number and we will reach you.",
+    "pay": "Pay",
+    "processing": "Contacting the gateway…",
+    "success": "Order received — thank you! We will be in touch.",
+    "successSandbox": "Sandbox test accepted — no real charge was made.",
+    "orderAnother": "Order another coffee",
+    "errorNetwork": "Could not reach the payment gateway. Check your connection and try again.",
+    "errorGeneric": "The gateway could not complete the order. Please try again.",
+    "items": {
+      "espresso": {
+        "name": "Single Espresso",
+        "desc": "One small strong shot to fuel the render queue."
+      },
+      "americano": {
+        "name": "Americano",
+        "desc": "The classic — smooth, balanced, bottomless."
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "desc": "Espresso stained with a cloud of milk."
+      }
+    },
+    "paymentSuccess": "Payment verified — thank you! Your coffee is on the way.",
+    "paymentCancelled": "Payment cancelled — no charge was made.",
+    "paymentFailed": "Payment could not be verified. If money was deducted, contact support."
+  },
+  "landing": {
+    "eyebrow": "Creative map studio",
+    "title": "Turn any place into",
+    "titleAccent": "living art",
+    "tagline": "Rasa Map turns cities into posters, postcards and living GIFs — free, in your browser, print-ready.",
+    "stepsLabel": "Creative process",
+    "step1": {
+      "title": "Pick a place",
+      "desc": "Search it or drop a pin on the map"
+    },
+    "step2": {
+      "title": "Style the theme",
+      "desc": "48 art themes + your own colors"
+    },
+    "step3": {
+      "title": "Draw routes & pins",
+      "desc": "GPS routes, markers and layers"
+    },
+    "step4": {
+      "title": "Export the art",
+      "desc": "PNG, PDF, SVG, GIF, animated HTML + print"
+    },
+    "cta": "Enter the studio",
+    "hint": "Free, no install — everything runs in your browser.",
+    "chipPrint": "Print",
+    "chipPostcard": "Postcard",
+    "chipStory": "Story"
   }
 }

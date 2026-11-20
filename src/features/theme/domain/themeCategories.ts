@@ -1,5 +1,6 @@
 /** Theme categories for the Theme tab, in display order. */
 export type ThemeCategoryId =
+  | "persian"
   | "neutral"
   | "sand"
   | "warm"
@@ -7,7 +8,8 @@ export type ThemeCategoryId =
   | "green"
   | "light"
   | "dark"
-  | "electric";
+  | "electric"
+  | "rasa";
 
 export interface ThemeCategory {
   id: ThemeCategoryId;
@@ -19,15 +21,20 @@ export interface ThemeCategory {
 
 export const THEME_CATEGORIES: ThemeCategory[] = [
   {
+    id: "persian",
+    color: "#1F9C9A",
+    themeIds: ["chinar", "lajvard", "firuzeh", "zafaran", "anar", "kavir"],
+  },
+  {
     id: "neutral",
     color: "#A6A6A6",
-    themeIds: ["carrara", "graphite", "noir", "japanese_ink", "contrast_zones"],
+    themeIds: ["carrara", "graphite", "noir", "japanese_ink", "contrast_zones", "swiss", "vintage_postcard"],
   },
-  { id: "sand", color: "#E4CF92", themeIds: ["sandstone", "desert", "rustic"] },
+  { id: "sand", color: "#E4CF92", themeIds: ["sandstone", "desert", "rustic", "vintage_postcard"] },
   {
     id: "warm",
     color: "#C8742E",
-    themeIds: ["amber", "autumn", "copper", "heatwave", "terracotta", "rustic"],
+    themeIds: ["amber", "autumn", "copper", "heatwave", "terracotta", "rustic", "risograph", "night_bazaar"],
   },
   {
     id: "water",
@@ -39,6 +46,8 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
       "mono_blue",
       "blueprint",
       "forest",
+      "indigo_dye",
+      "xray",
     ],
   },
   {
@@ -49,7 +58,7 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
   {
     id: "light",
     color: "#F0C6CC",
-    themeIds: ["blush", "coral", "pastel_dream", "sage"],
+    themeIds: ["blush", "coral", "pastel_dream", "sage", "risograph", "swiss"],
   },
   {
     id: "dark",
@@ -63,9 +72,14 @@ export const THEME_CATEGORIES: ThemeCategory[] = [
       "emerald",
       "noir",
       "graphite",
+      "indigo_dye",
+      "night_bazaar",
+      "aurora",
+      "solar_dusk",
     ],
   },
-  { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber"] },
+  { id: "electric", color: "#FF2BD6", themeIds: ["neon", "cyber", "xray", "neon_tokyo", "vaporwave", "ultraviolet", "laser"] },
+  { id: "rasa", color: "#D6AD55", themeIds: ["rasa_night", "rasa_dusk"] },
 ];
 
 /** Themes of one category, kept in the list's own order. */

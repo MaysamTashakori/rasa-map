@@ -1,14 +1,14 @@
 {
-  "name": "Terraink",
-  "short_name": "Terraink",
-  "description": "Free map poster and wallpaper creator. Design custom, print-ready map art for any location — export as PNG, PDF, or SVG.",
+  "name": "Rasa Map · رسا مپ",
+  "short_name": "Rasa Map",
+  "description": "Free creative studio for map posters and place art. Print-ready PNG, PDF and SVG.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#0a1824",
-  "theme_color": "#0a1824",
+  "background_color": "#0B1424",
+  "theme_color": "#0B1424",
   "icons": [
     {
       "src": "/assets/favicon-16.png",

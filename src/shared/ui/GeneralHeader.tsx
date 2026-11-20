@@ -17,7 +17,7 @@ export default function GeneralHeader({ onAboutOpen }: GeneralHeaderProps) {
           alt={t("shell.header.logoAlt")}
         />
         <div className="desktop-brand-copy brand-copy">
-          <h1 className="desktop-brand-title">Terraink</h1>
+          <h1 className="desktop-brand-title">Chinar</h1>
           <p className="desktop-brand-kicker app-kicker">
             {t("shell.header.tagline")}
           </p>

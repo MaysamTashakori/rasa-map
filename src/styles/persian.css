@@ -1,0 +1,22 @@
+/* Persian UI: right-to-left layout (set on <html dir> by i18n), Vazirmatn
+   everywhere in the interface and no tracking, which breaks letter joins.
+   The poster overlay keeps the font the user picked (inline style). */
+html[lang="fa"] body,
+html[lang="fa"] body *:not(.poster-text-overlay):not(.poster-text-overlay *) {
+  font-family: "Vazirmatn", "Instrument Sans", sans-serif;
+  letter-spacing: 0 !important;
+}
+
+html[lang="fa"] body {
+  line-height: 1.6;
+}
+
+html[lang="fa"] .desktop-brand-title {
+  font-weight: 900;
+}
+
+/* The map and the poster are geometry, not text: keep them left-to-right so
+   MapLibre's canvas, controls and the poster overlay keep their positions. */
+html[dir="rtl"] .poster-viewport {
+  direction: ltr;
+}

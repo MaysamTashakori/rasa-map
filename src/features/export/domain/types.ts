@@ -1,4 +1,4 @@
-export type ExportFormat = "png" | "pdf" | "svg";
+export type ExportFormat = "png" | "pdf" | "svg" | "html" | "gif";
 
 export interface ExportOptions {
   widthCm: number;

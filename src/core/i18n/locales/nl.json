@@ -5,7 +5,7 @@
       "done": "Klaar"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "Pin",
       "heart": "Hart",
       "home": "Huis",
@@ -151,12 +151,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Installeer Terraink voor snellere toegang.",
+      "deferred": "Installeer Rasa Map voor snellere toegang.",
       "addToHomeScreen": "Zet op beginscherm",
       "maybeLater": "Later",
       "diagnostics": "Diagnose",
       "iosHint": "Tik op <share/> en dan op <strong>Zet op beginscherm</strong> voor snellere toegang en een betere ervaring.",
-      "androidHint": "Voor snellere toegang en een betere ervaring installeer je Terraink via het browsermenu: <strong>App installeren</strong> of <strong>Toevoegen aan startscherm</strong>"
+      "androidHint": "Voor snellere toegang en een betere ervaring installeer je Rasa Map via het browsermenu: <strong>App installeren</strong> of <strong>Toevoegen aan startscherm</strong>"
     },
     "diagnostics": {
       "ariaLabel": "Installatiediagnose",
@@ -275,7 +275,7 @@
       "longitude": "Lengte (optioneel)"
     },
     "geo": {
-      "deniedNative": "Locatietoegang is geblokkeerd. Schakel locatie voor Terraink in via de instellingen van je apparaat en probeer het opnieuw.",
+      "deniedNative": "Locatietoegang is geblokkeerd. Schakel locatie voor Rasa Map in via de instellingen van je apparaat en probeer het opnieuw.",
       "deniedBrowser": "Locatietoegang is geblokkeerd. Schakel locatietoestemming in via je browserinstellingen en probeer het opnieuw.",
       "unsupported": "Locatie wordt niet ondersteund door deze browser.",
       "insecure": "Locatie vereist HTTPS.",
@@ -490,6 +490,12 @@
       "roads": "Wegen"
     },
     "descriptions": {
+      "chinar": "Plataangroen en herfstgoud op warm papier",
+      "lajvard": "Diep lapis lazuli met vergulde straten — een koninklijk miniatuurpalet",
+      "firuzeh": "Tegels van Isfahan — turquoise water en inktgroene straten op crème",
+      "zafaran": "Saffraan en rozenwater — warme amberkleurige straten op ivoor",
+      "anar": "Granaatappelnacht — karmozijnrode lanen op diep granaat",
+      "kavir": "Woestijnnacht onder de sterren — maanlichtlijnen op violette schemering",
       "carrara": "Wit marmer: bleke steen met zachte antracieten aders",
       "blush": "Stoffig roze op warm wit",
       "sandstone": "Warm beige met gedempte bruine lijnen",
@@ -525,6 +531,7 @@
     },
     "categories": {
       "label": "Themacategorieën",
+      "persian": "Perzisch",
       "all": "Alle",
       "neutral": "Neutraal",
       "sand": "Zand",
@@ -533,7 +540,8 @@
       "green": "Groen",
       "light": "Licht",
       "dark": "Donker",
-      "electric": "Elektrisch"
+      "electric": "Elektrisch",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -550,11 +558,11 @@
     "support": {
       "close": "Sluiten",
       "headline": "✨ Je poster is klaar!",
-      "text": "Volg Terraink op Instagram voor frisse kaartideeën, ontwerptips en de nieuwste functies — en laat de posters zien die je maakt.",
+      "text": "Volg Rasa Map op Instagram voor frisse kaartideeën, ontwerptips en de nieuwste functies — en laat de posters zien die je maakt.",
       "followUs": "Volg ons",
-      "videoText": "Meer uit Terraink halen? Bekijk de gids van 6 minuten over alle menu's.",
+      "videoText": "Meer uit Rasa Map halen? Bekijk de gids van 6 minuten over alle menu's.",
       "videoWatch": "Bekijk op YouTube",
-      "videoAlt": "Terraink-videogids"
+      "videoAlt": "Rasa Map-videogids"
     },
     "errors": {
       "mapNotReady": "De kaart is nog niet klaar.",
@@ -565,6 +573,16 @@
       "svgLayerContext": "Kan geen 2D-context maken voor SVG-laagexport.",
       "svgOverlayContext": "Kan geen 2D-context maken voor SVG-overlayexport.",
       "pngBlob": "PNG-blob maken van canvas mislukt."
+    },
+    "lead": {
+      "close": "Sluiten",
+      "headline": "✨ Even een dingetje",
+      "text": "Laat telefoon of e-mail achter — we sturen printtips en nieuwe ontwerpen. Downloaden blijft gratis.",
+      "name": "Naam",
+      "phone": "Telefoon",
+      "email": "E-mail (optioneel)",
+      "submit": "Doorgaan",
+      "skip": "Niet nu"
     }
   },
   "settings": {
@@ -608,7 +626,7 @@
       "imprint": "Colofon",
       "privacy": "Privacy",
       "cookieSettings": "Cookies",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | Gemaakt met <heart>❤︎</heart> in Hannover, Duitsland",
+      "madeWith": "Rasa Map v{{version}} | gebaseerd op open-source Terraink (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "Kaartgegevens © <link>OpenStreetMap contributors</link>",
       "moreAttribution": "Meer vermeldingen"
     },
@@ -636,24 +654,24 @@
       "close": "{{title}} sluiten"
     },
     "ad": {
-      "label": "Advertenties houden Terraink gratis"
+      "label": "Advertenties houden Rasa Map gratis"
     },
     "about": {
-      "dialog": "Over Terraink"
+      "dialog": "Over Rasa Map"
     },
     "info": {
       "helpTitle": "Help ons groeien",
-      "helpCopy": "Terraink draait 100% in je browser en is open source. Help mee de toekomst van kaartkunst te bouwen door bij te dragen aan onze roadmap!",
+      "helpCopy": "Rasa Map draait 100% in je browser en is open source. Help mee de toekomst van kaartkunst te bouwen door bij te dragen aan onze roadmap!",
       "supportProject": "Steun het project",
       "spreadWord": "Vertel het door",
       "supportMission": "Steun de missie",
       "githubRepo": "GitHub-repo",
-      "openRepo": "Terraink-repo op GitHub openen",
-      "starRepo": "Ster Terraink op GitHub",
+      "openRepo": "Rasa Map-repo op GitHub openen",
+      "starRepo": "Ster Rasa Map op GitHub",
       "star": "Ster",
       "donate": "Doneren",
-      "donateLabel": "Doneer om Terraink gratis te houden",
-      "follow": "Volg Terraink op {{network}}",
+      "donateLabel": "Doneer om Rasa Map gratis te houden",
+      "follow": "Volg Rasa Map op {{network}}",
       "credits": "Vermeld de bron zodat anderen de tool ontdekken",
       "builtWith": {
         "title": "Gemaakt met",
@@ -662,14 +680,15 @@
         "hosting": "Tile-hosting",
         "search": "Plaatsen zoeken",
         "renderer": "Kaart-engine"
-      }
+      },
+      "coffee": "Koffie"
     },
     "social": {
       "projectLinks": "Projectlinks",
       "githubRepository": "GitHub-repository"
     },
     "header": {
-      "logoAlt": "Terraink-logo",
+      "logoAlt": "Rasa Map-logo",
       "tagline": "Gratis kaartposters en achtergronden",
       "about": "Over"
     },
@@ -696,7 +715,7 @@
       "doneEditing": "Klaar"
     },
     "donate": {
-      "intro": "Steun Terraink en de open projecten waarop het draait. Links openen in een nieuw tabblad."
+      "intro": "Steun Rasa Map en de open projecten waarop het draait. Links openen in een nieuw tabblad."
     }
   },
   "updates": {
@@ -736,7 +755,67 @@
     "error": "Dit document kon niet worden geladen — probeer het later opnieuw."
   },
   "meta": {
-    "title": "Terraink: gratis maker van kaartposters en wallpapers",
+    "title": "Rasa Map: gratis maker van kaartposters en wallpapers",
     "description": "Gratis online generator voor kaartposters en wallpapers. Ontwerp eigen, drukklare kaartkunst van elke stad of locatie en exporteer als PNG, PDF of SVG. Geen account nodig."
+  },
+  "shop": {
+    "buttonLabel": "Trakteer Rasa Map op een koffie",
+    "title": "Trakteer ons op een koffie",
+    "subtitle": "Elke kop houdt Rasa Map gratis. Kies een drank, laat je nummer achter en betaal veilig.",
+    "menuLabel": "Koffiekaart",
+    "currency": "Toman",
+    "gatewayPending": "De betaalgateway wordt ingesteld — je bestelling wordt bevestigd. Laat je nummer achter.",
+    "pay": "Betalen",
+    "processing": "Gateway wordt gecontacteerd…",
+    "success": "Bestelling ontvangen — bedankt! We nemen contact op.",
+    "successSandbox": "Sandbox-test geaccepteerd — er is niets afgeschreven.",
+    "orderAnother": "Nog een koffie bestellen",
+    "errorNetwork": "Kan de betaalgateway niet bereiken. Controleer je verbinding.",
+    "errorGeneric": "De gateway kon de bestelling niet voltooien. Probeer opnieuw.",
+    "items": {
+      "espresso": {
+        "name": "Enkele espresso",
+        "desc": "Een kleine sterke shot voor de renderwachtrij."
+      },
+      "americano": {
+        "name": "Americano",
+        "desc": "De klassieker — zacht, gebalanceerd, bodemloos."
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "desc": "Espresso gevlekt met een wolk melk."
+      }
+    },
+    "paymentSuccess": "Betaling geverifieerd — bedankt! Je koffie is onderweg.",
+    "paymentCancelled": "Betaling geannuleerd — er is niets afgeschreven.",
+    "paymentFailed": "Betaling kon niet worden geverifieerd. Neem contact op met support als er is afgeschreven."
+  },
+  "landing": {
+    "eyebrow": "Creatief kaartstudio",
+    "title": "Verander elke plek in",
+    "titleAccent": "levende kunst",
+    "tagline": "Rasa Map maakt van steden posters, ansichtkaarten en levende GIF's — gratis, in je browser, printklaar.",
+    "stepsLabel": "Creatief proces",
+    "step1": {
+      "title": "Kies een plek",
+      "desc": "Zoek of zet een pin op de kaart"
+    },
+    "step2": {
+      "title": "Stijl het thema",
+      "desc": "48 kunstthema's + eigen kleuren"
+    },
+    "step3": {
+      "title": "Teken routes & pins",
+      "desc": "GPS-routes, markers en lagen"
+    },
+    "step4": {
+      "title": "Exporteer het werk",
+      "desc": "PNG, PDF, SVG, GIF, geanimeerde HTML + print"
+    },
+    "cta": "Studio openen",
+    "hint": "Gratis, geen installatie — alles draait in je browser.",
+    "chipPrint": "Print",
+    "chipPostcard": "Ansichtkaart",
+    "chipStory": "Story"
   }
 }

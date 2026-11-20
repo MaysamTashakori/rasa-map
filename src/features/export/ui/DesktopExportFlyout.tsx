@@ -7,6 +7,8 @@ import { DownloadIcon, LoaderIcon } from "@/shared/ui/Icons";
 const FLYOUT_FORMATS: { format: ExportFormat; label: string }[] = [
   { format: "svg", label: "RSVG" },
   { format: "pdf", label: "PDF" },
+  { format: "gif", label: "GIF" },
+  { format: "html", label: "HTML" },
 ];
 
 export default function DesktopExportFlyout() {

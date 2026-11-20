@@ -9,6 +9,9 @@
 import { localStorageCache } from "@/core/cache/localStorageCache";
 import { fetchAdapter } from "@/core/http/fetchAdapter";
 import { localFontsAdapter } from "@/core/fonts/localFontsAdapter";
+import { ZIBAL_MERCHANT } from "@/core/config";
+import { createCheckoutAdapter } from "@/features/shop/infrastructure/checkoutAdapter";
+import { createZibalAdapter } from "@/features/shop/infrastructure/zibalAdapter";
 import { createNominatimAdapter } from "@/features/location/infrastructure/nominatimAdapter";
 import { createRecentLocationsStore } from "@/features/location/infrastructure/recentLocationsStore";
 
@@ -19,6 +22,18 @@ const nominatim = createNominatimAdapter(fetchAdapter, localStorageCache);
 export const searchLocations = nominatim.searchLocations;
 export const geocodeLocation = nominatim.geocodeLocation;
 export const reverseGeocodeCoordinates = nominatim.reverseGeocode;
+
+/* ── Coffee shop / personal payment gateway ── */
+
+// Zibal takes precedence when a merchant id is configured; the generic
+// endpoint remains as a fallback for a future self-hosted gateway.
+const zibalMerchant = String(ZIBAL_MERCHANT ?? "").trim();
+const checkout = zibalMerchant
+  ? createZibalAdapter(fetchAdapter, zibalMerchant)
+  : createCheckoutAdapter(fetchAdapter);
+
+export const submitCheckout = checkout.submitCheckout;
+export const verifyCheckoutCallback = checkout.verifyCallback;
 
 /* ── Recent location history ── */
 
@@ -48,6 +63,11 @@ export { createLayeredSvgBlobFromMap } from "@/features/export/infrastructure/la
 export { createPdfBlobFromCanvas } from "@/features/export/infrastructure/pdfExporter";
 
 export { createPosterFilename } from "@/features/export/infrastructure/filenameGenerator";
+
+export {
+  createGifBlobFromCanvas,
+  createAnimatedHtmlBlob,
+} from "@/features/export/infrastructure/animatedExporters";
 
 export { triggerDownloadBlob } from "@/features/export/infrastructure/fileDownloader";
 export {

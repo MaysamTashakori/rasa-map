@@ -1,5 +1,5 @@
 {
-  "name": "terraink",
+  "name": "rasa-map",
   "private": true,
   "version": "0.5.0",
   "type": "module",
@@ -13,6 +13,7 @@
     "i18n:check": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
+    "gifenc": "^1.0.3",
     "i18next": "^27.1.1",
     "i18next-browser-languagedetector": "^8.3.0",
     "maplibre-gl": "^6.18.0",
@@ -27,20 +28,27 @@
     "rollup": "^4.59.0"
   },
   "devDependencies": {
+    "@fontsource/amiri": "5.3.0",
+    "@fontsource/aref-ruqaa": "5.3.0",
     "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
     "@fontsource/instrument-sans": "^5.3.0",
+    "@fontsource/lalezar": "5.3.0",
     "@fontsource/lato": "^5.2.7",
+    "@fontsource/markazi-text": "5.3.0",
     "@fontsource/merriweather": "^5.2.11",
     "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/noto-naskh-arabic": "5.3.0",
     "@fontsource/noto-sans-jp": "^5.2.9",
     "@fontsource/oswald": "^5.2.8",
     "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/raleway": "^5.2.8",
+    "@fontsource/reem-kufi": "5.3.0",
     "@fontsource/source-sans-pro": "^5.2.5",
     "@fontsource/space-grotesk": "^5.3.0",
     "@fontsource/spline-sans-mono": "^5.3.0",
+    "@fontsource/vazirmatn": "5.3.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.4.1",

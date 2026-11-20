@@ -4440,3 +4440,190 @@ button.theme-category-tab {
   opacity: 0.45;
   cursor: not-allowed;
 }
+
+/* Lead capture modal (one-time, before first download) */
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lead-input {
+  width: 100%;
+  border: 1px solid rgba(151, 183, 207, 0.26);
+  border-radius: 10px;
+  background: rgba(9, 18, 27, 0.84);
+  padding: 9px 10px;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.lead-input:focus {
+  outline: none;
+  border-color: rgba(151, 183, 207, 0.6);
+}
+
+.lead-input::placeholder {
+  color: #7ea5bc;
+  opacity: 0.8;
+}
+
+.support-modal__instagram:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Coffee shop modal (personal payment gateway) */
+.coffee-modal {
+  max-width: 420px;
+}
+
+.coffee-menu {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coffee-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  border: 1px solid rgba(151, 183, 207, 0.26);
+  border-radius: 10px;
+  background: rgba(9, 18, 27, 0.6);
+  padding: 10px 12px;
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.coffee-item:hover:not(:disabled) {
+  border-color: rgba(151, 183, 207, 0.55);
+}
+
+.coffee-item--active {
+  border-color: rgba(240, 180, 90, 0.85);
+  background: rgba(240, 180, 90, 0.08);
+}
+
+.coffee-item:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.coffee-item-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.coffee-item-desc {
+  font-size: 0.78rem;
+  color: #7ea5bc;
+}
+
+.coffee-item-price {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f0b45a;
+}
+
+.coffee-form {
+  margin-top: 12px;
+}
+
+.coffee-notice {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: #7ea5bc;
+}
+
+.coffee-notice--error {
+  color: #e08a8a;
+}
+
+.coffee-pay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.coffee-spinner {
+  animation: coffee-spin 0.9s linear infinite;
+}
+
+@keyframes coffee-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.coffee-success {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coffee-success-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.coffee-again {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #7ea5bc;
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Payment-return toast (Zibal callback) */
+.coffee-notice-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(92vw, 460px);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(151, 183, 207, 0.3);
+  background: rgba(9, 18, 27, 0.92);
+  color: inherit;
+  font-size: 0.88rem;
+  z-index: 1000;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.coffee-notice-toast--ok {
+  border-color: rgba(120, 220, 160, 0.55);
+}
+
+.coffee-notice-toast-close {
+  display: inline-flex;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.7;
+}
+
+.coffee-notice-toast-close:hover {
+  opacity: 1;
+}

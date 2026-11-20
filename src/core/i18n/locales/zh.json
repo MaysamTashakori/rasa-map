@@ -5,7 +5,7 @@
       "done": "完成"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "图钉",
       "heart": "爱心",
       "home": "房子",
@@ -150,12 +150,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "安装 Terraink，访问更快，体验更好。",
+      "deferred": "安装 Rasa Map，访问更快，体验更好。",
       "addToHomeScreen": "添加到主屏幕",
       "maybeLater": "以后再说",
       "diagnostics": "诊断",
       "iosHint": "点按 <share/>，然后选择<strong>添加到主屏幕</strong>，访问更快，体验更好。",
-      "androidHint": "想要更快访问、更好体验，请从浏览器菜单安装 Terraink：<strong>安装应用</strong>或<strong>添加到主屏幕</strong>"
+      "androidHint": "想要更快访问、更好体验，请从浏览器菜单安装 Rasa Map：<strong>安装应用</strong>或<strong>添加到主屏幕</strong>"
     },
     "diagnostics": {
       "ariaLabel": "安装诊断",
@@ -274,7 +274,7 @@
       "longitude": "经度（可选）"
     },
     "geo": {
-      "deniedNative": "位置访问已被禁止。请在设备“设置”中为 Terraink 开启定位，然后重试。",
+      "deniedNative": "位置访问已被禁止。请在设备“设置”中为 Rasa Map 开启定位，然后重试。",
       "deniedBrowser": "位置访问已被禁止。请在浏览器设置中开启定位权限，然后重试。",
       "unsupported": "此浏览器不支持定位。",
       "insecure": "定位需要安全连接 (HTTPS)。",
@@ -488,6 +488,12 @@
       "roads": "道路"
     },
     "descriptions": {
+      "chinar": "温暖纸面上的梧桐绿与秋日金",
+      "lajvard": "深邃青金石配镀金街道——皇家细密画配色",
+      "firuzeh": "伊斯法罕瓷砖——奶油底色上的绿松石水域与墨青街道",
+      "zafaran": "藏红花与玫瑰水——象牙底色上的温暖琥珀街道",
+      "anar": "石榴之夜——深石榴红上的绯红大道",
+      "kavir": "星空下的沙漠之夜——紫色暮光中的月光线条",
       "carrara": "白色大理石，浅色石面带柔和炭灰纹理",
       "blush": "暖白底上的灰玫瑰色",
       "sandstone": "暖米色搭配柔和的棕色线条",
@@ -523,6 +529,7 @@
     },
     "categories": {
       "label": "主题分类",
+      "persian": "波斯",
       "all": "全部",
       "neutral": "中性",
       "sand": "沙色",
@@ -531,7 +538,8 @@
       "green": "绿色",
       "light": "浅色",
       "dark": "深色",
-      "electric": "电光"
+      "electric": "电光",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -548,11 +556,11 @@
     "support": {
       "close": "关闭",
       "headline": "✨ 你的海报已就绪！",
-      "text": "在 Instagram 上关注 Terraink，获取新鲜的地图创意、设计技巧和最新功能，也欢迎展示你制作的海报。",
+      "text": "在 Instagram 上关注 Rasa Map，获取新鲜的地图创意、设计技巧和最新功能，也欢迎展示你制作的海报。",
       "followUs": "关注我们",
-      "videoText": "想更好地使用 Terraink？观看 6 分钟的全菜单使用指南。",
+      "videoText": "想更好地使用 Rasa Map？观看 6 分钟的全菜单使用指南。",
       "videoWatch": "在 YouTube 上观看",
-      "videoAlt": "Terraink 视频指南"
+      "videoAlt": "Rasa Map 视频指南"
     },
     "errors": {
       "mapNotReady": "地图尚未就绪。",
@@ -563,6 +571,16 @@
       "svgLayerContext": "无法为 SVG 图层导出创建 2D 上下文。",
       "svgOverlayContext": "无法为 SVG 叠加层导出创建 2D 上下文。",
       "pngBlob": "无法从画布创建 PNG 数据。"
+    },
+    "lead": {
+      "close": "关闭",
+      "headline": "✨ 小小一件事",
+      "text": "留下电话或邮箱——我们会发送打印技巧和新设计。下载依然免费。",
+      "name": "姓名",
+      "phone": "电话",
+      "email": "邮箱（可选）",
+      "submit": "继续",
+      "skip": "稍后再说"
     }
   },
   "settings": {
@@ -606,7 +624,7 @@
       "imprint": "法律声明",
       "privacy": "数据隐私",
       "cookieSettings": "Cookie 设置",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | 用 <heart>❤︎</heart> 制作于德国汉诺威",
+      "madeWith": "Rasa Map v{{version}} | 基于开源项目 Terraink (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "地图数据 © <link>OpenStreetMap 贡献者</link>",
       "moreAttribution": "更多地图归属信息"
     },
@@ -634,24 +652,24 @@
       "close": "关闭{{title}}"
     },
     "ad": {
-      "label": "广告让 Terraink 保持免费"
+      "label": "广告让 Rasa Map 保持免费"
     },
     "about": {
-      "dialog": "关于 Terraink"
+      "dialog": "关于 Rasa Map"
     },
     "info": {
       "helpTitle": "助力我们成长",
-      "helpCopy": "Terraink 完全在客户端运行，并且开源。参与我们的路线图，一起打造地图艺术的未来！",
+      "helpCopy": "Rasa Map 完全在客户端运行，并且开源。参与我们的路线图，一起打造地图艺术的未来！",
       "supportProject": "支持本项目",
       "spreadWord": "帮忙宣传",
       "supportMission": "支持我们的使命",
       "githubRepo": "GitHub 仓库",
-      "openRepo": "在 GitHub 上打开 Terraink 仓库",
-      "starRepo": "在 GitHub 上为 Terraink 点星",
+      "openRepo": "在 GitHub 上打开 Rasa Map 仓库",
+      "starRepo": "在 GitHub 上为 Rasa Map 点星",
       "star": "点星",
       "donate": "捐赠",
-      "donateLabel": "支持 Terraink，捐赠让它保持免费",
-      "follow": "在 {{network}} 上关注 Terraink",
+      "donateLabel": "支持 Rasa Map，捐赠让它保持免费",
+      "follow": "在 {{network}} 上关注 Rasa Map",
       "credits": "注明出处，帮助更多人发现这个工具",
       "builtWith": {
         "title": "技术支持",
@@ -660,14 +678,15 @@
         "hosting": "瓦片托管",
         "search": "地点搜索",
         "renderer": "地图引擎"
-      }
+      },
+      "coffee": "咖啡"
     },
     "social": {
       "projectLinks": "项目链接",
       "githubRepository": "GitHub 仓库"
     },
     "header": {
-      "logoAlt": "Terraink 标志",
+      "logoAlt": "Rasa Map 标志",
       "tagline": "免费地图海报与壁纸制作工具",
       "about": "关于"
     },
@@ -694,7 +713,7 @@
       "doneEditing": "完成编辑"
     },
     "donate": {
-      "intro": "支持 Terraink 及其依托的开源项目。链接将在新标签页中打开。"
+      "intro": "支持 Rasa Map 及其依托的开源项目。链接将在新标签页中打开。"
     }
   },
   "updates": {
@@ -734,7 +753,67 @@
     "error": "无法加载此文档，请稍后再试。"
   },
   "meta": {
-    "title": "Terraink：免费地图海报与壁纸生成器",
+    "title": "Rasa Map：免费地图海报与壁纸生成器",
     "description": "免费在线地图海报和壁纸生成器。为任意城市或地点设计专属、可直接打印的地图艺术作品，支持导出 PNG、PDF 或 SVG。无需注册。"
+  },
+  "shop": {
+    "buttonLabel": "请 Rasa Map 喝杯咖啡",
+    "title": "请我们喝杯咖啡",
+    "subtitle": "每一杯都让 Rasa Map 保持免费。选择饮品，留下号码并安全付款。",
+    "menuLabel": "咖啡菜单",
+    "currency": "图曼",
+    "gatewayPending": "支付网关正在配置中——您的订单将被确认。请留下您的号码。",
+    "pay": "支付",
+    "processing": "正在连接网关…",
+    "success": "订单已收到——谢谢！我们会尽快联系您。",
+    "successSandbox": "沙盒测试已接受——未产生实际扣款。",
+    "orderAnother": "再点一杯咖啡",
+    "errorNetwork": "无法连接支付网关。请检查网络后重试。",
+    "errorGeneric": "网关无法完成订单。请重试。",
+    "items": {
+      "espresso": {
+        "name": "单份浓缩",
+        "desc": "一小杯浓缩，为渲染队列供能。"
+      },
+      "americano": {
+        "name": "美式咖啡",
+        "desc": "经典款——顺滑、均衡、回味无穷。"
+      },
+      "macchiato": {
+        "name": "玛奇朵",
+        "desc": "带着一抹奶泡的浓缩。"
+      }
+    },
+    "paymentSuccess": "支付已验证——谢谢！您的咖啡正在路上。",
+    "paymentCancelled": "支付已取消——未产生扣款。",
+    "paymentFailed": "无法验证支付。如已扣款，请联系客服。"
+  },
+  "landing": {
+    "eyebrow": "创意地图工作室",
+    "title": "把任何地方变成",
+    "titleAccent": "活的艺术",
+    "tagline": "Rasa Map 将城市变成海报、明信片和动态 GIF——免费、在浏览器中、可打印。",
+    "stepsLabel": "创作流程",
+    "step1": {
+      "title": "选择地点",
+      "desc": "搜索或在地图上放置图钉"
+    },
+    "step2": {
+      "title": "设置主题",
+      "desc": "48 种艺术主题 + 自定义颜色"
+    },
+    "step3": {
+      "title": "绘制路线与标记",
+      "desc": "GPS 路线、标记和图层"
+    },
+    "step4": {
+      "title": "导出作品",
+      "desc": "PNG、PDF、SVG、GIF、动态 HTML + 打印"
+    },
+    "cta": "进入工作室",
+    "hint": "免费、无需安装——一切都在浏览器中运行。",
+    "chipPrint": "打印",
+    "chipPostcard": "明信片",
+    "chipStory": "快拍"
   }
 }

@@ -20,10 +20,13 @@ async function loadLanguage(code: string): Promise<void> {
   i18n.addResourceBundle(code, "translation", mod.default, true, true);
 }
 
-/* Arabic is kept left-to-right on purpose, so only `lang` changes. */
+/* Arabic is kept left-to-right on purpose; Persian gets a full right-to-left layout. */
+const RTL_LANGUAGES = new Set(["fa"]);
+
 function syncHtmlLang(code: string) {
   if (typeof document !== "undefined") {
     document.documentElement.lang = code;
+    document.documentElement.dir = RTL_LANGUAGES.has(code) ? "rtl" : "ltr";
   }
 }
 

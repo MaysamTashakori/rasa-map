@@ -5,7 +5,7 @@
       "done": "Terminé"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "Épingle",
       "heart": "Cœur",
       "home": "Maison",
@@ -152,12 +152,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Installez Terraink pour un accès plus rapide et une meilleure expérience.",
+      "deferred": "Installez Rasa Map pour un accès plus rapide et une meilleure expérience.",
       "addToHomeScreen": "Ajouter à l’écran d’accueil",
       "maybeLater": "Plus tard",
       "diagnostics": "Diagnostic",
       "iosHint": "Touchez <share/> puis <strong>Sur l’écran d’accueil</strong> pour un accès plus rapide et une meilleure expérience.",
-      "androidHint": "Pour un accès plus rapide et une meilleure expérience, installez Terraink depuis le menu de votre navigateur : <strong>Installer l’application</strong> ou <strong>Ajouter à l’écran d’accueil</strong>"
+      "androidHint": "Pour un accès plus rapide et une meilleure expérience, installez Rasa Map depuis le menu de votre navigateur : <strong>Installer l’application</strong> ou <strong>Ajouter à l’écran d’accueil</strong>"
     },
     "diagnostics": {
       "ariaLabel": "Diagnostic d’installation",
@@ -276,7 +276,7 @@
       "longitude": "Longitude (facultatif)"
     },
     "geo": {
-      "deniedNative": "L’accès à la position est bloqué. Activez la localisation pour Terraink dans les réglages de votre appareil, puis réessayez.",
+      "deniedNative": "L’accès à la position est bloqué. Activez la localisation pour Rasa Map dans les réglages de votre appareil, puis réessayez.",
       "deniedBrowser": "L’accès à la position est bloqué. Autorisez la localisation dans les réglages de votre navigateur, puis réessayez.",
       "unsupported": "La localisation n’est pas prise en charge par ce navigateur.",
       "insecure": "La localisation nécessite une connexion sécurisée (HTTPS).",
@@ -492,6 +492,12 @@
       "roads": "Routes"
     },
     "descriptions": {
+      "chinar": "Vert de platane et or d’automne sur papier chaud",
+      "lajvard": "Lapis-lazuli profond aux rues dorées — une palette de miniature royale",
+      "firuzeh": "Faïences d’Ispahan — eau turquoise et rues bleu encre sur crème",
+      "zafaran": "Safran et eau de rose — rues ambrées et chaudes sur ivoire",
+      "anar": "Nuit de grenade — avenues cramoisies sur grenat profond",
+      "kavir": "Nuit du désert sous les étoiles — lignes lunaires sur crépuscule violet",
       "carrara": "Marbre blanc, pierre pâle aux veines gris anthracite",
       "blush": "Rose poudré sur blanc chaud",
       "sandstone": "Beige chaud et traits brun sourd",
@@ -527,6 +533,7 @@
     },
     "categories": {
       "label": "Catégories de thèmes",
+      "persian": "Persan",
       "all": "Tous",
       "neutral": "Neutres",
       "sand": "Sable",
@@ -535,7 +542,8 @@
       "green": "Verts",
       "light": "Clairs",
       "dark": "Sombres",
-      "electric": "Électriques"
+      "electric": "Électriques",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -552,11 +560,11 @@
     "support": {
       "close": "Fermer",
       "headline": "✨ Votre affiche est prête !",
-      "text": "Suivez Terraink sur Instagram pour des idées de cartes, des conseils de design et les dernières nouveautés — et montrez les affiches que vous créez.",
+      "text": "Suivez Rasa Map sur Instagram pour des idées de cartes, des conseils de design et les dernières nouveautés — et montrez les affiches que vous créez.",
       "followUs": "Suivez-nous",
-      "videoText": "Envie d'en faire plus avec Terraink ? Regardez le guide de 6 minutes sur tous les menus.",
+      "videoText": "Envie d'en faire plus avec Rasa Map ? Regardez le guide de 6 minutes sur tous les menus.",
       "videoWatch": "Voir sur YouTube",
-      "videoAlt": "Guide vidéo de Terraink"
+      "videoAlt": "Guide vidéo de Rasa Map"
     },
     "errors": {
       "mapNotReady": "La carte n’est pas prête.",
@@ -567,6 +575,16 @@
       "svgLayerContext": "Impossible de créer le contexte 2D pour l’export du calque SVG.",
       "svgOverlayContext": "Impossible de créer le contexte 2D pour l’export de la superposition SVG.",
       "pngBlob": "Échec de la création du blob PNG à partir du canvas."
+    },
+    "lead": {
+      "close": "Fermer",
+      "headline": "✨ Un petit détail",
+      "text": "Laisse ton téléphone ou e-mail — on t'envoie des conseils d'impression et les nouveautés. Le téléchargement reste gratuit.",
+      "name": "Nom",
+      "phone": "Téléphone",
+      "email": "E-mail (facultatif)",
+      "submit": "Continuer",
+      "skip": "Plus tard"
     }
   },
   "settings": {
@@ -610,7 +628,7 @@
       "imprint": "Mentions légales",
       "privacy": "Confidentialité",
       "cookieSettings": "Cookies",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | Fait avec <heart>❤︎</heart> à Hanovre, Allemagne",
+      "madeWith": "Rasa Map v{{version}} | basé sur le code open source de Terraink (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "Données cartographiques © <link>contributeurs OpenStreetMap</link>",
       "moreAttribution": "Plus de crédits cartographiques"
     },
@@ -638,24 +656,24 @@
       "close": "Fermer {{title}}"
     },
     "ad": {
-      "label": "Les pubs gardent Terraink gratuit"
+      "label": "Les pubs gardent Rasa Map gratuit"
     },
     "about": {
-      "dialog": "À propos de Terraink"
+      "dialog": "À propos de Rasa Map"
     },
     "info": {
       "helpTitle": "Aidez-nous à grandir",
-      "helpCopy": "Terraink est 100 % côté client et open source. Aidez-nous à construire l’avenir de l’art cartographique en contribuant à notre feuille de route !",
+      "helpCopy": "Rasa Map est 100 % côté client et open source. Aidez-nous à construire l’avenir de l’art cartographique en contribuant à notre feuille de route !",
       "supportProject": "Soutenir le projet",
       "spreadWord": "Faire passer le mot",
       "supportMission": "Soutenir la mission",
       "githubRepo": "Dépôt GitHub",
-      "openRepo": "Ouvrir le dépôt Terraink sur GitHub",
-      "starRepo": "Mettre une étoile à Terraink sur GitHub",
+      "openRepo": "Ouvrir le dépôt Rasa Map sur GitHub",
+      "starRepo": "Mettre une étoile à Rasa Map sur GitHub",
       "star": "Étoile",
       "donate": "Faire un don",
-      "donateLabel": "Soutenez Terraink et faites un don pour le garder gratuit",
-      "follow": "Suivre Terraink sur {{network}}",
+      "donateLabel": "Soutenez Rasa Map et faites un don pour le garder gratuit",
+      "follow": "Suivre Rasa Map sur {{network}}",
       "credits": "Mentionnez-nous pour aider d’autres personnes à découvrir l’outil",
       "builtWith": {
         "title": "Conçu avec",
@@ -664,14 +682,15 @@
         "hosting": "Hébergement des tuiles",
         "search": "Recherche de lieux",
         "renderer": "Moteur de carte"
-      }
+      },
+      "coffee": "Café"
     },
     "social": {
       "projectLinks": "Liens du projet",
       "githubRepository": "Dépôt GitHub"
     },
     "header": {
-      "logoAlt": "Logo Terraink",
+      "logoAlt": "Logo Rasa Map",
       "tagline": "Créateur gratuit d’affiches et fonds d’écran cartographiques",
       "about": "À propos"
     },
@@ -698,7 +717,7 @@
       "doneEditing": "Terminer"
     },
     "donate": {
-      "intro": "Soutenez Terraink et les projets libres sur lesquels il repose. Les liens s’ouvrent dans un nouvel onglet."
+      "intro": "Soutenez Rasa Map et les projets libres sur lesquels il repose. Les liens s’ouvrent dans un nouvel onglet."
     }
   },
   "updates": {
@@ -738,7 +757,67 @@
     "error": "Impossible de charger ce document — veuillez réessayer plus tard."
   },
   "meta": {
-    "title": "Terraink : créateur gratuit d'affiches et de fonds d'écran cartographiques",
+    "title": "Rasa Map : créateur gratuit d'affiches et de fonds d'écran cartographiques",
     "description": "Générateur gratuit d'affiches et de fonds d'écran cartographiques. Créez une carte personnalisée, prête à imprimer, de n'importe quelle ville ou lieu — export en PNG, PDF ou SVG. Sans inscription."
+  },
+  "shop": {
+    "buttonLabel": "Offrez-nous un café",
+    "title": "Offrez-nous un café",
+    "subtitle": "Chaque tasse garde Rasa Map gratuit. Choisissez une boisson, laissez votre numéro et payez en sécurité.",
+    "menuLabel": "Carte des cafés",
+    "currency": "Toman",
+    "gatewayPending": "La passerelle de paiement est en cours de configuration — votre commande sera confirmée. Laissez votre numéro.",
+    "pay": "Payer",
+    "processing": "Contact avec la passerelle…",
+    "success": "Commande reçue — merci ! Nous vous contacterons.",
+    "successSandbox": "Test sandbox accepté — aucun débit réel.",
+    "orderAnother": "Commander un autre café",
+    "errorNetwork": "Impossible de joindre la passerelle. Vérifiez votre connexion.",
+    "errorGeneric": "La passerelle n'a pas pu finaliser la commande. Réessayez.",
+    "items": {
+      "espresso": {
+        "name": "Espresso simple",
+        "desc": "Une petite dose forte pour la file de rendu."
+      },
+      "americano": {
+        "name": "Americano",
+        "desc": "Le classique — doux, équilibré, inépuisable."
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "desc": "Espresso taché d'un nuage de lait."
+      }
+    },
+    "paymentSuccess": "Paiement vérifié — merci ! Votre café arrive.",
+    "paymentCancelled": "Paiement annulé — aucun débit.",
+    "paymentFailed": "Paiement non vérifié. Si un montant a été débité, contactez le support."
+  },
+  "landing": {
+    "eyebrow": "Studio créatif de cartes",
+    "title": "Transformez tout lieu en",
+    "titleAccent": "art vivant",
+    "tagline": "Rasa Map transforme les villes en affiches, cartes postales et GIF animés — gratuit, dans le navigateur, prêt à imprimer.",
+    "stepsLabel": "Processus créatif",
+    "step1": {
+      "title": "Choisissez un lieu",
+      "desc": "Recherchez ou déposez un repère"
+    },
+    "step2": {
+      "title": "Habillez le thème",
+      "desc": "48 thèmes artistiques + vos couleurs"
+    },
+    "step3": {
+      "title": "Tracez routes & repères",
+      "desc": "Itinéraires GPS, marqueurs et calques"
+    },
+    "step4": {
+      "title": "Exportez l'œuvre",
+      "desc": "PNG, PDF, SVG, GIF, HTML animé + impression"
+    },
+    "cta": "Entrer dans le studio",
+    "hint": "Gratuit, sans installation — tout tourne dans le navigateur.",
+    "chipPrint": "Impression",
+    "chipPostcard": "Carte postale",
+    "chipStory": "Story"
   }
 }

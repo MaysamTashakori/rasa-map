@@ -20,8 +20,11 @@ import StartupLocationModal from "@/features/location/ui/StartupLocationModal";
 import { loadAds } from "@/core/services";
 import { CheckIcon } from "@/shared/ui/Icons";
 import SupportModal from "@/features/export/ui/SupportModal";
+import LeadModal from "@/features/export/ui/LeadModal";
+import CoffeeCallbackNotice from "@/features/shop/ui/CoffeeCallbackNotice";
 import {
   SUPPORT_PROMPT_EVENT,
+  LEAD_REQUEST_EVENT,
   type SupportPromptState,
 } from "@/features/export/application/useExport";
 import { useSessionAnalytics } from "@/features/export/application/useSessionAnalytics";
@@ -105,6 +108,7 @@ export default function AppShell() {
     useState(true);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [supportPrompt, setSupportPrompt] = useState<SupportPromptState | null>(null);
+  const [leadOpen, setLeadOpen] = useState(false);
   const [legalDoc, setLegalDoc] = useState<LegalDocType | null>(null);
   const news = useNews();
   const [newsOpen, setNewsOpen] = useState(false);
@@ -119,6 +123,12 @@ export default function AppShell() {
     };
     window.addEventListener(SUPPORT_PROMPT_EVENT, handler);
     return () => window.removeEventListener(SUPPORT_PROMPT_EVENT, handler);
+  }, []);
+
+  useEffect(() => {
+    const handler = () => setLeadOpen(true);
+    window.addEventListener(LEAD_REQUEST_EVENT, handler);
+    return () => window.removeEventListener(LEAD_REQUEST_EVENT, handler);
   }, []);
 
   useEffect(() => {
@@ -365,6 +375,8 @@ export default function AppShell() {
           onClose={() => setSupportPrompt(null)}
         />
       ) : null}
+      {leadOpen ? <LeadModal onClose={() => setLeadOpen(false)} /> : null}
+      <CoffeeCallbackNotice />
       {legalDoc ? (
         <Suspense fallback={null}>
           <LegalModal doc={legalDoc} onClose={() => setLegalDoc(null)} />

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { isNativePlatform, onPlatformAdapterChange } from "@/core/platform";
 import { i18nReady } from "@/core/i18n";
-import App from "./App";
+import LandingGate from "@/features/landing/ui/LandingGate";
 
 // Self-hosted UI typefaces. These replace the Google Fonts stylesheet that
 // base.css used to @import, which leaked visitor IPs to Google on every load.
@@ -14,6 +14,11 @@ import "@fontsource/instrument-sans/700.css";
 import "@fontsource/spline-sans-mono/400.css";
 import "@fontsource/spline-sans-mono/500.css";
 import "@fontsource/bebas-neue/400.css";
+// Persian UI typeface (only downloaded when the Persian UI uses it).
+import "@fontsource/vazirmatn/400.css";
+import "@fontsource/vazirmatn/500.css";
+import "@fontsource/vazirmatn/700.css";
+import "@fontsource/vazirmatn/900.css";
 
 // Default poster typefaces. Every poster falls back to these when no custom
 // font is chosen, but nothing ever loaded them — until now they silently
@@ -61,7 +66,7 @@ if ("serviceWorker" in navigator && !isNativePlatform()) {
 void i18nReady.then(() => {
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-      <App />
+      <LandingGate />
     </React.StrictMode>,
   );
 });

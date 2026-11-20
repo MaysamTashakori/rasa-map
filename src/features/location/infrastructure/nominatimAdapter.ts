@@ -42,6 +42,12 @@ function waitForRequestSlot(signal?: AbortSignal): Promise<void> {
   });
 }
 
+/** Place names come back in the interface language (e.g. «تهران» for Persian). */
+function preferredLanguage(): string {
+  const lang = typeof document !== "undefined" ? document.documentElement.lang : "";
+  return lang || "en";
+}
+
 export function createNominatimAdapter(
   http: IHttp,
   cache: ICache,
@@ -57,7 +63,8 @@ export function createNominatimAdapter(
     }
 
     const normalizedLimit = Math.max(1, Math.min(Math.round(limit), 10));
-    const cacheKey = getLocationSearchCacheKey(lookup, normalizedLimit);
+    const language = preferredLanguage();
+    const cacheKey = getLocationSearchCacheKey(lookup, normalizedLimit, language);
     const cached = cache.read<SearchResult[]>(cacheKey, LOCATION_SEARCH_TTL_MS);
     if (Array.isArray(cached)) {
       return cached;
@@ -69,7 +76,7 @@ export function createNominatimAdapter(
 
     const url =
       "https://nominatim.openstreetmap.org/search?" +
-      `format=jsonv2&addressdetails=1&limit=${normalizedLimit}&q=${encodeURIComponent(lookup)}`;
+      `format=jsonv2&addressdetails=1&limit=${normalizedLimit}&accept-language=${encodeURIComponent(language)}&q=${encodeURIComponent(lookup)}`;
 
     const promise = waitForRequestSlot(signal)
       .then(() => {
@@ -97,7 +104,7 @@ export function createNominatimAdapter(
       throw new Error("Location is required.");
     }
 
-    const cacheKey = getGeocodeCacheKey(lookup);
+    const cacheKey = getGeocodeCacheKey(lookup, preferredLanguage());
     const cached = cache.read<Record<string, unknown>>(
       cacheKey,
       GEOCODE_TTL_MS,
@@ -137,7 +144,8 @@ export function createNominatimAdapter(
       throw new Error("Latitude and longitude are required.");
     }
 
-    const cacheKey = getReverseGeocodeCacheKey(lat, lon);
+    const language = preferredLanguage();
+    const cacheKey = getReverseGeocodeCacheKey(lat, lon, language);
     const cached = cache.read<Record<string, unknown>>(cacheKey, GEOCODE_TTL_MS);
     if (cached && typeof cached === "object") {
       const normalizedCached = normalizeLocationResult(cached as any);
@@ -152,7 +160,7 @@ export function createNominatimAdapter(
 
     const url =
       "https://nominatim.openstreetmap.org/reverse?" +
-      `format=jsonv2&addressdetails=1&zoom=10&lat=${encodeURIComponent(String(lat))}&lon=${encodeURIComponent(String(lon))}`;
+      `format=jsonv2&addressdetails=1&zoom=10&accept-language=${encodeURIComponent(language)}&lat=${encodeURIComponent(String(lat))}&lon=${encodeURIComponent(String(lon))}`;
 
     const promise = waitForRequestSlot()
       .then(() => {

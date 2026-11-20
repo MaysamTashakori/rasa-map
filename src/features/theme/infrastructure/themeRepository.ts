@@ -128,6 +128,12 @@ const referenceAliases: Record<string, string> = {
 };
 
 const preferredThemeOrder = [
+  "lajvard",
+  "chinar",
+  "firuzeh",
+  "zafaran",
+  "anar",
+  "kavir",
   "midnight_blue",
   "terracotta",
   "neon",
@@ -156,6 +162,18 @@ const preferredThemeOrder = [
   "blush",
   "sandstone",
   "graphite",
+  "risograph",
+  "indigo_dye",
+  "xray",
+  "vintage_postcard",
+  "swiss",
+  "night_bazaar",
+  "neon_tokyo",
+  "vaporwave",
+  "ultraviolet",
+  "aurora",
+  "laser",
+  "solar_dusk",
 ];
 
 function isObject(value: unknown): value is ThemeObject {
@@ -297,9 +315,19 @@ function normalizeTheme(themeInput: unknown): ResolvedTheme {
     return normalizedTextHex;
   })();
 
+  // Optional print effects (grain / vignette) declared by the theme.
+  const fxRaw = getPathValue(theme, "fx");
+  const fx = isObject(fxRaw)
+    ? {
+        grain: typeof fxRaw.grain === "number" ? Math.min(1, Math.max(0, fxRaw.grain)) : undefined,
+        vignette: typeof fxRaw.vignette === "number" ? Math.min(1, Math.max(0, fxRaw.vignette)) : undefined,
+      }
+    : undefined;
+
   return {
     name,
     description,
+    ...(fx && (fx.grain != null || fx.vignette != null) ? { fx } : {}),
     ui: {
       bg: uiBg,
       text: uiText,
@@ -371,7 +399,7 @@ export const themeOptions: ThemeOption[] = themeNames.map((name) => ({
   palette: getThemePalette(themesByName[name]),
 }));
 
-const preferredDefaultThemeName = "midnight_blue";
+const preferredDefaultThemeName = "lajvard";
 
 export const defaultThemeName = themeNames.includes(preferredDefaultThemeName)
   ? preferredDefaultThemeName

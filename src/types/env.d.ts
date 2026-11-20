@@ -12,7 +12,11 @@ interface ImportMetaEnv {
   readonly VITE_SOCIAL_INSTAGRAM?: string;
   readonly VITE_SOCIAL_REDDIT?: string;
   readonly VITE_SOCIAL_THREADS?: string;
-  readonly VITE_SOCIAL_YOUTUBE?: string;
+  readonly VITE_SOCIAL_TELEGRAM?: string;
+  readonly VITE_LEAD_ENDPOINT?: string;
+  readonly VITE_PAYMENT_GATEWAY_URL?: string;
+  readonly VITE_PAYMENT_GATEWAY_TOKEN?: string;
+  readonly VITE_ZIBAL_MERCHANT?: string;
   readonly VITE_KOFI_URL?: string;
   readonly VITE_DONATION_LINKS?: string;
   readonly VITE_APP_CREDIT_URL?: string;

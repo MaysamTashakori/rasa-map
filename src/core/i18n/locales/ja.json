@@ -5,7 +5,7 @@
       "done": "完了"
     },
     "icons": {
-      "app-marker": "Terraink",
+      "app-marker": "Rasa Map",
       "pin": "ピン",
       "heart": "ハート",
       "home": "ホーム",
@@ -150,12 +150,12 @@
   },
   "install": {
     "prompt": {
-      "deferred": "Terrainkをインストールすると、すばやく快適に使えます。",
+      "deferred": "Rasa Mapをインストールすると、すばやく快適に使えます。",
       "addToHomeScreen": "ホーム画面に追加",
       "maybeLater": "あとで",
       "diagnostics": "診断",
       "iosHint": "<share/>をタップして<strong>ホーム画面に追加</strong>を選ぶと、すばやく快適に使えます。",
-      "androidHint": "すばやく快適に使うには、ブラウザのメニューからTerrainkをインストールしてください：<strong>アプリをインストール</strong>または<strong>ホーム画面に追加</strong>"
+      "androidHint": "すばやく快適に使うには、ブラウザのメニューからRasa Mapをインストールしてください：<strong>アプリをインストール</strong>または<strong>ホーム画面に追加</strong>"
     },
     "diagnostics": {
       "ariaLabel": "インストール診断",
@@ -274,7 +274,7 @@
       "longitude": "経度（任意）"
     },
     "geo": {
-      "deniedNative": "位置情報へのアクセスがブロックされています。端末の設定でTerrainkの位置情報を許可してから、もう一度お試しください。",
+      "deniedNative": "位置情報へのアクセスがブロックされています。端末の設定でRasa Mapの位置情報を許可してから、もう一度お試しください。",
       "deniedBrowser": "位置情報へのアクセスがブロックされています。ブラウザの設定で位置情報を許可してから、もう一度お試しください。",
       "unsupported": "このブラウザは位置情報に対応していません。",
       "insecure": "位置情報の利用には安全な接続（HTTPS）が必要です。",
@@ -488,6 +488,12 @@
       "roads": "道路"
     },
     "descriptions": {
+      "chinar": "温かな紙にプラタナスの緑と秋の金",
+      "lajvard": "金の街路が映える深いラピスラズリ — 王朝細密画の配色",
+      "firuzeh": "イスファハンのタイル — クリーム地にターコイズの水とインクの街路",
+      "zafaran": "サフランとローズウォーター — アイボリーに温かな琥珀の街路",
+      "anar": "ザクロの夜 — 深いガーネットに真紅の大通り",
+      "kavir": "星空の砂漠の夜 — 紫の夕闇に月明かりの線",
       "carrara": "白い大理石、淡い石にやわらかな炭色の筋",
       "blush": "温かみのある白にくすんだローズ",
       "sandstone": "暖かなベージュに落ち着いた茶色の線",
@@ -523,6 +529,7 @@
     },
     "categories": {
       "label": "テーマの分類",
+      "persian": "ペルシャ",
       "all": "すべて",
       "neutral": "ニュートラル",
       "sand": "砂",
@@ -531,7 +538,8 @@
       "green": "緑",
       "light": "明るい",
       "dark": "暗い",
-      "electric": "エレクトリック"
+      "electric": "エレクトリック",
+      "rasa": "Rasa"
     }
   },
   "export": {
@@ -548,11 +556,11 @@
     "support": {
       "close": "閉じる",
       "headline": "✨ ポスターができました！",
-      "text": "InstagramでTerrainkをフォローして、マップのアイデアやデザインのコツ、最新機能をチェックしましょう。作ったポスターもぜひ見せてください。",
+      "text": "InstagramでRasa Mapをフォローして、マップのアイデアやデザインのコツ、最新機能をチェックしましょう。作ったポスターもぜひ見せてください。",
       "followUs": "フォローする",
-      "videoText": "Terraink をもっと活用したい方へ。全メニューを 6 分で紹介するガイドをご覧ください。",
+      "videoText": "Rasa Map をもっと活用したい方へ。全メニューを 6 分で紹介するガイドをご覧ください。",
       "videoWatch": "YouTube で見る",
-      "videoAlt": "Terraink 動画ガイド"
+      "videoAlt": "Rasa Map 動画ガイド"
     },
     "errors": {
       "mapNotReady": "マップの準備ができていません。",
@@ -563,6 +571,16 @@
       "svgLayerContext": "SVGレイヤー書き出し用の2Dコンテキストを作成できませんでした。",
       "svgOverlayContext": "SVGオーバーレイ書き出し用の2Dコンテキストを作成できませんでした。",
       "pngBlob": "キャンバスからPNG Blobを作成できませんでした。"
+    },
+    "lead": {
+      "close": "閉じる",
+      "headline": "✨ ひとつだけ",
+      "text": "電話番号かメールアドレスをどうぞ。印刷のコツや新作をお届けします。ダウンロードは無料のままです。",
+      "name": "名前",
+      "phone": "電話番号",
+      "email": "メール（任意）",
+      "submit": "続ける",
+      "skip": "あとで"
     }
   },
   "settings": {
@@ -606,7 +624,7 @@
       "imprint": "運営者情報",
       "privacy": "プライバシー",
       "cookieSettings": "Cookie設定",
-      "madeWith": "Terraink™ v{{version}} | © 2026 | ドイツ・ハノーファーで <heart>❤︎</heart> を込めて制作",
+      "madeWith": "Rasa Map v{{version}} | オープンソースの Terraink をベースに開発 (AGPL-3.0) | <heart>❤︎</heart>",
       "mapData": "地図データ © <link>OpenStreetMap contributors</link>",
       "moreAttribution": "その他の地図クレジット"
     },
@@ -634,24 +652,24 @@
       "close": "{{title}}を閉じる"
     },
     "ad": {
-      "label": "広告でTerrainkは無料です"
+      "label": "広告でRasa Mapは無料です"
     },
     "about": {
-      "dialog": "Terrainkについて"
+      "dialog": "Rasa Mapについて"
     },
     "info": {
       "helpTitle": "開発を応援",
-      "helpCopy": "Terrainkは完全にクライアント側で動くオープンソースです。ロードマップに参加して、マップアートの未来をいっしょに作りましょう！",
+      "helpCopy": "Rasa Mapは完全にクライアント側で動くオープンソースです。ロードマップに参加して、マップアートの未来をいっしょに作りましょう！",
       "supportProject": "プロジェクトを応援",
       "spreadWord": "シェアする",
       "supportMission": "活動を応援",
       "githubRepo": "GitHubリポジトリ",
-      "openRepo": "GitHubでTerrainkのリポジトリを開く",
-      "starRepo": "GitHubでTerrainkにスターを付ける",
+      "openRepo": "GitHubでRasa Mapのリポジトリを開く",
+      "starRepo": "GitHubでRasa Mapにスターを付ける",
       "star": "スター",
       "donate": "寄付",
-      "donateLabel": "Terrainkを無料で続けるために寄付で応援",
-      "follow": "{{network}}でTerrainkをフォロー",
+      "donateLabel": "Rasa Mapを無料で続けるために寄付で応援",
+      "follow": "{{network}}でRasa Mapをフォロー",
       "credits": "クレジットを入れて、このツールを広めましょう",
       "builtWith": {
         "title": "使用サービス",
@@ -660,14 +678,15 @@
         "hosting": "タイル配信",
         "search": "場所検索",
         "renderer": "地図エンジン"
-      }
+      },
+      "coffee": "コーヒー"
     },
     "social": {
       "projectLinks": "プロジェクトのリンク",
       "githubRepository": "GitHubリポジトリ"
     },
     "header": {
-      "logoAlt": "Terrainkのロゴ",
+      "logoAlt": "Rasa Mapのロゴ",
       "tagline": "無料のマップポスター・壁紙メーカー",
       "about": "概要"
     },
@@ -694,7 +713,7 @@
       "doneEditing": "編集を終了"
     },
     "donate": {
-      "intro": "Terraink と、それを支えるオープンなプロジェクトを応援できます。リンクは新しいタブで開きます。"
+      "intro": "Rasa Map と、それを支えるオープンなプロジェクトを応援できます。リンクは新しいタブで開きます。"
     }
   },
   "updates": {
@@ -734,7 +753,67 @@
     "error": "このドキュメントを読み込めませんでした。しばらくしてからもう一度お試しください。"
   },
   "meta": {
-    "title": "Terraink: 無料の地図ポスター・壁紙作成ツール",
+    "title": "Rasa Map: 無料の地図ポスター・壁紙作成ツール",
     "description": "無料のオンライン地図ポスター・壁紙ジェネレーター。好きな都市や場所の印刷に対応したオリジナル地図アートをデザインし、PNG、PDF、SVGで書き出せます。登録不要。"
+  },
+  "shop": {
+    "buttonLabel": "チャイナールにコーヒーをおごる",
+    "title": "コーヒーをおごる",
+    "subtitle": "一杯ごとにチャイナールは無料のまま。ドリンクを選び、番号を残して安全にお支払いください。",
+    "menuLabel": "コーヒーメニュー",
+    "currency": "トマーン",
+    "gatewayPending": "決済ゲートウェイを設定中です—ご注文は確認されます。番号を残してください。",
+    "pay": "支払う",
+    "processing": "ゲートウェイに接続中…",
+    "success": "注文を受け付けました—ありがとうございます！ご連絡します。",
+    "successSandbox": "サンドボックステストが受理されました—実際の請求はありません。",
+    "orderAnother": "別のコーヒーを注文",
+    "errorNetwork": "決済ゲートウェイに接続できません。接続を確認して再試行してください。",
+    "errorGeneric": "ゲートウェイが注文を完了できませんでした。もう一度お試しください。",
+    "items": {
+      "espresso": {
+        "name": "シングルエスプレッソ",
+        "desc": "レンダーキューを動かす小さくて濃い一杯。"
+      },
+      "americano": {
+        "name": "アメリカーノ",
+        "desc": "定番——まろやかでバランスが良く、底なし。"
+      },
+      "macchiato": {
+        "name": "マキアート",
+        "desc": "ミルクの雲をまとったエスプレッソ。"
+      }
+    },
+    "paymentSuccess": "支払いが確認されました—ありがとうございます！コーヒーをお届けします。",
+    "paymentCancelled": "支払いがキャンセルされました—請求はありません。",
+    "paymentFailed": "支払いを確認できませんでした。引き落とされた場合はサポートへご連絡ください。"
+  },
+  "landing": {
+    "eyebrow": "クリエイティブ地図スタジオ",
+    "title": "どんな場所も",
+    "titleAccent": "生きたアートに",
+    "tagline": "Rasa Mapは街をポスター、絵はがき、動くGIFに変えます—無料、ブラウザだけ、印刷対応。",
+    "stepsLabel": "クリエイティブ工程",
+    "step1": {
+      "title": "場所を選ぶ",
+      "desc": "検索するか地図にピンを置く"
+    },
+    "step2": {
+      "title": "テーマを整える",
+      "desc": "48のアートテーマ＋自分の色"
+    },
+    "step3": {
+      "title": "ルートとピン",
+      "desc": "GPSルート、マーカー、レイヤー"
+    },
+    "step4": {
+      "title": "作品を書き出す",
+      "desc": "PNG、PDF、SVG、GIF、アニメHTML＋印刷"
+    },
+    "cta": "スタジオへ",
+    "hint": "無料・インストール不要—すべてブラウザ内で動作。",
+    "chipPrint": "印刷",
+    "chipPostcard": "絵はがき",
+    "chipStory": "ストーリー"
   }
 }

@@ -33,11 +33,11 @@ export const DEFAULT_CONTAINER_PX = 600;
 /** Duration (ms) for flyTo animation when selecting a location. */
 export const FLY_TO_DURATION_MS = 1800;
 
-/** Hanover, Germany — default fallback when geolocation is denied. */
-export const DEFAULT_LAT = 52.3759;
-export const DEFAULT_LON = 9.732;
-export const DEFAULT_CITY = "Hanover";
-export const DEFAULT_COUNTRY = "Germany";
+/** Tehran, Iran — default fallback when geolocation is denied. */
+export const DEFAULT_LAT = 35.6997;
+export const DEFAULT_LON = 51.4062;
+export const DEFAULT_CITY = "تهران";
+export const DEFAULT_COUNTRY = "ایران";
 
 /**
  * The sidebar ad in the poster preview panel is OFF unless
@@ -63,14 +63,28 @@ export const SOCIAL_LINKEDIN = import.meta.env.VITE_SOCIAL_LINKEDIN ?? "";
 export const SOCIAL_INSTAGRAM = import.meta.env.VITE_SOCIAL_INSTAGRAM ?? "";
 export const SOCIAL_REDDIT = import.meta.env.VITE_SOCIAL_REDDIT ?? "";
 export const SOCIAL_THREADS = import.meta.env.VITE_SOCIAL_THREADS ?? "";
-export const SOCIAL_YOUTUBE = import.meta.env.VITE_SOCIAL_YOUTUBE ?? "";
+export const SOCIAL_TELEGRAM = import.meta.env.VITE_SOCIAL_TELEGRAM ?? "";
 export const KOFI_URL = import.meta.env.VITE_KOFI_URL ?? "";
+/** Optional webhook that receives {name, contact, page} once per visitor. */
+export const LEAD_ENDPOINT = import.meta.env.VITE_LEAD_ENDPOINT ?? "";
 
-/** The complete video guide, offered after downloads. Replace to change the video. */
-export const VIDEO_GUIDE_URL =
-  import.meta.env.VITE_VIDEO_GUIDE_URL ?? "https://youtu.be/Eitp-_LAqlc";
-/** Self-hosted thumbnail (no request to YouTube until the user clicks). */
-export const VIDEO_GUIDE_THUMBNAIL = "/assets/video-guide.jpg";
+/**
+ * Personal payment gateway for the coffee shop. POSTs checkout JSON here and
+ * expects { ok, paymentUrl?, message?, sandbox? }. Empty = gateway pending,
+ * the shop shows an honest notice instead of taking payment.
+ */
+export const PAYMENT_GATEWAY_URL =
+  import.meta.env.VITE_PAYMENT_GATEWAY_URL ?? "";
+/** Optional shared token sent as X-Gateway-Token to the gateway. */
+export const PAYMENT_GATEWAY_TOKEN =
+  import.meta.env.VITE_PAYMENT_GATEWAY_TOKEN ?? "";
+
+/**
+ * Zibal merchant id (درگاه زیبال) for the coffee shop. When set it takes
+ * precedence over the generic PAYMENT_GATEWAY_URL. Request/verify need only
+ * this id — no secret ever ships to the client.
+ */
+export const ZIBAL_MERCHANT = import.meta.env.VITE_ZIBAL_MERCHANT ?? "";
 
 export interface DonationLink {
   name: string;
@@ -111,7 +125,7 @@ export const DEVELOPER_NAME = import.meta.env.VITE_DEVELOPER_NAME ?? "";
 export const DEVELOPER_PROFILE_URL =
   import.meta.env.VITE_DEVELOPER_PROFILE_URL ?? "";
 export const APP_CREDIT_URL =
-  import.meta.env.VITE_APP_CREDIT_URL ?? "terraink.app";
+  import.meta.env.VITE_APP_CREDIT_URL ?? "rasa-map";
 export const APP_VERSION = String(
   import.meta.env.VITE_APP_VERSION ?? "0.0.0",
 ).trim();
@@ -137,4 +151,11 @@ export const FONT_OPTIONS: FontOption[] = [
   { value: "Lato", label: "Lato" },
   { value: "Merriweather", label: "Merriweather" },
   { value: "Bebas neue", label: "Bebas Neue" },
+  { value: "Vazirmatn", label: "وزیرمتن · Vazirmatn" },
+  { value: "Lalezar", label: "لاله‌زار · Lalezar" },
+  { value: "Markazi Text", label: "مرکزی · Markazi Text" },
+  { value: "Reem Kufi", label: "کوفی · Reem Kufi" },
+  { value: "Amiri", label: "نسخ امیری · Amiri" },
+  { value: "Noto Naskh Arabic", label: "نسخ نوتو · Noto Naskh" },
+  { value: "Aref Ruqaa", label: "رقعه · Aref Ruqaa" },
 ];

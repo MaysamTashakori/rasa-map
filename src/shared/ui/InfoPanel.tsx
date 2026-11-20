@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import DonateLink from "@/shared/ui/DonateLink";
+import CoffeeShop from "@/features/shop/ui/CoffeeShop";
 import { useRepoStars } from "@/shared/hooks/useRepoStars";
 import { trackEvent } from "@/shared/utils/analytics";
 import {
@@ -10,7 +11,7 @@ import {
   SOCIAL_INSTAGRAM,
   SOCIAL_REDDIT,
   SOCIAL_THREADS,
-  SOCIAL_YOUTUBE,
+  SOCIAL_TELEGRAM,
 } from "@/core/config";
 import {
   GitHubIcon,
@@ -20,7 +21,7 @@ import {
   InstagramIcon,
   RedditIcon,
   ThreadsIcon,
-  YouTubeIcon,
+  TelegramIcon,
 } from "./Icons";
 
 /* ── sub-components ── */
@@ -63,9 +64,9 @@ function HelpUsGrowSection({
       label: "Threads",
     },
     {
-      href: String(SOCIAL_YOUTUBE ?? "").trim(),
-      Icon: YouTubeIcon,
-      label: "YouTube",
+      href: String(SOCIAL_TELEGRAM ?? "").trim(),
+      Icon: TelegramIcon,
+      label: "Telegram",
     },
   ];
 
@@ -129,6 +130,9 @@ function HelpUsGrowSection({
             >
               <span>{t("shell.info.donate")}</span>
             </DonateLink>
+            <CoffeeShop className="github-badge">
+              <span>{t("shell.info.coffee")}</span>
+            </CoffeeShop>
           </div>
         </div>
 

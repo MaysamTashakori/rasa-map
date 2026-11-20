@@ -1,5 +1,161 @@
 {
   "themes": {
+    "chinar": {
+      "name": "Chinar",
+      "description": "Plane-tree green and autumn gold on warm paper",
+      "ui": {
+        "bg": "#F2EDE1",
+        "text": "#2F4A33"
+      },
+      "map": {
+        "land": "#F2EDE1",
+        "landcover": "#E8E3D1",
+        "water": "#BCCFC4",
+        "waterway": "#BCCFC4",
+        "parks": "#D9DFC6",
+        "buildings": "#E2D8C0",
+        "aeroway": "#DCD4BE",
+        "rail": "#2F4A33",
+        "roads": {
+          "major": "#2F4A33",
+          "minor_high": "#7E6230",
+          "minor_mid": "#AE8F4E",
+          "minor_low": "#CDB98A",
+          "path": "#DACDA8",
+          "outline": "#F2EDE1"
+        }
+      }
+    },
+    "lajvard": {
+      "name": "Lajvard",
+      "description": "Deep lapis lazuli with gilded streets — a royal miniature palette",
+      "ui": {
+        "bg": "#13245A",
+        "text": "#E7C46F"
+      },
+      "map": {
+        "land": "#13245A",
+        "landcover": "#172B66",
+        "water": "#0A163D",
+        "waterway": "#0A163D",
+        "parks": "#1A306D",
+        "buildings": "#2A3D7C",
+        "aeroway": "#1A306D",
+        "rail": "#E7C46F",
+        "roads": {
+          "major": "#EAC66C",
+          "minor_high": "#C39A45",
+          "minor_mid": "#58628A",
+          "minor_low": "#34437A",
+          "path": "#2C3A6B",
+          "outline": "#13245A"
+        }
+      }
+    },
+    "firuzeh": {
+      "name": "Firuzeh",
+      "description": "Isfahan tilework — turquoise water and ink-teal streets on cream",
+      "ui": {
+        "bg": "#F4EEE2",
+        "text": "#0F5964"
+      },
+      "map": {
+        "land": "#F4EEE2",
+        "landcover": "#ECE3D2",
+        "water": "#5DB7B5",
+        "waterway": "#5DB7B5",
+        "parks": "#DCE5D3",
+        "buildings": "#E6D8C0",
+        "aeroway": "#E3D9C5",
+        "rail": "#0F5964",
+        "roads": {
+          "major": "#0F5964",
+          "minor_high": "#2F7F86",
+          "minor_mid": "#6FA6A3",
+          "minor_low": "#A9C7C0",
+          "path": "#C9D8CF",
+          "outline": "#F4EEE2"
+        }
+      }
+    },
+    "zafaran": {
+      "name": "Zafaran",
+      "description": "Saffron and rosewater — warm amber streets on ivory",
+      "ui": {
+        "bg": "#FBF3E4",
+        "text": "#A1361F"
+      },
+      "map": {
+        "land": "#FBF3E4",
+        "landcover": "#F5E7CF",
+        "water": "#E9C9A8",
+        "waterway": "#E9C9A8",
+        "parks": "#F1E2C2",
+        "buildings": "#EFD6B0",
+        "aeroway": "#EEDDBF",
+        "rail": "#A1361F",
+        "roads": {
+          "major": "#C0461E",
+          "minor_high": "#D7772E",
+          "minor_mid": "#E5A14B",
+          "minor_low": "#EDC587",
+          "path": "#F2D9AC",
+          "outline": "#FBF3E4"
+        }
+      }
+    },
+    "anar": {
+      "name": "Anar",
+      "description": "Pomegranate night — crimson avenues on deep garnet",
+      "ui": {
+        "bg": "#2A0E14",
+        "text": "#F0C9A7"
+      },
+      "map": {
+        "land": "#2A0E14",
+        "landcover": "#321219",
+        "water": "#170609",
+        "waterway": "#170609",
+        "parks": "#3A1820",
+        "buildings": "#5A1E2A",
+        "aeroway": "#3A1820",
+        "rail": "#F0C9A7",
+        "roads": {
+          "major": "#E0304A",
+          "minor_high": "#A51E33",
+          "minor_mid": "#6E1B2A",
+          "minor_low": "#4A1620",
+          "path": "#3E1820",
+          "outline": "#2A0E14"
+        }
+      }
+    },
+    "kavir": {
+      "name": "Kavir",
+      "description": "Desert night under the stars — moonlit sand lines on violet dusk",
+      "ui": {
+        "bg": "#1C1A24",
+        "text": "#E8D9B5"
+      },
+      "map": {
+        "land": "#1C1A24",
+        "landcover": "#221F2B",
+        "water": "#11101A",
+        "waterway": "#11101A",
+        "parks": "#262333",
+        "buildings": "#3A3445",
+        "aeroway": "#262333",
+        "rail": "#E8D9B5",
+        "roads": {
+          "major": "#E8D9B5",
+          "minor_high": "#B9A57E",
+          "minor_mid": "#6E6476",
+          "minor_low": "#4A4455",
+          "path": "#3A3445",
+          "outline": "#1C1A24"
+        }
+      }
+    },
     "carrara": {
       "name": "Carrara",
       "description": "White marble — pale stone with soft charcoal veining",
@@ -724,6 +880,436 @@
           "minor_mid": "#5F6A6E",
           "minor_low": "#3E4D62"
         }
+      }
+    },
+    "risograph": {
+      "name": "Risograph",
+      "description": "Two-ink print-shop palette — fluorescent pink and blue on warm cream",
+      "ui": {
+        "bg": "#F7E7D7",
+        "text": "#1F3A93"
+      },
+      "map": {
+        "land": "#F7E7D7",
+        "landcover": "#F1DCC8",
+        "water": "#9CC3E0",
+        "waterway": "#9CC3E0",
+        "parks": "#CFE0B8",
+        "buildings": "#EFD9BE",
+        "aeroway": "#E8CBA8",
+        "rail": "#D64550",
+        "roads": {
+          "major": "#D64550",
+          "minor_high": "#3E6FA3",
+          "minor_mid": "#7C93BE",
+          "minor_low": "#B9C4D8",
+          "path": "#D8B49A",
+          "outline": "#F7E7D7"
+        }
+      },
+      "fx": {
+        "grain": 0.35,
+        "vignette": 0.15
+      }
+    },
+    "indigo_dye": {
+      "name": "Indigo Dye",
+      "description": "Aizome blue — deep indigo water and unbleached cloth roads",
+      "ui": {
+        "bg": "#1B2A4A",
+        "text": "#EFE6CC"
+      },
+      "map": {
+        "land": "#1B2A4A",
+        "landcover": "#22355C",
+        "water": "#0F1A33",
+        "waterway": "#0F1A33",
+        "parks": "#2C4A7C",
+        "buildings": "#31406B",
+        "aeroway": "#263B66",
+        "rail": "#EFE6CC",
+        "roads": {
+          "major": "#EFE6CC",
+          "minor_high": "#C9BC9C",
+          "minor_mid": "#8A7F66",
+          "minor_low": "#4A5578",
+          "path": "#3A4568",
+          "outline": "#1B2A4A"
+        }
+      },
+      "fx": {
+        "grain": 0.25,
+        "vignette": 0.3
+      }
+    },
+    "xray": {
+      "name": "X-Ray",
+      "description": "Medical cyan scan — dark field with glowing teal arteries",
+      "ui": {
+        "bg": "#081C22",
+        "text": "#5FF2D6"
+      },
+      "map": {
+        "land": "#081C22",
+        "landcover": "#0C2630",
+        "water": "#0E3542",
+        "waterway": "#0E3542",
+        "parks": "#0F3B2E",
+        "buildings": "#12404C",
+        "aeroway": "#0E2E3C",
+        "rail": "#5FF2D6",
+        "roads": {
+          "major": "#5FF2D6",
+          "minor_high": "#2BBFA8",
+          "minor_mid": "#1B8A7C",
+          "minor_low": "#145E55",
+          "path": "#0E3A3C",
+          "outline": "#081C22"
+        }
+      },
+      "fx": {
+        "grain": 0.2,
+        "vignette": 0.35
+      }
+    },
+    "vintage_postcard": {
+      "name": "Vintage Postcard",
+      "description": "Aged cream stock with faded sepia ink and postal red",
+      "ui": {
+        "bg": "#F1E4C8",
+        "text": "#7A4A26"
+      },
+      "map": {
+        "land": "#F1E4C8",
+        "landcover": "#E9D8B4",
+        "water": "#A9BFC4",
+        "waterway": "#A9BFC4",
+        "parks": "#D8CBA4",
+        "buildings": "#DEC9A2",
+        "aeroway": "#D4BC90",
+        "rail": "#A33B2E",
+        "roads": {
+          "major": "#8A5A2B",
+          "minor_high": "#A97B45",
+          "minor_mid": "#C29A63",
+          "minor_low": "#D9BC85",
+          "path": "#C8A87C",
+          "outline": "#F1E4C8"
+        }
+      },
+      "fx": {
+        "grain": 0.4,
+        "vignette": 0.25
+      }
+    },
+    "swiss": {
+      "name": "Swiss",
+      "description": "Stark white field, black arteries — International Typographic discipline",
+      "ui": {
+        "bg": "#FFFFFF",
+        "text": "#111111"
+      },
+      "map": {
+        "land": "#FFFFFF",
+        "landcover": "#F4F4F0",
+        "water": "#DCE9F5",
+        "waterway": "#DCE9F5",
+        "parks": "#EDF2E4",
+        "buildings": "#ECECEC",
+        "aeroway": "#F0F0F0",
+        "rail": "#111111",
+        "roads": {
+          "major": "#111111",
+          "minor_high": "#4A4A4A",
+          "minor_mid": "#8C8C8C",
+          "minor_low": "#C4C4C4",
+          "path": "#DCDCDC",
+          "outline": "#FFFFFF"
+        }
+      }
+    },
+    "night_bazaar": {
+      "name": "Night Bazaar",
+      "description": "Warm dark souk — amber lanterns on charcoal streets",
+      "ui": {
+        "bg": "#171310",
+        "text": "#E8B04B"
+      },
+      "map": {
+        "land": "#171310",
+        "landcover": "#1E1915",
+        "water": "#12222E",
+        "waterway": "#12222E",
+        "parks": "#1F3325",
+        "buildings": "#241F19",
+        "aeroway": "#201A14",
+        "rail": "#E8B04B",
+        "roads": {
+          "major": "#E8B04B",
+          "minor_high": "#C98A3E",
+          "minor_mid": "#8A6234",
+          "minor_low": "#4A3826",
+          "path": "#33291E",
+          "outline": "#171310"
+        }
+      },
+      "fx": {
+        "grain": 0.3,
+        "vignette": 0.4
+      }
+    },
+    "neon_tokyo": {
+      "name": "Neon Tokyo",
+      "description": "Pink and cyan signage glow on a midnight grid — Osaka backstreets at 2AM",
+      "ui": {
+        "bg": "#0B0B1E",
+        "text": "#FF2EA6"
+      },
+      "map": {
+        "land": "#0B0B1E",
+        "landcover": "#12122B",
+        "water": "#14082E",
+        "waterway": "#14082E",
+        "parks": "#0E2A1E",
+        "buildings": "#1A1030",
+        "aeroway": "#151029",
+        "rail": "#FF2EA6",
+        "roads": {
+          "major": "#FF2EA6",
+          "minor_high": "#00E5FF",
+          "minor_mid": "#7A5CFF",
+          "minor_low": "#3A2E66",
+          "path": "#241C48",
+          "outline": "#0B0B1E"
+        }
+      },
+      "fx": {
+        "grain": 0.12,
+        "vignette": 0.45
+      }
+    },
+    "vaporwave": {
+      "name": "Vaporwave",
+      "description": "Magenta grid sunset — chrome pink over deep violet",
+      "ui": {
+        "bg": "#1A0B2E",
+        "text": "#FF71CE"
+      },
+      "map": {
+        "land": "#1A0B2E",
+        "landcover": "#241140",
+        "water": "#2E1060",
+        "waterway": "#2E1060",
+        "parks": "#2A1048",
+        "buildings": "#2E1454",
+        "aeroway": "#261344",
+        "rail": "#01CDFE",
+        "roads": {
+          "major": "#01CDFE",
+          "minor_high": "#FF71CE",
+          "minor_mid": "#B967FF",
+          "minor_low": "#5C3A8C",
+          "path": "#3A2A66",
+          "outline": "#1A0B2E"
+        }
+      },
+      "fx": {
+        "grain": 0.1,
+        "vignette": 0.4
+      }
+    },
+    "ultraviolet": {
+      "name": "Ultraviolet",
+      "description": "Blacklight poster — violet arteries on a UV-dark field",
+      "ui": {
+        "bg": "#12071F",
+        "text": "#C084FC"
+      },
+      "map": {
+        "land": "#12071F",
+        "landcover": "#1A0B2E",
+        "water": "#1E1040",
+        "waterway": "#1E1040",
+        "parks": "#140F33",
+        "buildings": "#1E0F38",
+        "aeroway": "#1A0D30",
+        "rail": "#C084FC",
+        "roads": {
+          "major": "#C084FC",
+          "minor_high": "#8B5CF6",
+          "minor_mid": "#6D28D9",
+          "minor_low": "#3B1D6E",
+          "path": "#2A1448",
+          "outline": "#12071F"
+        }
+      },
+      "fx": {
+        "grain": 0.15,
+        "vignette": 0.4
+      }
+    },
+    "aurora": {
+      "name": "Aurora",
+      "description": "Northern lights over arctic night — mint and ice-blue ribbons",
+      "ui": {
+        "bg": "#06121A",
+        "text": "#34D399"
+      },
+      "map": {
+        "land": "#06121A",
+        "landcover": "#0A1B26",
+        "water": "#0A2033",
+        "waterway": "#0A2033",
+        "parks": "#0B2E26",
+        "buildings": "#0C2230",
+        "aeroway": "#0A1C28",
+        "rail": "#34D399",
+        "roads": {
+          "major": "#34D399",
+          "minor_high": "#22D3EE",
+          "minor_mid": "#0E7490",
+          "minor_low": "#155E75",
+          "path": "#0B3A4A",
+          "outline": "#06121A"
+        }
+      },
+      "fx": {
+        "grain": 0.12,
+        "vignette": 0.4
+      }
+    },
+    "laser": {
+      "name": "Laser",
+      "description": "Single red beam on carbon black — minimal, dangerous, precise",
+      "ui": {
+        "bg": "#050505",
+        "text": "#FF3131"
+      },
+      "map": {
+        "land": "#050505",
+        "landcover": "#0A0A0A",
+        "water": "#0A0A14",
+        "waterway": "#0A0A14",
+        "parks": "#071008",
+        "buildings": "#0C0C0C",
+        "aeroway": "#090909",
+        "rail": "#FF3131",
+        "roads": {
+          "major": "#FF3131",
+          "minor_high": "#FFB300",
+          "minor_mid": "#8A8A8A",
+          "minor_low": "#2A2A2A",
+          "path": "#1A1A1A",
+          "outline": "#050505"
+        }
+      },
+      "fx": {
+        "grain": 0.08,
+        "vignette": 0.5
+      }
+    },
+    "solar_dusk": {
+      "name": "Solar Dusk",
+      "description": "Last light of the desert — ember orange sinking into violet",
+      "ui": {
+        "bg": "#1C0F14",
+        "text": "#FF8C42"
+      },
+      "map": {
+        "land": "#1C0F14",
+        "landcover": "#261420",
+        "water": "#241430",
+        "waterway": "#241430",
+        "parks": "#14251F",
+        "buildings": "#2A1A26",
+        "aeroway": "#221626",
+        "rail": "#FFB627",
+        "roads": {
+          "major": "#FF6B35",
+          "minor_high": "#FFB627",
+          "minor_mid": "#8A5A6E",
+          "minor_low": "#4A3040",
+          "path": "#35222E",
+          "outline": "#1C0F14"
+        }
+      },
+      "fx": {
+        "grain": 0.15,
+        "vignette": 0.45
+      }
+    },
+    "rasa_night": {
+      "name": "Rasa Night",
+      "description": "Midnight navy with amber signal and cyan water — the Rasa after-hours look",
+      "ui": {
+        "bg": "#0B1424",
+        "text": "#E6C983"
+      },
+      "map": {
+        "land": "#0E1A30",
+        "landcover": "#12233C",
+        "water": "#123A5E",
+        "waterway": "#164E63",
+        "parks": "#0F2E28",
+        "buildings": "#1B2C4A",
+        "aeroway": "#22314F",
+        "rail": "#7C5CFF",
+        "roads": {
+          "major": "#D6AD55",
+          "minor_high": "#E6C983",
+          "minor_mid": "#5C6B8C",
+          "minor_low": "#2A3A58",
+          "path": "#1A2942",
+          "outline": "#0B1424"
+        },
+        "forest": "#0C2B24",
+        "grass": "#123528",
+        "farmland": "#16301F",
+        "wetland": "#14303A",
+        "sand": "#2A2A20",
+        "ice": "#274058",
+        "borders": "#7C5CFF"
+      },
+      "fx": {
+        "grain": 0.12,
+        "vignette": 0.4
+      }
+    },
+    "rasa_dusk": {
+      "name": "Rasa Dusk",
+      "description": "Violet hour — plum skies, rose signals and glassy cyan rivers",
+      "ui": {
+        "bg": "#150F24",
+        "text": "#FFB3C7"
+      },
+      "map": {
+        "land": "#1B1330",
+        "landcover": "#221847",
+        "water": "#143A4E",
+        "waterway": "#1B5568",
+        "parks": "#12291F",
+        "buildings": "#2A1E44",
+        "aeroway": "#2E2350",
+        "rail": "#FF5C8A",
+        "roads": {
+          "major": "#8B74FF",
+          "minor_high": "#B79CFF",
+          "minor_mid": "#6A5A8C",
+          "minor_low": "#382C58",
+          "path": "#241A3C",
+          "outline": "#150F24"
+        },
+        "forest": "#10291F",
+        "grass": "#153322",
+        "farmland": "#1A3320",
+        "wetland": "#143038",
+        "sand": "#33291C",
+        "ice": "#2C3A58",
+        "borders": "#FF5C8A"
+      },
+      "fx": {
+        "grain": 0.14,
+        "vignette": 0.45
       }
     }
   }
